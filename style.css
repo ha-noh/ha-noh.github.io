@@ -4,7 +4,7 @@
   src:url(fonts/uni0553-webfont.woff) format(woff);
 }
 
-html,body{
+body{
   background-color: #232b2a;
   color: #ffb5ad;
   font-family: 'uni0553';

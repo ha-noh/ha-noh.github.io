@@ -6,11 +6,11 @@
 }
 @font-face{
   font-family: 'munro';
-  src: url('fonts/Munro.ttf') format('truetype');
+  src: url('fonts/munro.ttf') format('truetype');
 }
 
 body{
   background-color: #232b2a;
   color: #ffb5ad;
-  font-family: 'munro';
+  font-family: 'uni0553';
 }

@@ -5,12 +5,13 @@
   url('fonts/uni0553-webfont.ttf') format('truetype');
 }
 @font-face{
-  font-family: 'munro';
-  src: url('fonts/munro.ttf') format('truetype');
+  font-family: 'silkscreen';
+  src: url('fonts/slkscr.ttf') format('truetype'),
+  url('fonts/slkscr-webfont.woff') format('woff') ;
 }
 
 body{
   background-color: #232b2a;
   color: #ffb5ad;
-  font-family: 'munro';
+  font-family: 'silkscreen';
 }

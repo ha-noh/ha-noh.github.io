@@ -10,7 +10,24 @@
 }
 
 body{
-  background-color: #141e1d;
+  background-color: #0b1111;
   color: #fca89f;
   font-family: 'DeterminationMono';
+  font-size: 20px;
 }
+
+.border{
+  border: 3px solid ;
+  color: #fca89f;
+  padding: 20px;
+}
+
+.negative{
+  background-color: #fca89f;
+  color: #0b1111;
+  padding: 5px;
+}
+
+/**
+#a2eeef -> desaturated cyan color
+**/

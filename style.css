@@ -6,6 +6,8 @@
   url('fonts/uni0553-webfont.ttf') format('truetype');
 }
 
-/*
-<section>
-*/
+body{
+  background-color: #232b2a;
+  color: #ffb5ad;
+  font-family: "uni0553-webfont";
+}

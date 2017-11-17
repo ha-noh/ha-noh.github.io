@@ -1,11 +1,11 @@
 @charset "UTF-8";
 @font-face {
   font-family: 'uni';
-  src:url("fonts/uni0553-webfont.woff");
+  src:url(fonts/uni0553-webfont.woff);
 }
 
 body{
   background-color: #232b2a;
   color: #ffb5ad;
-  font-family: "uni";
+  font-family: uni;
 }

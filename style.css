@@ -6,7 +6,8 @@
 }
 @font-face{
   font-family: 'DeterminationMono';
-  src: url('fonts/DeterminationMonoWeb.woff') format('woff');
+  src: url('fonts/DeterminationMonoWeb.woff') format('woff'),
+  url('font/DTM-Mono.otf')  format('opentype');
 }
 
 body{
@@ -26,6 +27,11 @@ body{
   background-color: #fca89f;
   color: #0b1111;
   padding: 5px;
+}
+
+.underline{
+  padding-bottom: 5px;
+  border-bottom: solid 2px #fca89f;
 }
 
 /**

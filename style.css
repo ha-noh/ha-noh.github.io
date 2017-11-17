@@ -1,12 +1,16 @@
 @charset "UTF-8";
 @font-face {
   font-family: 'uni0553';
-  src:url('fonts/uni0553-webfont.woff') format('woff'),
+  src: url('fonts/uni0553-webfont.woff') format('woff'),
   url('fonts/uni0553-webfont.ttf') format('truetype');
+}
+@font-face{
+  font-family: 'munro';
+  src: url('fonts/munro.ttf') format('truetype');
 }
 
 body{
   background-color: #232b2a;
   color: #ffb5ad;
-  font-family: 'uni0553';
+  font-family: 'munro';
 }

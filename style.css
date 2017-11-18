@@ -17,10 +17,6 @@ body{
   font-size: 20px;
 }
 
-section{
-  float:left;
-}
-
 .border{
   border: 3px solid ;
   color: #fca89f;
@@ -39,15 +35,19 @@ section{
 }
 
 .leftbox{
-  width:40%
+  width:40%;
+  float:left;
 }
 
 .rightbox{
-  border: 3px solid;
-  color: #fca89f;
   width: 50%;
   margin-left:1%;
-  padding: 20px;
+  position: fixed;
+  float: right;
+}
+
+.pagewrapper{
+  width: 100%
 }
 
 

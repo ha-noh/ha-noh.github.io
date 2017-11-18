@@ -36,18 +36,19 @@ body{
 
 .leftbox{
   width:40%;
-  float:left;
 }
 
 .rightbox{
+  height: 75%;
   width: 50%;
   margin-left:1%;
   position: fixed;
-  float: right;
+  top: 100px;
+  right: 50px;
 }
 
 .pagewrapper{
-  width: 100%
+  width: 100%;
 }
 
 

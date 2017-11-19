@@ -10,6 +10,11 @@
   url('font/DTM-Mono.otf')  format('opentype');
 }
 
+a{
+  color:#fca89f;
+  text-decoration:none;
+}
+
 body{
   background-color: #0b1111;
   color: #fca89f;
@@ -19,40 +24,11 @@ body{
   margin-bottom:1%;
 }
 
-.border{
-  border: 3px solid ;
-  color: #fca89f;
-  padding: 2%;
-}
-
-.negative{
-  background-color: #fca89f;
-  color: #0b1111;
-  padding: 1%;
-}
-
-.underline{
-  padding-bottom: 1%;
-  border-bottom: solid 3px #fca89f;
-}
-
-.leftbox{
-  margin-top: 90px;
-  width:40%;
-}
-
-.rightbox{
-  height: 80%;
-  width: 53%;
-  position: fixed;
-  top: 90px;
-  right: 1.5%;
-  object-fit: contain;
-  color: #a2eeef;
-}
-
-.pagewrapper{
-
+ul,li {
+  list-style-type:none;
+  list-style-position:inside;
+  margin:0;
+  padding:0;
 }
 
 #head{
@@ -65,20 +41,40 @@ body{
   text-overflow: clip;
 }
 
-ul,li {
-  list-style-type:none;
-  list-style-position:inside;
-  margin:0;
-  padding:0;
+.border{
+  border: 3px solid ;
+  color: #fca89f;
+  padding: 2%;
 }
 
-a{
-  color:#fca89f;
-  text-decoration:none;
+.leftbox{
+  margin-top: 90px;
+  width:40%;
+}
+
+.negative{
+  background-color: #fca89f;
+  color: #0b1111;
+  padding: 1%;
+}
+
+.rightbox{
+  height: 80%;
+  width: 53%;
+  position: fixed;
+  top: 90px;
+  right: 1.5%;
+  object-fit: contain;
+  color: #a2eeef;
 }
 
 .socialbuttons{
   width:23px;
   height:23px;
   object-fit:scale-down;
+}
+
+.underline{
+  padding-bottom: 1%;
+  border-bottom: solid 3px #fca89f;
 }

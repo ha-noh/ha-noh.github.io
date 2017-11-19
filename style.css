@@ -76,3 +76,9 @@ a{
   color:#fca89f;
   text-decoration:none;
 }
+
+.socialbuttons{
+  width:23px;
+  height:23px;
+  object-fit:scale-down;
+}

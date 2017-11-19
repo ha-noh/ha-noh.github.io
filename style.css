@@ -36,6 +36,10 @@ ul,li {
   padding:0;
 }
 
+li{
+  padding:.5%;
+}
+
 #head{
   position:fixed;
   top: 0%;

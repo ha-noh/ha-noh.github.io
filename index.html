@@ -23,46 +23,56 @@
 <script>
   $(function(){
     var headerid=null;
+    var underlineid=null;
     $("#softwareheader").mouseover(function(){
       //not the first mouseover and previous mouseover wasn't this header
       if(headerid != null && headerid != "#softwareheader"){
-        $(headerid).attr("style","background-color:#fca89f");
+        revertHighlight(headerid,underlineid);
       }
-      headerid = updateOnMouseover("images/softwarecover.png","#softwareheader");
+      highlightOnMouseover("images/softwarecover.png","#softwareheader","#softwareUL");
     });
     $("#musicheader").mouseover(function(){
       //not the first mouseover and previous mouseover wasn't this header
       if(headerid != null && headerid != "#musicheader"){
-        $(headerid).attr("style","background-color:#fca89f");
+        revertHighlight(headerid,underlineid);
       }
-      headerid = updateOnMouseover("images/musiccover.png","#musicheader");
+      highlightOnMouseover("images/musiccover.png","#musicheader", "#musicUL");
     });
     $("#designheader").mouseover(function(){
       //not the first mouseover and previous mouseover wasn't this header
       if(headerid != null && headerid != "#designheader"){
-        $(headerid).attr("style","background-color:#fca89f");
+        revertHighlight(headerid,underlineid);
       }
-      headerid = updateOnMouseover("images/designcover.png","#designheader");
+      highlightOnMouseover("images/designcover.png","#designheader","#designUL");
     });
     $("#photoheader").mouseover(function(){
       //not the first mouseover and previous mouseover wasn't this header
       if(headerid != null && headerid != "#photoheader"){
-        $(headerid).attr("style","background-color:#fca89f");
+        revertHighlight(headerid,underlineid);
       }
-      headerid = updateOnMouseover("images/photocover.png","#photoheader");
+      highlightOnMouseover("images/photocover.png","#photoheader","#photoUL");
     });
     $("#essayheader").mouseover(function(){
       //not the first mouseover and previous mouseover wasn't this header
       if(headerid != null && headerid != "#essayheader"){
-        $(headerid).attr("style","background-color:#fca89f");
+        revertHighlight(headerid,underlineid);
       }
-      headerid = updateOnMouseover("images/essaycover.png","#essayheader");
+      highlightOnMouseover("images/essaycover.png","#essayheader","#essayUL");
     });
+
+    //convenience function for resetting highlighted item
+    function revertHighlight(headername, ulname){
+      $(headername).attr("style","background-color:#fca89f");
+      $(ulname).attr("style","border-bottom:solid 3px #fca89f");
+    }
+
     //convenience function for mousing over different headers
-    function updateOnMouseover(imgsrc, headername){
+    function highlightOnMouseover(imgsrc, headername, ulname){
       $("#rightimg").attr("src", imgsrc);
       $(headername).attr("style","background-color:#a2eeef;");
-      return headername;
+      $(ulname).attr("style","border-bottom:solid 3px #a2eeef;");
+      underlineid=ulname;
+      headerid=headername;
     }
   });
 </script>
@@ -74,30 +84,30 @@
   Andrew: *Thanks for your curiosity! </p>
 
   <h3 class="negative" id="softwareheader">software projects</h3>
-  <ul class="underline">
-    <li><a href="filler.html">freeweight workout tracker | ANDROID </a></li>
-    <li>coming soon.</li>
-    <li>coming soon.</li>
+  <ul class="underline" id="softwareUL">
+    <li><a href="filler.html">+freeweight workout tracker | ANDROID </a></li>
+    <li>+coming soon.</li>
+    <li>+coming soon.</li>
   </ul>
 
   <h3 class="negative" id="musicheader">music</h3>
-  <ul class="underline">
-    <li> coming soon! </li>
+  <ul class="underline" id="musicUL">
+    <li>+coming soon! </li>
   </ul>
 
   <h3 class="negative" id="designheader">graphic design & illustrations</h3>
-  <ul class="underline">
-    <li><a href="aboutthissite.html">ha-noh.github.io | WEB DESIGN</a></li>
+  <ul class="underline" id="designUL">
+    <li><a href="aboutthissite.html">+ha-noh.github.io | WEB DESIGN</a></li>
   </ul>
 
   <h3 class="negative" id="photoheader">photography</h3>
-  <ul class="underline">
-    <li><a href="">SK  | COMING SOON</a></li>
+  <ul class="underline" id="photoUL">
+    <li><a href="">+SK  | COMING SOON</a></li>
   </ul>
 
   <h3 class="negative" id="essayheader">essays & analyses</h3>
-  <ul class="underline">
-    <li><a href="identity_culture_essay.html"> Identity and Its Basis In the Cultural Appropriation of Music </a> </li>
+  <ul class="underline" id="essayUL">
+    <li><a href="identity_culture_essay.html">+Identity and Its Basis In the Cultural Appropriation of Music </a> </li>
   </ul>
 
 </section>

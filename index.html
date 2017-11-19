@@ -33,16 +33,15 @@
       if(headerid != null && headerid != "#designheader"){
         $(headerid).attr("style","background-color:#fca89f");
       }
-      headerid = updateOnMouseover("images/designcover.jpg","#designheader");
+      headerid = updateOnMouseover("images/designcover.png","#designheader");
     });
     $("#photoheader").mouseover(function(){
       //not the first mouseover and previous mouseover wasn't this header
       if(headerid != null && headerid != "#photoheader"){
         $(headerid).attr("style","background-color:#fca89f");
       }
-      headerid = updateOnMouseover("images/photocover.webp","#photoheader");
+      headerid = updateOnMouseover("images/photocover.png","#photoheader");
     });
-
     //convenience function for mousing over different headers
     function updateOnMouseover(imgsrc, headername){
       $("#rightimg").attr("src", imgsrc);
@@ -61,31 +60,34 @@
 
   <h3 class="negative" id="softwareheader">software projects</h3>
   <ul class="underline">
-    <li>coming soon.</li>
+    <li><a href="filler.html">freeweight workout tracker | ANDROID </a></li>
     <li>coming soon.</li>
     <li>coming soon.</li>
   </ul>
 
   <h3 class="negative" id="musicheader">music</h3>
   <ul class="underline">
-    <li>coming soon.</li>
+    <li><a href="filler.html">listen to my mixtape xd | SOUNDCLOUD | SPOTIFY</a></li>
     <li>coming soon.</li>
     <li>coming soon.</li>
   </ul>
 
   <h3 class="negative" id="designheader">graphic design & illustrations</h3>
   <ul class="underline">
-    <li>coming soon.</li>
+    <li><a href="filler.html">hyunseung-noh.github.io | WEB DESIGN</a></li>
     <li>coming soon.</li>
     <li>coming soon.</li>
   </ul>
 
   <h3 class="negative" id="photoheader">photography</h3>
   <ul class="underline">
-    <li>coming soon.</li>
+    <li><a href="filler.html">Seoul</a></li>
     <li>coming soon.</li>
     <li>coming soon.</li>
   </ul>
+
+  <h3 class="negative">dummy</h3>
+  <div class="underline">coming soon. <br> coming soon. <br> coming soon. </div>
 
   <h3 class="negative">dummy</h3>
   <div class="underline">coming soon. <br> coming soon. <br> coming soon. </div>

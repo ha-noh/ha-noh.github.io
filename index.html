@@ -51,6 +51,13 @@
       }
       headerid = updateOnMouseover("images/photocover.png","#photoheader");
     });
+    $("#essayheader").mouseover(function(){
+      //not the first mouseover and previous mouseover wasn't this header
+      if(headerid != null && headerid != "#essayheader"){
+        $(headerid).attr("style","background-color:#fca89f");
+      }
+      headerid = updateOnMouseover("images/essaycover.png","#essayheader");
+    });
     //convenience function for mousing over different headers
     function updateOnMouseover(imgsrc, headername){
       $("#rightimg").attr("src", imgsrc);

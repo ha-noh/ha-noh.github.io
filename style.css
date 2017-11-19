@@ -9,6 +9,10 @@
   src: url('fonts/DeterminationMonoWeb.woff') format('woff'),
   url('font/DTM-Mono.otf')  format('opentype');
 }
+@font-face{
+  font-family: 'hind-regular';
+  src: url('fonts/hind-regular-webfont.woff') format('woff');
+}
 
 a{
   color:#fca89f;
@@ -40,6 +44,13 @@ ul,li {
   background-color: #0b1111;
   overflow: hidden;
   text-overflow: clip;
+}
+
+.article{
+  text-align:left;
+  max-width: 60%;
+  line-height: 1.5;
+  font-family: 'hind-regular';
 }
 
 .border{

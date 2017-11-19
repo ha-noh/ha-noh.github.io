@@ -1,56 +1,96 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>H.A.NOH</title>
-<link rel="stylesheet" href="style.css" type="text/css" />
+  <meta charset="utf-8">
+  <title>H.A.NOH</title>
+  <link rel="stylesheet" href="style.css" type="text/css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
 <header id="head">
-<h1>hyunseung andrew noh</h1>
+  <h1>hyunseung andrew noh</h1>
 </header>
+<script>
+  $(function(){
+    var headerid=null;
+    $("#softwareheader").mouseover(function(){
+      //not the first mouseover and previous mouseover wasn't this header
+      if(headerid != null && headerid != "#softwareheader"){
+        $(headerid).attr("style","background-color:#fca89f");
+      }
+      headerid = updateOnMouseover("images/softwarecover.png","#softwareheader");
+    });
+    $("#musicheader").mouseover(function(){
+      //not the first mouseover and previous mouseover wasn't this header
+      if(headerid != null && headerid != "#musicheader"){
+        $(headerid).attr("style","background-color:#fca89f");
+      }
+      headerid = updateOnMouseover("images/musiccover.png","#musicheader");
+    });
+    $("#designheader").mouseover(function(){
+      //not the first mouseover and previous mouseover wasn't this header
+      if(headerid != null && headerid != "#designheader"){
+        $(headerid).attr("style","background-color:#fca89f");
+      }
+      headerid = updateOnMouseover("images/designcover.jpg","#designheader");
+    });
+    $("#photoheader").mouseover(function(){
+      //not the first mouseover and previous mouseover wasn't this header
+      if(headerid != null && headerid != "#photoheader"){
+        $(headerid).attr("style","background-color:#fca89f");
+      }
+      headerid = updateOnMouseover("images/photocover.webp","#photoheader");
+    });
 
+    //convenience function for mousing over different headers
+    function updateOnMouseover(imgsrc, headername){
+      $("#rightimg").attr("src", imgsrc);
+      $(headername).attr("style","background-color:#a2eeef;");
+      return headername;
+    }
+  });
+</script>
 <div class="pagewrapper">
 <section class="leftbox">
-<p class="border">????: *Howdy!<br> ????: *I'm FLOWEY <br> ????: *FLOWEY the FLOWER <br>
-FLOWEY: *Hmmm... <br> FLOWEY: *You're new to the UNDERGROUND, aren'tcha? <br>
-FLOWEY: *Golly, you must be so confused! <br> FLOWEY: *Someone ought to teach you
-how things work around here! <br> FLOWEY: *I guess little old me will have to do. <br>
-FLOWEY: *Ready?</p>
+  <p class="border">????: *Howdy!<br> ????: *I'm FLOWEY <br> ????: *FLOWEY the FLOWER <br>
+  FLOWEY: *Hmmm... <br> FLOWEY: *You're new to the UNDERGROUND, aren'tcha? <br>
+  FLOWEY: *Golly, you must be so confused! <br> FLOWEY: *Someone ought to teach you
+  how things work around here! <br> FLOWEY: *I guess little old me will have to do. <br>
+  FLOWEY: *Ready?</p>
 
-<h3 class="negative" id="catheader1">software projects</h3>
-<ul class="underline">
-  <li>coming soon.</li>
-  <li>coming soon.</li>
-  <li>coming soon.</li>
-</ul>
+  <h3 class="negative" id="softwareheader">software projects</h3>
+  <ul class="underline">
+    <li>coming soon.</li>
+    <li>coming soon.</li>
+    <li>coming soon.</li>
+  </ul>
 
-<h3 class="negative" id="catheader2">music</h3>
-<ul class="underline">
-  <li>coming soon.</li>
-  <li>coming soon.</li>
-  <li>coming soon.</li>
-</ul>
+  <h3 class="negative" id="musicheader">music</h3>
+  <ul class="underline">
+    <li>coming soon.</li>
+    <li>coming soon.</li>
+    <li>coming soon.</li>
+  </ul>
 
-<h3 class="negative" id="catheader3">graphic design & illustrations</h3>
-<ul class="underline">
-  <li>coming soon.</li>
-  <li>coming soon.</li>
-  <li>coming soon.</li>
-</ul>
+  <h3 class="negative" id="designheader">graphic design & illustrations</h3>
+  <ul class="underline">
+    <li>coming soon.</li>
+    <li>coming soon.</li>
+    <li>coming soon.</li>
+  </ul>
 
-<h3 class="negative" id="catheader4">photography</h3>
-<ul class="underline">
-  <li>coming soon.</li>
-  <li>coming soon.</li>
-  <li>coming soon.</li>
-</ul>
+  <h3 class="negative" id="photoheader">photography</h3>
+  <ul class="underline">
+    <li>coming soon.</li>
+    <li>coming soon.</li>
+    <li>coming soon.</li>
+  </ul>
 
-<h3 class="negative">dummy</h3>
-<div class="underline">coming soon. <br> coming soon. <br> coming soon. </div>
+  <h3 class="negative">dummy</h3>
+  <div class="underline">coming soon. <br> coming soon. <br> coming soon. </div>
 </section>
-<img src="images/hyouka-episode-6-together-2.png" class="rightbox border">
+<img src="images/defaultcover.png" class="rightbox border" id="rightimg">
 </div>
 </body>
 </html>

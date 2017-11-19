@@ -22,9 +22,9 @@
 </header>
 <script>
   $(function(){
-    var highlightedHeader=null;
+    var highlightedTag=null;
     var highlightedUL=null;
-    var highlightedLI=null;
+
     //mouseover checks for category headers
     $("#softwareheader").mouseover(function(){
       revertHighlight("#softwareheader");
@@ -56,18 +56,17 @@
     //convenience function for resetting highlighted item
     function revertHighlight(currtag){
       //not the first mouseover and previous mouseover wasn't this item
-      if((highlightedHeader == null || highlightedHeader == currtag) &&
-        (highlightedLI == null || highlightedLI == currtag)){
+      if(highlightedTag == null || highlightedTag == currtag){
         return;
       }
       //prev highlighted item was a header
-      else if(highlightedHeader != null){
-        $(highlightedHeader).attr("style","background-color:#fca89f;");
+      else if(highlightedUL != null){
+        $(highlightedTag).attr("style","background-color:#fca89f;");
         $(highlightedUL).attr("style","border-bottom:solid 3px #fca89f;");
       }
       //otherwise the prev highlighted item was a list item
       else{
-        $(highlightedLI).attr("style","color:#fca89f;");
+        $(highlightedTag).attr("style","color:#fca89f;");
       }
     }
 
@@ -78,13 +77,11 @@
         $(currtag).attr("style","background-color:#a2eeef;");
         $(ulname).attr("style","border-bottom:solid 3px #a2eeef;");
         highlightedUL=ulname;
-        highlightedHeader=currtag;
-        highlightedLI=null;
+        highlightedTag=currtag;
       }
       else{
         $(currtag).attr("style","color:#a2eeef;");
-        highlightedLI=currtag;
-        highlightedHeader=null;
+        highlightedTag=currtag;
         highlightedUL=null;
       }
     }

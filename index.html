@@ -23,6 +23,7 @@
 <script>
   $(function(){
     var highlightedTag=null;
+    //whether or not highlightedUL is null determines whether the highlighted item is a heading or a list item
     var highlightedUL=null;
 
     //mouseover checks for category headers
@@ -51,6 +52,21 @@
     $("#freeweight").mouseover(function(){
       revertHighlight("#freeweight");
       highlightOnMouseover("images/freeweight.png","#freeweight",null);
+    });
+
+    $("#hanoh").mouseover(function(){
+      revertHighlight("#hanoh");
+      highlightOnMouseover("images/hanoh.png","#hanoh", null);
+    });
+
+    $("#skphoto").mouseover(function(){
+      revertHighlight("#skphoto");
+      highlightOnMouseover("images/skphoto.png","#skphoto", null);
+    });
+
+    $("#identitymusicessay").mouseover(function(){
+      revertHighlight("#identitymusicessay");
+      highlightOnMouseover("images/identitymusicessay.png","#identitymusicessay", null);
     });
 
     //convenience function for resetting highlighted item
@@ -96,7 +112,7 @@
 
   <h3 class="negative" id="softwareheader">software projects</h3>
   <ul class="underline" id="softwareUL">
-    <li id="freeweight"><a href="filler.html">
+    <li><a href="filler.html" id="freeweight">
       +freeweight workout tracker | ANDROID</a></li>
     <li>+coming soon.</li>
     <li>+coming soon.</li>
@@ -109,19 +125,19 @@
 
   <h3 class="negative" id="designheader">graphic design & illustrations</h3>
   <ul class="underline" id="designUL">
-    <li id="hanoh"><a href="aboutthissite.html">
+    <li><a href="aboutthissite.html" id="hanoh">
       +ha-noh.github.io | WEB DESIGN</a></li>
   </ul>
 
   <h3 class="negative" id="photoheader">photography</h3>
   <ul class="underline" id="photoUL">
-    <li id="skphoto"><a href="">
+    <li><a href="" id="skphoto">
       +SK  | COMING SOON</a></li>
   </ul>
 
   <h3 class="negative" id="essayheader">essays & analyses</h3>
   <ul class="underline" id="essayUL">
-    <li id="identitymusicessay"><a href="identity_culture_essay.html">
+    <li><a href="identity_culture_essay.html" id="identitymusicessay">
       +Identity and Its Basis In the Cultural Appropriation of Music</a> </li>
   </ul>
 

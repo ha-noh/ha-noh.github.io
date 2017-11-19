@@ -22,49 +22,71 @@
 </header>
 <script>
   $(function(){
-    var headerid=null;
-    var underlineid=null;
+    var highlightedHeader=null;
+    var highlightedUL=null;
+    var highlightedLI=null;
     //mouseover checks for category headers
     $("#softwareheader").mouseover(function(){
-      revertHighlight(headerid,"#softwareheader",underlineid);
+      revertHighlight("#softwareheader");
       highlightOnMouseover("images/softwarecover.png","#softwareheader","#softwareUL");
     });
     $("#musicheader").mouseover(function(){
-      revertHighlight(headerid,"#musicheader",underlineid);
+      revertHighlight("#musicheader");
       highlightOnMouseover("images/musiccover.png","#musicheader", "#musicUL");
     });
     $("#designheader").mouseover(function(){
-      revertHighlight(headerid,"#designheader",underlineid);
+      revertHighlight("#designheader");
       highlightOnMouseover("images/designcover.png","#designheader","#designUL");
     });
     $("#photoheader").mouseover(function(){
-      revertHighlight(headerid,"#photoheader",underlineid);
+      revertHighlight("#photoheader");
       highlightOnMouseover("images/photocover.png","#photoheader","#photoUL");
     });
     $("#essayheader").mouseover(function(){
-      revertHighlight(headerid,"#essayheader",underlineid);
+      revertHighlight("#essayheader");
       highlightOnMouseover("images/essaycover.png","#essayheader","#essayUL");
     });
 
     //mouseover checks for list items
+    $("#freeweight").mouseover(function(){
+      revertHighlight("#freeweight");
+      highlightOnMouseover("images/freeweight.png","#freeweight",null);
+    });
 
     //convenience function for resetting highlighted item
-    function revertHighlight(prevheader,thisheader, ulname){
-      //not the first mouseover and previous mouseover wasn't this header
-      if(prevheader == null || prevheader == thisheader){
+    function revertHighlight(currtag){
+      //not the first mouseover and previous mouseover wasn't this item
+      if((highlightedHeader == null || highlightedHeader == currtag) &&
+        (highlightedLI == null || highlightedLI == currtag)){
         return;
       }
-      $(prevheader).attr("style","background-color:#fca89f;");
-      $(ulname).attr("style","border-bottom:solid 3px #fca89f;");
+      //prev highlighted item was a header
+      else if(highlightedHeader != null){
+        $(highlightedHeader).attr("style","background-color:#fca89f;");
+        $(highlightedUL).attr("style","border-bottom:solid 3px #fca89f;");
+      }
+      //otherwise the prev highlighted item was a list item
+      else{
+        $(highlightedLI).attr("style","color:#fca89f;");
+      }
     }
 
-    //convenience function for mousing over different headers
-    function highlightOnMouseover(imgsrc, headername, ulname){
+    //convenience function for highlighting headers on mouseover
+    function highlightOnMouseover(imgsrc, currtag, ulname){
       $("#rightimg").attr("src", imgsrc);
-      $(headername).attr("style","background-color:#a2eeef;");
-      $(ulname).attr("style","border-bottom:solid 3px #a2eeef;");
-      underlineid=ulname;
-      headerid=headername;
+      if(ulname != null){
+        $(currtag).attr("style","background-color:#a2eeef;");
+        $(ulname).attr("style","border-bottom:solid 3px #a2eeef;");
+        highlightedUL=ulname;
+        highlightedHeader=currtag;
+        highlightedLI=null;
+      }
+      else{
+        $(currtag).attr("style","color:#a2eeef;");
+        highlightedLI=currtag;
+        highlightedHeader=null;
+        highlightedUL=null;
+      }
     }
   });
 </script>

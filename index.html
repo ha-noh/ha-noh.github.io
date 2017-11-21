@@ -28,7 +28,7 @@
     //mouseover checks for category headers
     $("#softwareheader").mouseover(function(){
       revertHighlight("#softwareheader");
-      highlightOnMouseover("images/softwarecover.png","#softwareheader","#softwareUL");
+      highlightOnMouseover("images/soon.png","#softwareheader","#softwareUL");
     });
     $("#musicheader").mouseover(function(){
       revertHighlight("#musicheader");
@@ -47,7 +47,10 @@
       highlightOnMouseover("images/essaycover.png","#essayheader","#essayUL");
     });
 
-    //mouseover checks for list items
+    /**
+      * mouseover checks for list items
+    **/
+
     $("#freeweight").mouseover(function(){
       revertHighlight("#freeweight");
       highlightOnMouseover("images/soon.png","#freeweight",null);
@@ -70,7 +73,7 @@
 
     $("#identitymusicessay").mouseover(function(){
       revertHighlight("#identitymusicessay");
-      highlightOnMouseover("images/soon.png","#identitymusicessay", null);
+      highlightOnMouseover("images/essay.png","#identitymusicessay", null);
     });
 
     $("#faceb00k").mouseover(function(){
@@ -92,6 +95,17 @@
       revertHighlight("#twitch");
       highlightOnMouseover("images/soon.png","#twitch",null);
     });
+
+    $("#aaslcproject").mouseover(function(){
+      revertHighlight("#aaslcproject");
+      highlightOnMouseover("images/propic.jpg","#aaslcproject",null);
+    });
+
+    $("#drakextobyfox").mouseover(function(){
+      revertHighlight("#drakextobyfox");
+      highlightOnMouseover("images/drakextobyfox.png","#drakextobyfox",null);
+    });
+
 
     //convenience function for resetting highlighted item
     function revertHighlight(currtag){
@@ -145,6 +159,9 @@
 
   <h3 class="negative" id="musicheader">music</h3>
   <ul class="underline" id="musicUL">
+    <li><a href="https://soundcloud.com/andrew-hn/school-project" id="aaslcproject">
+      +short school project | REMIX </a></li>
+    <li><a href="drakextobyfox.html" id="drakextobyfox"> +Drake x Toby Fox | REMIX | MEME </a></li>
     <li id="originalmusic">+original music | COMING SOON!</li>
     <li id="playlists">+curated playlists | COMING SOON(ER)!</li>
   </ul>
@@ -152,7 +169,7 @@
   <h3 class="negative" id="designheader">graphic design & illustrations</h3>
   <ul class="underline" id="designUL">
     <li id="hanoh">+ha-noh.github.io | WEB DESIGN</li>
-    <li><a href="" id="aacc">+RUAACC flyers | GRAPHIC DESIGN</a></li>
+    <li ><a href="aaccflyers.html" id="aacc">+RUAACC flyers | GRAPHIC DESIGN</a></li>
     <li id="twitch">+<s>twitch.tv channel branding</s> | STAY TUNED!</li>
   </ul>
 
@@ -170,6 +187,6 @@
 </section>
 <div class="skeuNavBar" id="navbar">/default </div>
 <div class="skeuFakebuttons">= [] X</div>
-<img src="images/defaultcover.png" class="rightbox" id="rightimg">
+<img src="images/photocover.png" class="rightbox" id="rightimg">
 
 </html>

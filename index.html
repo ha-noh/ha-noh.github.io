@@ -73,6 +73,26 @@
       highlightOnMouseover("images/soon.png","#identitymusicessay", null);
     });
 
+    $("#faceb00k").mouseover(function(){
+      revertHighlight("#faceb00k");
+      highlightOnMouseover("images/soon.png","#faceb00k",null);
+    });
+
+    $("#originalmusic").mouseover(function(){
+      revertHighlight("#originalmusic");
+      highlightOnMouseover("images/soon.png","#originalmusic",null);
+    });
+
+    $("#playlists").mouseover(function(){
+      revertHighlight("#playlists");
+      highlightOnMouseover("images/soon.png","#playlists",null);
+    });
+
+    $("#twitch").mouseover(function(){
+      revertHighlight("#twitch");
+      highlightOnMouseover("images/soon.png","#twitch",null);
+    });
+
     //convenience function for resetting highlighted item
     function revertHighlight(currtag){
       //not the first mouseover and previous mouseover wasn't this item
@@ -118,22 +138,22 @@
 
   <h3 class="negative" id="softwareheader">software projects</h3>
   <ul class="underline" id="softwareUL">
-    <li><a href="" id="freeweight">
-      +<s>freeweight workout tracker</s> | ANDROID | COMING SOON!</a></li>
-    <li>+<s>faceb*ok</s> | CHROME EXTENSION | COMING SOON!</li>
+    <li id="freeweight">
+      +<s>freeweight workout tracker</s> | ANDROID | COMING SOON!</li>
+    <li id="faceb00k">+<s>faceb**k</s> | CHROME EXTENSION | COMING SOON!</li>
   </ul>
 
   <h3 class="negative" id="musicheader">music</h3>
   <ul class="underline" id="musicUL">
-    <li>+original music | COMING SOON!</li>
-    <li>+curated playlists | COMING SOON(ER)!</li>
+    <li id="originalmusic">+original music | COMING SOON!</li>
+    <li id="playlists">+curated playlists | COMING SOON(ER)!</li>
   </ul>
 
   <h3 class="negative" id="designheader">graphic design & illustrations</h3>
   <ul class="underline" id="designUL">
-    <li><a href="" id="hanoh">+ha-noh.github.io | WEB DESIGN</a></li>
+    <li id="hanoh">+ha-noh.github.io | WEB DESIGN</li>
     <li><a href="" id="aacc">+RUAACC flyers | GRAPHIC DESIGN</a></li>
-    <li>+<s>twitch.tv channel branding</s> | STAY TUNED!</li>
+    <li id="twitch">+<s>twitch.tv channel branding</s> | STAY TUNED!</li>
   </ul>
 
   <h3 class="negative" id="photoheader">photography</h3>

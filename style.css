@@ -74,6 +74,10 @@ ul,li {
   margin-top: 90px;
 }
 
+.ghostmargin{
+  font-size: 0px;
+}
+
 .leftbox{
   margin-top: 90px;
   width:40%;
@@ -146,8 +150,16 @@ ul,li {
     max-width: 100%;
   }
 
+  .ghostmargin{
+    position:fixed;
+    top: 510px;
+    height: 10px;
+    width:100%;
+    background-color: #0b1111;
+  }
+
   .leftbox{
-    margin-top: 530px;
+    margin-top: 540px;
     width:100%;
   }
   .skeuNavBar,.rightbox{
@@ -160,7 +172,7 @@ ul,li {
     height: 350px;
     top: 160px;
     padding: 1%;
-    object-fit: contain;
+    object-fit:cover;
     background-color: #ffffff;
   }
 

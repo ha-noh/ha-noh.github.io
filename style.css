@@ -135,12 +135,10 @@ ul,li {
   border-bottom: solid 3px #fca89f;
 }
 
-@media screen and (max-width:1000px){
+@media screen and (max-width:720px) and (max-aspect-ratio:1/1){
+
   body{
-    background-color: #0b1111;
-    color: #fca89f;
-    font-family: 'DeterminationMono';
-    font-size: 20px;
+    font-size: 17px;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
@@ -152,46 +150,39 @@ ul,li {
 
   .ghostmargin{
     position:fixed;
-    top: 510px;
+    top: 420px;
     height: 10px;
     width:100%;
     background-color: #0b1111;
   }
 
   .leftbox{
-    margin-top: 540px;
+    margin-top: 430px;
     width:100%;
   }
+
   .skeuNavBar,.rightbox{
     width: 100%;
-    border: 5px solid #a2eeef;
     right:0px;
   }
 
   .rightbox{
-    height: 350px;
-    top: 160px;
-    padding: 1%;
+    height: 300px;
+    top: 120px;
     object-fit:cover;
-    background-color: #ffffff;
   }
 
   .skeuNavBar{
-    height:50px;
-    top:110px;
-    background-color: #a2eeef;
-    color:#0b1111;
+    height:20px;
+    top:100px;
     padding: .5%;
+    font-size: 10px;
   }
 
   .skeuFakebuttons{
-    color:#0b1111;
-    background-color: #a2eeef;
     top: 90px;
-    height: 20px;
-    text-align: right;
-    padding-right: 5px;
+    height: 10px;
     width:100%;
     right:0px;
+    font-size: 10px;
   }
-}

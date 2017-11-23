@@ -171,7 +171,7 @@ body{
 /*
  * layout that responds to vertical mobile aspect ratios
  */
-@media screen and (max-width:720px) and (max-aspect-ratio:1/1){
+@media screen and (max-aspect-ratio:1/1){
   .headeritem{
     font-size:30px;
   }

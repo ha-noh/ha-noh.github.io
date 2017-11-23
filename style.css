@@ -171,12 +171,12 @@ body{
 /*
  * layout that responds to vertical mobile aspect ratios
  */
-@media screen and (max-aspect-ratio:1/1){
+@media screen and (max-aspect-ratio:1/1) and (min-height: 800px){
   .headeritem{
     font-size:30px;
   }
   body{
-    font-size: 17px;
+    font-size: 18px;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 10px;

@@ -58,7 +58,7 @@ ul,li {
 .article{
   margin-top:60px;
   text-align:left;
-  max-width: 55%;
+  max-width: 100%;
   line-height: 1.5;
   font-family: 'hind-regular';
 }
@@ -180,10 +180,6 @@ body{
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
-  }
-
-  .article{
-    max-width: 100%;
   }
 
   .ghostmargin{

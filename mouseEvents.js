@@ -71,7 +71,7 @@ $(function(){
 
   $("#twitch").mouseover(function(){
     revertHighlight("#twitch");
-    highlightOnMouseover("images/soon.png","#twitch",null);
+    highlightOnMouseover("images/twitch_design.png","#twitch",null);
   });
 
   $("#aaslcproject").mouseover(function(){

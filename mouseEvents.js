@@ -76,7 +76,7 @@ $(function(){
 
   $("#aaslcproject").mouseover(function(){
     revertHighlight("#aaslcproject");
-    highlightOnMouseover("images/propic.jpg","#aaslcproject",null);
+    highlightOnMouseover("images/soundcloud_cover.png","#aaslcproject",null);
   });
 
   $("#drakextobyfox").mouseover(function(){

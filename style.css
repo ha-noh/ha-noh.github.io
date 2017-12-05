@@ -140,9 +140,13 @@ ul,li {
 }
 /*
  * layout responds to cramped window sizes/zoom
+ * Applies when (1) width <= 900px (not enough width to display image and text adjacent comfortably),
+ * and height < 1400px (height where vertical layout applies) OR
+ * (2) when height> width, and height < 1400px (height where vertical layout applies), and
+ * width < 900px (around where image is unable to be displayed comfortably)
  */
-@media screen and (min-height: 0px) and (min-width: 0px) and (max-height: 1000px) and (max-width: 1000px),
-(min-aspect-ratio: 1/1) and (max-height: 1000px) and (max-width: 1000px){
+@media screen and (max-height: 1400px) and (max-width: 800px),
+(max-aspect-ratio: 1/1) and (max-height: 1400px) and (max-width: 900px){
 
 .headeritem{
     font-size:30px;
@@ -170,8 +174,10 @@ body{
 }
 /*
  * layout that responds to vertical mobile aspect ratios
+ * Applies when browser Height > Width &&
+ * Height >= 1400px (700px for images/banner, 700px for list text)
  */
-@media screen and (max-aspect-ratio:1/1) and (min-height: 1000px){
+@media screen and (max-aspect-ratio:1/1) and (min-height: 1400px){
   .headeritem{
     font-size:30px;
   }

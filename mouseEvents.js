@@ -22,7 +22,7 @@ $(function(){
   });
   $("#essayheader").mouseover(function(){
     revertHighlight("#essayheader");
-    highlightOnMouseover("images/essaycover.png","#essayheader","#essayUL");
+    highlightOnMouseover("images/essaycover.jpg","#essayheader","#essayUL");
   });
 
   /**
@@ -46,7 +46,7 @@ $(function(){
 
   $("#skphoto").mouseover(function(){
     revertHighlight("#skphoto");
-    highlightOnMouseover("images/skphoto.png","#skphoto", null);
+    highlightOnMouseover("images/skphoto.jpg","#skphoto", null);
   });
 
   $("#identitymusicessay").mouseover(function(){

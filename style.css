@@ -141,8 +141,8 @@ ul,li {
 /*
  * layout responds to cramped window sizes/zoom
  */
-@media screen and (min-height: 0px) and (min-width: 0px) and (max-height: 800px) and (max-width: 800px),
-(min-aspect-ratio: 1/1) and (max-height: 800px) and (max-width: 800px){
+@media screen and (min-height: 0px) and (min-width: 0px) and (max-height: 1000px) and (max-width: 1000px),
+(min-aspect-ratio: 1/1) and (max-height: 1000px) and (max-width: 1000px){
 
 .headeritem{
     font-size:30px;
@@ -171,7 +171,7 @@ body{
 /*
  * layout that responds to vertical mobile aspect ratios
  */
-@media screen and (max-aspect-ratio:1/1) and (min-height: 800px){
+@media screen and (max-aspect-ratio:1/1) and (min-height: 1000px){
   .headeritem{
     font-size:30px;
   }

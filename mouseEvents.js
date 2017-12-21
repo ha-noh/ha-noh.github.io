@@ -14,7 +14,7 @@ $(function(){
   });
   $("#designheader").mouseover(function(){
     revertHighlight("#designheader");
-    highlightOnMouseover("images/designcover.png","#designheader","#designUL");
+    highlightOnMouseover("images/soon.png","#designheader","#designUL");
   });
   $("#photoheader").mouseover(function(){
     revertHighlight("#photoheader");

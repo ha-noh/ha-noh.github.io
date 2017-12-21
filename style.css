@@ -44,6 +44,20 @@ ul,li {
   padding-left: 0;
 }
 
+iframe.playlist {
+  display: block;
+  margin: auto;
+}
+
+li.content p{
+  text-align: center;
+}
+
+li.content img{
+  display: block;
+  margin: auto;
+}
+
 #head{
   position:fixed;
   top: 0;

@@ -54,19 +54,14 @@ $(function(){
     highlightOnMouseover("images/essay.png","#identitymusicessay", null);
   });
 
-  $("#faceb00k").mouseover(function(){
-    revertHighlight("#faceb00k");
-    highlightOnMouseover("images/soon.png","#faceb00k",null);
-  });
-
   $("#originalmusic").mouseover(function(){
     revertHighlight("#originalmusic");
-    highlightOnMouseover("images/soon.png","#originalmusic",null);
+    highlightOnMouseover("images/coverimages/season1.png","#originalmusic",null);
   });
 
   $("#playlists").mouseover(function(){
     revertHighlight("#playlists");
-    highlightOnMouseover("images/soon.png","#playlists",null);
+    highlightOnMouseover("images/coverimages/curatedplaylists.png","#playlists",null);
   });
 
   $("#twitch").mouseover(function(){

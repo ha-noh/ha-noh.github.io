@@ -6,7 +6,7 @@ $(function(){
   //mouseover checks for category headers
   $("#softwareheader").mouseover(function(){
     revertHighlight("#softwareheader");
-    highlightOnMouseover("images/soon.png","#softwareheader","#softwareUL");
+    highlightOnMouseover("images/coverimages/software.png","#softwareheader","#softwareUL");
   });
   $("#musicheader").mouseover(function(){
     revertHighlight("#musicheader");
@@ -71,7 +71,7 @@ $(function(){
 
   $("#aaslcproject").mouseover(function(){
     revertHighlight("#aaslcproject");
-    highlightOnMouseover("images/soundcloud_cover.png","#aaslcproject",null);
+    highlightOnMouseover("images/coverimages/aaslc.png","#aaslcproject",null);
   });
 
   $("#drakextobyfox").mouseover(function(){

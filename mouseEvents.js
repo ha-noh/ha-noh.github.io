@@ -51,7 +51,7 @@ $(function(){
 
   $("#identitymusicessay").mouseover(function(){
     revertHighlight("#identitymusicessay");
-    highlightOnMouseover("images/essay.png","#identitymusicessay", null);
+    highlightOnMouseover("images/coverimages/essay.png","#identitymusicessay", null);
   });
 
   $("#originalmusic").mouseover(function(){
@@ -71,7 +71,7 @@ $(function(){
 
   $("#aaslcproject").mouseover(function(){
     revertHighlight("#aaslcproject");
-    highlightOnMouseover("images/coverimages/aaslc.png","#aaslcproject",null);
+    highlightOnMouseover("images/coverimages/aaslc.PNG","#aaslcproject",null);
   });
 
   $("#drakextobyfox").mouseover(function(){

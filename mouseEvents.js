@@ -41,7 +41,7 @@ $(function(){
 
   $("#aacc").mouseover(function(){
     revertHighlight("#aacc");
-    highlightOnMouseover("images/aacc.png","#aacc",null);
+    highlightOnMouseover("images/aacc_1.png","#aacc",null);
   });
 
   $("#skphoto").mouseover(function(){

@@ -10,19 +10,19 @@ $(function(){
   });
   $("#musicheader").mouseover(function(){
     revertHighlight("#musicheader");
-    highlightOnMouseover("images/musiccover.png","#musicheader", "#musicUL");
+    highlightOnMouseover("images/coverimages/musiccover.png","#musicheader", "#musicUL");
   });
   $("#designheader").mouseover(function(){
     revertHighlight("#designheader");
-    highlightOnMouseover("images/soon.png","#designheader","#designUL");
+    highlightOnMouseover("images/coverimages/soon.png","#designheader","#designUL");
   });
   $("#photoheader").mouseover(function(){
     revertHighlight("#photoheader");
-    highlightOnMouseover("images/photocover.png","#photoheader","#photoUL");
+    highlightOnMouseover("images/sk/photocover.png","#photoheader","#photoUL");
   });
   $("#essayheader").mouseover(function(){
     revertHighlight("#essayheader");
-    highlightOnMouseover("images/essaycover.jpg","#essayheader","#essayUL");
+    highlightOnMouseover("images/coverimages/essaycover.jpg","#essayheader","#essayUL");
   });
 
   /**
@@ -31,22 +31,22 @@ $(function(){
 
   $("#freeweight").mouseover(function(){
     revertHighlight("#freeweight");
-    highlightOnMouseover("images/soon.png","#freeweight",null);
+    highlightOnMouseover("images/coverimages/soon.png","#freeweight",null);
   });
 
   $("#hanoh").mouseover(function(){
     revertHighlight("#hanoh");
-    highlightOnMouseover("images/hanoh.png","#hanoh", null);
+    highlightOnMouseover("images/coverimages/hanoh.png","#hanoh", null);
   });
 
   $("#aacc").mouseover(function(){
     revertHighlight("#aacc");
-    highlightOnMouseover("images/aacc_1.png","#aacc",null);
+    highlightOnMouseover("images/aacc/aacc_1.png","#aacc",null);
   });
 
   $("#skphoto").mouseover(function(){
     revertHighlight("#skphoto");
-    highlightOnMouseover("images/skphoto.jpg","#skphoto", null);
+    highlightOnMouseover("images/sk/skphoto.jpg","#skphoto", null);
   });
 
   $("#identitymusicessay").mouseover(function(){
@@ -66,7 +66,7 @@ $(function(){
 
   $("#twitch").mouseover(function(){
     revertHighlight("#twitch");
-    highlightOnMouseover("images/twitch_design.png","#twitch",null);
+    highlightOnMouseover("images/coverimages/twitch_design.png","#twitch",null);
   });
 
   $("#aaslcproject").mouseover(function(){
@@ -76,7 +76,7 @@ $(function(){
 
   $("#drakextobyfox").mouseover(function(){
     revertHighlight("#drakextobyfox");
-    highlightOnMouseover("images/drakextobyfox.png","#drakextobyfox",null);
+    highlightOnMouseover("images/coverimages/drakextobyfox.png","#drakextobyfox",null);
   });
 
 

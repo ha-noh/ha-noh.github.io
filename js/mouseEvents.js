@@ -51,17 +51,17 @@ $(function(){
 
   $("#identitymusicessay").mouseover(function(){
     revertHighlight("#identitymusicessay");
-    highlightOnMouseover("./images/coverimages/essay.png","#identitymusicessay", null);
+    highlightOnMouseover("./images/coverimages/essay.jpg","#identitymusicessay", null);
   });
 
   $("#originalmusic").mouseover(function(){
     revertHighlight("#originalmusic");
-    highlightOnMouseover("./images/coverimages/season1.png","#originalmusic",null);
+    highlightOnMouseover("./images/coverimages/season1.jpg","#originalmusic",null);
   });
 
   $("#playlists").mouseover(function(){
     revertHighlight("#playlists");
-    highlightOnMouseover("./images/coverimages/curatedplaylists.png","#playlists",null);
+    highlightOnMouseover("./images/coverimages/curatedplaylists.jpg","#playlists",null);
   });
 
   $("#twitch").mouseover(function(){

@@ -76,7 +76,7 @@ $(function(){
 
   $("#drakextobyfox").mouseover(function(){
     revertHighlight("#drakextobyfox");
-    highlightOnMouseover("./images/memes/drakextobyfox.png","#drakextobyfox",null);
+    highlightOnMouseover("./images/coverimages/drakextobyfox.png","#drakextobyfox",null);
   });
 
 

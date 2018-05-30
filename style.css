@@ -83,6 +83,14 @@ li.content img{
   padding: 2%;
 }
 
+.colortoggle{
+  border: none;
+  margin: 0;
+  padding: 0;
+  height: 23px;
+  width: 23px;
+}
+
 .firstelement{
   margin-top: 60px;
 }

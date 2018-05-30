@@ -36,7 +36,7 @@ $(function(){
 
   $("#hanoh").mouseover(function(){
     revertHighlight("#hanoh");
-    highlightOnMouseover("./images/coverimages/hanoh.png","#hanoh", null);
+    highlightOnMouseover("./images/sk/photocover.png","#hanoh", null);
   });
 
   $("#aacc").mouseover(function(){

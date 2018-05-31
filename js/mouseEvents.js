@@ -18,11 +18,11 @@ $(function(){
   });
   $("#photoheader").mouseover(function(){
     revertHighlight("#photoheader");
-    highlightOnMouseover("./images/sk/photocover.png","#photoheader","#photoUL");
+    highlightOnMouseover("./images/coverimages/generic.png","#photoheader","#photoUL");
   });
   $("#essayheader").mouseover(function(){
     revertHighlight("#essayheader");
-    highlightOnMouseover("./images/coverimages/essaycover.jpg","#essayheader","#essayUL");
+    highlightOnMouseover("./images/coverimages/essaycover.png","#essayheader","#essayUL");
   });
 
   /**
@@ -36,32 +36,32 @@ $(function(){
 
   $("#hanoh").mouseover(function(){
     revertHighlight("#hanoh");
-    highlightOnMouseover("./images/sk/photocover.png","#hanoh", null);
+    highlightOnMouseover("./images/coverimages/generic.png","#hanoh", null);
   });
 
   $("#aacc").mouseover(function(){
     revertHighlight("#aacc");
-    highlightOnMouseover("./images/aacc/aacc_1.png","#aacc",null);
+    highlightOnMouseover("./images/coverimages/aacc.png","#aacc",null);
   });
 
   $("#skphoto").mouseover(function(){
     revertHighlight("#skphoto");
-    highlightOnMouseover("./images/sk/skphoto.jpg","#skphoto", null);
+    highlightOnMouseover("./images/coverimages/skphoto.png","#skphoto", null);
   });
 
   $("#identitymusicessay").mouseover(function(){
     revertHighlight("#identitymusicessay");
-    highlightOnMouseover("./images/coverimages/essay.jpg","#identitymusicessay", null);
+    highlightOnMouseover("./images/coverimages/essay.png","#identitymusicessay", null);
   });
 
   $("#originalmusic").mouseover(function(){
     revertHighlight("#originalmusic");
-    highlightOnMouseover("./images/coverimages/season1.jpg","#originalmusic",null);
+    highlightOnMouseover("./images/coverimages/season1.png","#originalmusic",null);
   });
 
   $("#playlists").mouseover(function(){
     revertHighlight("#playlists");
-    highlightOnMouseover("./images/coverimages/curatedplaylists.jpg","#playlists",null);
+    highlightOnMouseover("./images/coverimages/curatedplaylists.png","#playlists",null);
   });
 
   $("#twitch").mouseover(function(){

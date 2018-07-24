@@ -27,6 +27,7 @@ $(function(){
 
   /**
     * mouseover checks for list items
+    * png over jpeg to preserve transparency
   **/
 
   $("#freeweight").mouseover(function(){
@@ -79,6 +80,10 @@ $(function(){
     highlightOnMouseover("./images/coverimages/drakextobyfox.png","#drakextobyfox",null);
   });
 
+  $("#artwork").mouseover(function(){
+    revertHighlight("#artwork");
+    highlightOnMouseover("./images/coverimages/artwork.jpg","#artwork",null);
+  });
 
   //convenience function for resetting highlighted item
   function revertHighlight(currtag){

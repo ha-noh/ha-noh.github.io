@@ -74,7 +74,8 @@ li.content img{
   margin-top:60px;
   text-align:left;
   width: 56%;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   line-height: 1.5;
   font-family: 'hind-regular';
 }

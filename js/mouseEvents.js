@@ -6,23 +6,23 @@ $(function(){
   //mouseover checks for category headers
   $("#softwareheader").mouseover(function(){
     revertHighlight("#softwareheader");
-    highlightOnMouseover("./images/coverimages/software.png","#softwareheader","#softwareUL");
+    highlightOnMouseover("./images/coverimages/software.jpg","#softwareheader","#softwareUL");
   });
   $("#musicheader").mouseover(function(){
     revertHighlight("#musicheader");
-    highlightOnMouseover("./images/coverimages/musiccover.png","#musicheader", "#musicUL");
+    highlightOnMouseover("./images/coverimages/music.jpg","#musicheader", "#musicUL");
   });
   $("#designheader").mouseover(function(){
     revertHighlight("#designheader");
-    highlightOnMouseover("./images/coverimages/soon.png","#designheader","#designUL");
+    highlightOnMouseover("./images/coverimages/soon.jpg","#designheader","#designUL");
   });
   $("#photoheader").mouseover(function(){
     revertHighlight("#photoheader");
-    highlightOnMouseover("./images/coverimages/generic.png","#photoheader","#photoUL");
+    highlightOnMouseover("./images/coverimages/generic.jpg","#photoheader","#photoUL");
   });
   $("#essayheader").mouseover(function(){
     revertHighlight("#essayheader");
-    highlightOnMouseover("./images/coverimages/essaycover.png","#essayheader","#essayUL");
+    highlightOnMouseover("./images/coverimages/analysis.jpg","#essayheader","#essayUL");
   });
 
   /**
@@ -32,52 +32,52 @@ $(function(){
 
   $("#freeweight").mouseover(function(){
     revertHighlight("#freeweight");
-    highlightOnMouseover("./images/coverimages/soon.png","#freeweight",null);
+    highlightOnMouseover("./images/coverimages/soon.jpg","#freeweight",null);
   });
 
   $("#hanoh").mouseover(function(){
     revertHighlight("#hanoh");
-    highlightOnMouseover("./images/coverimages/generic.png","#hanoh", null);
+    highlightOnMouseover("./images/coverimages/generic.jpg","#hanoh", null);
   });
 
   $("#aacc").mouseover(function(){
     revertHighlight("#aacc");
-    highlightOnMouseover("./images/coverimages/aacc.png","#aacc",null);
+    highlightOnMouseover("./images/coverimages/aacc.jpg","#aacc",null);
   });
 
   $("#skphoto").mouseover(function(){
     revertHighlight("#skphoto");
-    highlightOnMouseover("./images/coverimages/skphoto.png","#skphoto", null);
+    highlightOnMouseover("./images/coverimages/skphoto.jpg","#skphoto", null);
   });
 
   $("#identitymusicessay").mouseover(function(){
     revertHighlight("#identitymusicessay");
-    highlightOnMouseover("./images/coverimages/essay.png","#identitymusicessay", null);
+    highlightOnMouseover("./images/coverimages/essay.jpg","#identitymusicessay", null);
   });
 
   $("#originalmusic").mouseover(function(){
     revertHighlight("#originalmusic");
-    highlightOnMouseover("./images/coverimages/season1.png","#originalmusic",null);
+    highlightOnMouseover("./images/coverimages/season1.jpg","#originalmusic",null);
   });
 
   $("#playlists").mouseover(function(){
     revertHighlight("#playlists");
-    highlightOnMouseover("./images/coverimages/curatedplaylists.png","#playlists",null);
+    highlightOnMouseover("./images/coverimages/generic.jpg","#playlists",null);
   });
 
   $("#twitch").mouseover(function(){
     revertHighlight("#twitch");
-    highlightOnMouseover("./images/coverimages/twitch_design.png","#twitch",null);
+    highlightOnMouseover("./images/coverimages/twitch.jpg","#twitch",null);
   });
 
   $("#aaslcproject").mouseover(function(){
     revertHighlight("#aaslcproject");
-    highlightOnMouseover("./images/coverimages/aaslc.PNG","#aaslcproject",null);
+    highlightOnMouseover("./images/coverimages/aaslc.jpg","#aaslcproject",null);
   });
 
   $("#drakextobyfox").mouseover(function(){
     revertHighlight("#drakextobyfox");
-    highlightOnMouseover("./images/coverimages/drakextobyfox.png","#drakextobyfox",null);
+    highlightOnMouseover("./images/coverimages/drakextobyfox.jpg","#drakextobyfox",null);
   });
 
   $("#artwork").mouseover(function(){

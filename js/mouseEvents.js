@@ -25,10 +25,10 @@ $(function(){
     highlightOnMouseover("./images/coverimages/analysis.jpg","#essayheader","#essayUL");
   });
 
-  /**
-    * mouseover checks for list items
-    * png over jpeg to preserve transparency
-  **/
+  /*
+   * mouseover checks for list items
+   * png over jpeg to preserve transparency
+   */
 
   $("#freeweight").mouseover(function(){
     revertHighlight("#freeweight");

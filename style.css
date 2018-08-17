@@ -1,17 +1,14 @@
 @charset "UTF-8";
-@font-face{
-  font-family: 'uni0553';
-  src: url('fonts/uni0553-webfont.woff') format('woff'),
-  url('fonts/uni0553-webfont.ttf') format('truetype');
-}
+
 @font-face{
   font-family: 'DeterminationMono';
   src: url('fonts/DeterminationMonoWeb.woff') format('woff'),
   url('font/DTM-Mono.otf')  format('opentype');
 }
+
 @font-face{
-  font-family: 'hind-regular';
-  src: url('fonts/hind-regular-webfont.woff') format('woff');
+  font-family: 'Hack';
+  src: url('fonts/Hack-regular-webfont.woff') format('woff');
 }
 
 *{
@@ -73,11 +70,11 @@ li.content img{
 .article{
   margin-top:60px;
   text-align:left;
-  width: 56%;
+  width: 52%;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.5;
-  font-family: 'hind-regular';
+  font-family: 'Hack';
 }
 
 .border{
@@ -117,7 +114,13 @@ li.content img{
   color: #0b1111;
   padding: 1%;
 }
-
+.pstyle{
+  width: 60%;
+  margin: auto;
+  margin-top: 20px;
+  text-align: left;
+  font-family:'Hack';
+}
 .rightbox{
   height: 80%;
   top: 130px;

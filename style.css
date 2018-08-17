@@ -75,6 +75,7 @@ li.content img{
   margin-right: auto;
   line-height: 1.5;
   font-family: 'Hack';
+  font-size: 18px;
 }
 
 .border{
@@ -120,6 +121,7 @@ li.content img{
   margin-top: 20px;
   text-align: left;
   font-family:'Hack';
+  font-size: 18px;
 }
 .rightbox{
   height: 80%;

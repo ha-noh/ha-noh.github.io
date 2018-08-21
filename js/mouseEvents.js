@@ -62,7 +62,7 @@ $(function(){
 
   $("#playlists").mouseover(function(){
     revertHighlight("#playlists");
-    highlightOnMouseover("./images/coverimages/generic.jpg","#playlists",null);
+    highlightOnMouseover("./images/coverimages/blank.jpg","#playlists",null);
   });
 
   $("#twitch").mouseover(function(){
@@ -83,6 +83,11 @@ $(function(){
   $("#artwork").mouseover(function(){
     revertHighlight("#artwork");
     highlightOnMouseover("./images/coverimages/artwork.jpg","#artwork",null);
+  });
+
+  $("#sfxLetter").mouseover(function(){
+    revertHighlight("#sfxLetter");
+    highlightOnMouseover("./images/coverimages/blank.jpg","#sfxLetter",null);
   });
 
   //convenience function for resetting highlighted item

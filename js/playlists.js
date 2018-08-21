@@ -1,4 +1,4 @@
-$(function(){
+$(document).ready(function(){
   /*
    * (1) inserts and shows playlist iframe on first click
    * (2) Finds the child of the button being clicked on and hides
@@ -54,7 +54,7 @@ $(function(){
     else
       $("#abstract_body").toggle();
   });
-  
+
   /* function template
   $("#beef").click(function(){
     var body= document.getElementById("beef_body");

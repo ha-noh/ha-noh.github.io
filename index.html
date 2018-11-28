@@ -3,62 +3,49 @@
 <head>
   <meta charset="utf-8">
   <title>h.a.noh</title>
-  <link rel="icon" href="images/icon.png">
-  <link rel="stylesheet" href="style.css" type="text/css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="js/mouseEvents.js"></script>
-  <script src="js/globalnav.js"></script>
+  <style>
+    @font-face{
+      font-family: 'd-din';
+      src: url('fonts/d-din-webfont.woff') format('woff');
+    }
+    @font-face{
+      font-family:'josefinsans';
+      src: url('fonts/josefinsans-regular-webfont.woff') format('woff');
+    }
+    body{
+      background-image: url("images/bg_pixels.png");
+      text-align: center;
+      margin-top: 10%;
+    }
+    h2{
+      font-family:'d-din';
+    }
+    h1{
+      font-family:'josefinsans';
+    }
+    img{
+      height: 30%;
+      width:30%;
+      align-content: center;
+    }
+  </style>
 </head>
-
-<header id="nav_placeholder"></header>
-
-<section class="leftbox">
-  <p class="border" id="lefttext">
-    * Hello! <br>
-    * Stop by every once in a while to see what I'm up to<br>
-    * Thanks for your curiosity o7
-  </p>
-
-  <!-- <a href="software_summary.html"><h3 class="negative" id="softwareheader">software projects</h3></a> -->
-  <h3 class="negative" id="softwareheader">software projects</h3>
-  <ul class="underline" id="softwareUL">
-    <li id="freeweight">
-      +10k productivity app | ANDROID | COMING SOON!</li>
-  </ul>
-
-  <!--<a href="music_summary.html"><h3 class="negative" id="musicheader">music</h3></a> -->
-  <h3 class="negative" id="musicheader">music</h3>
-  <ul class="underline" id="musicUL">
-    <li><a href="https://soundcloud.com/andrew-hn/sets/season1" id="originalmusic" target="_blank">+biweekly music | ORGINAL CONTENT | SOUNDCLOUD</a></li>
-    <li><a href="https://soundcloud.com/andrew-hn/school-project" id="aaslcproject" target="_blank">
-      +aaslc project | REMIX </a></li>
-    <li><a href="drakextobyfox" id="drakextobyfox"> +Drake x Toby Fox | REMIX | MEME </a></li>
-    <li><a href="playlists" id="playlists">+curated playlists</a></li>
-  </ul>
-
-  <!-- <a href="graphic_summary.html"><h3 class="negative" id="designheader">graphic design & illustrations</h3></a> -->
-  <h3 class="negative" id="designheader">graphic design & illustrations</h3>
-  <ul class="underline" id="designUL">
-    <li id="hanoh">+ha-noh.github.io | WEB DESIGN | GRAPHIC DESIGN</li>
-    <li><a href="aaccflyers" id="aacc">+RUAACC flyers | GRAPHIC DESIGN</a></li>
-    <li><a href="sfxLettering" id="sfxLetter">+manga sfx lettering</a></li>
-    <li><a href="artwork" id="artwork">+artwork</a></li>
-    <li><a href="twitchdesigns" id="twitch">+twitch.tv channel branding</a></li>
-  </ul>
-
-  <!--<a href="photo_summary.html"><h3 class="negative" id="photoheader">photography</h3></a>-->
-  <h3 class="negative" id="photoheader">photography</h3>
-  <ul class="underline" id="photoUL">
-    <li><a href="skphoto" id="skphoto">+SK</a></li>
-  </ul>
-
-  <!-- <a href="essay_summary.html"><h3 class="negative" id="essayheader">essays & analyses</h3></a> -->
-  <h3 class="negative" id="essayheader">essays & analyses</h3>
-  <ul class="underline" id="essayUL">
-    <li><a href="identity_culture_essay" id="identitymusicessay">
-      +Identity and Its Basis In the Cultural Appropriation of Music</a> </li>
-  </ul>
-</section>
-<img src="images/coverimages/blank.jpg" class="rightbox" id="rightimg">
-<p class="ghostmargin">10px</p>
+  <div class="rellax" data-rellax-speed="7" style="">
+    <h1> I'm currently undergoing some massive redesigns </h1>
+    <h2> The previous site wasn't an expression of what I imagined; <br>
+         many hours were spent refining that design but in the end<br>
+         a building on a shaky foundation will never be stable. <br>
+         <br>
+         The intent is that this next iteration will be <br>
+         an honest reflection of the things I love, <br>
+         have made, and have learned.<br>
+         Hope you come back soon!
+    </h2>
+  </div>
+  <img src="images/charselect/drb.png" class="rellax" data-rellax-speed="-2">
+  <h1> - hanoh </h1>
+  <script src="js/rellax.min.js"></script>
+  <script>  // Also can pass in optional settings block
+    var rellax = new Rellax('.rellax');
+  </script>
 </html>

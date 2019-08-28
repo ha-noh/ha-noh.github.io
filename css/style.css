@@ -1,0 +1,172 @@
+@charset "utf-8";
+
+* {
+	font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 55px;
+	color: #97fae4;
+	margin-bottom:0;
+	/*text-shadow: -3px 0 #34b89a;*/
+}
+
+h2 {
+	position: absolute;
+	top: 0;
+	left:0;
+	width: 100%;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 50px;
+	color: #e72d80;
+	text-shadow: -3px 0 #ac206e;
+}
+
+header {
+	text-align: center;
+	font-size: 25px;
+	margin-bottom: 10px;
+}
+
+
+/* ============== Default, mobile layout ============== */
+.icon {
+	color:#34b89a;
+	padding: 0 20px;
+}
+.container-main {
+	display: flex;
+	flex-flow: row wrap;
+}
+.container-main > * {
+	flex: 1 100%;
+}
+.panel-topright {
+	margin-bottom: 5px;
+}
+.container-bot > * {
+	margin-bottom: 5px;
+}
+.panel img {
+	width: 100%;
+	/* height: 100%; messes with .aboutme-overlay */
+}
+.overlay {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+}
+
+/* hide overlay image in mobile layout */
+.aboutme-overlay {
+	position: absolute;
+	overflow: hidden;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 0;
+	transition: .2s ease;
+}
+
+/* animated elements & overlays */
+.panel {
+	transition: transform 0.1s;
+	position: relative;
+}
+.panel:hover {
+	transform: scale(0.95);
+}
+
+/* one last responsive hail mary for tiny viewports
+ * layout breaks around 300px width
+ */
+@media screen and (min-width:0) and (max-width: 500px) {
+	h1 {
+		font-size: 1.5em;
+	}
+	h2 {
+		font-size: 2em;
+	}
+	header {
+		font-size: 20px;
+	}
+}
+
+/* ============== Full panel display layout ============== */
+@media screen and (min-width:800px) {
+	header {
+		font-size: 18px;
+	}
+
+	.icon {
+		padding: 0 10px;
+	}
+
+	/* set up grid layout */
+	.container-topleft {
+		flex-flow: column;
+		margin-right: 5px;
+	}
+	.container-top > *, .container-topleft > * {
+		flex: 1 calc(50% - 2.5px);
+	}
+	.panel-topleft {
+		order:1;
+	}
+	.panel-midleft {
+		order:2;
+		margin-top: 5px;
+	}
+	.container-bot {
+		margin-top: 5px;
+	}
+	.panel-botleft {
+		flex: 1 calc(60% - 2.5px);
+		/*margin-right: 2.5px;*/
+	}
+	.panel-botright {
+		flex: 1 calc(40% - 2.5px);
+		margin-left: 5px;
+	}
+	.panel-topright img{
+		height: 100%;
+	}
+
+	/* hide overlay text */
+	.overlay {
+		position: absolute;
+		overflow: hidden;
+		left: 100%;
+		width: 0;
+		height: 100%;
+		text-align: center;
+	}
+
+	/* trigger css animations only in wide viewports */
+	.panel-botright:hover .aboutme-overlay {
+		height: 100%;
+	}
+
+	.panel:hover .overlay {
+		width: 100%;
+		left: 0;
+	}
+
+	.panel:hover img {
+		filter: blur(3px);
+	}
+}
+
+/* add margins when viewport is larger than max resolution images */
+@media screen and (min-width:1200px) {
+	.container-main {
+		width:1200px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

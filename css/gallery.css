@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 * {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Muli', sans-serif;
 }
 
 h1 {
@@ -15,6 +15,14 @@ h1 {
 h2 {
 	text-align: center;
 	color: #e72d80;
+}
+
+h3 {
+	text-align: left;
+	color: #e72d80;
+	font-size: 25px;
+	width: 80%;
+	margin: auto;
 }
 
 header {
@@ -46,5 +54,7 @@ header {
 }
 
 @media screen and (min-width:1200px){
-
+	h3 {
+		width: 50%;
+	}
 }

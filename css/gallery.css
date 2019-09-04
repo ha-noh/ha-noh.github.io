@@ -36,7 +36,7 @@ header {
 
 .aboutme-body {
 	width: 80%;
-	margin: auto;
+	margin: 0 auto 30px;
 	box-shadow: -3px 3px 10px -5px #1a0509;
 	padding: 10px;
 }
@@ -64,5 +64,7 @@ header {
 }
 
 @media screen and (min-width:1200px){
-
+	.aboutme-body {
+		width: 600px;
+	}
 }

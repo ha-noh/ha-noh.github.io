@@ -133,6 +133,7 @@ header {
 	.page {
 		box-shadow: -4px 4px 8px -5px #1a0509;
 		padding: 10px;
+		margin-bottom: 30px;
 	}
 
 	/* hide overlay text */

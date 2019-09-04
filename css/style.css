@@ -24,10 +24,11 @@ h2 {
 	text-shadow: -3px 0 #ac206e;
 }
 
+/* determines icon size */
 header {
 	text-align: center;
-	font-size: 25px;
-	margin-bottom: 10px;
+	font-size: 15px;
+	margin-bottom: 30px;
 }
 
 
@@ -87,13 +88,10 @@ header {
  */
 @media screen and (min-width:0) and (max-width: 500px) {
 	h1 {
-		font-size: 1.5em;
+		font-size: 2em;
 	}
 	h2 {
 		font-size: 2em;
-	}
-	header {
-		font-size: 20px;
 	}
 }
 
@@ -101,10 +99,6 @@ header {
 @media screen and (min-width:800px) {
 	header {
 		font-size: 18px;
-	}
-
-	.icon {
-		padding: 0 10px;
 	}
 
 	/* set up grid layout */
@@ -136,6 +130,10 @@ header {
 	.panel-topright img{
 		height: 100%;
 	}
+	.page {
+		box-shadow: -4px 4px 8px -5px #1a0509;
+		padding: 10px;
+	}
 
 	/* hide overlay text */
 	.overlay {
@@ -165,6 +163,9 @@ header {
 /* add margins when viewport is larger than max resolution images */
 @media screen and (min-width:1200px) {
 	.container-main {
+		width:1200px;
+	}
+	.page {
 		width:1200px;
 		margin-left: auto;
 		margin-right: auto;

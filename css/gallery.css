@@ -7,7 +7,6 @@
 h1 {
 	text-align: center;
 	font-family: 'Montserrat', sans-serif;
-	font-size: 55px;
 	color: #97fae4;
 	margin-bottom: 4px;
 }
@@ -20,14 +19,14 @@ h2 {
 h3 {
 	text-align: left;
 	color: #e72d80;
-	font-size: 25px;
-	width: 80%;
 	margin: auto;
 }
 
+/* determines icon size */
 header {
 	text-align: center;
-	font-size: 22px;
+	font-size: 15px;
+	margin-bottom: 50px;
 }
 
 .icon {
@@ -35,13 +34,21 @@ header {
 	padding: 0 20px;
 }
 
+.aboutme-body {
+	width: 80%;
+	margin: auto;
+	box-shadow: -3px 3px 10px -5px #1a0509;
+	padding: 10px;
+}
+
+.profile {
+	width: 100%;
+}
+
 /*====== Full layout ======*/
-@media screen and (min-width:800px){
-	header {
-		font-size:18px;
-	}
-	.icon {
-		padding: 0 10px;
+@media screen and (min-width:700px){
+	h1 {
+		font-size: 55px;
 	}
 	.container-main {
 		display: flex;
@@ -50,11 +57,12 @@ header {
 	.category {
 		flex: 1 25%;
 	}
+	.aboutme-body {
+		width: 50%;
+	}
 
 }
 
 @media screen and (min-width:1200px){
-	h3 {
-		width: 50%;
-	}
+
 }

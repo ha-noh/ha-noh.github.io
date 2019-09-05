@@ -3,44 +3,54 @@
 * {
 	font-family: 'Muli', sans-serif;
 }
-
 h1 {
 	text-align: center;
 	font-family: 'Montserrat', sans-serif;
 	color: #97fae4;
 	margin-bottom: 4px;
 }
-
 h2 {
 	text-align: center;
 	color: #e72d80;
 }
-
 h3 {
 	text-align: left;
 	color: #e72d80;
 	margin: auto;
 }
-
+button {
+	border: none;
+}
 /* determines icon size */
 header {
 	text-align: center;
 	font-size: 15px;
 	margin-bottom: 50px;
 }
-
 .icon {
 	color:#34b89a;
 	padding: 0 20px;
 }
-
+/* gallery specific classes */
+.category {
+	display: flex;
+	flex-flow: row;
+}
+.container-gallery {
+	display: flex;
+	flex-flow: column;
+}
+.sidebar {
+	display: flex;
+	flex-flow: column;
+}
+/* about me specific classes*/
 .aboutme-body {
 	width: 80%;
 	margin: 0 auto 30px;
 	box-shadow: -3px 3px 10px -5px #1a0509;
 	padding: 10px;
 }
-
 .profile {
 	width: 100%;
 }
@@ -50,15 +60,9 @@ header {
 	h1 {
 		font-size: 55px;
 	}
-	.container-main {
-		display: flex;
-		flex-flow: row;
-	}
-	.category {
-		flex: 1 25%;
-	}
 	.aboutme-body {
-		width: 50%;
+		min-width: 547px;
+		max-width: 600px;
 	}
 
 }

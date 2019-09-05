@@ -15,23 +15,36 @@
 	</script>
 	<title>gallery</title>
 </head>
-<header>
-	<h1>gallery</h1>
-	<div id="nav-placeholder"></div>
-</header>
+
+
 <body>
-	<main class="container-main">
-		<article class="category">
+	<header>
+		<h1>gallery</h1>
+		<nav id="nav-placeholder"></nav>
+	</header>
+
+	<main class="container-gallery">
+		<nav class="sidebar">
+			<button class="tablink" onclick="openCategory(evt, 'sketches')">Sketches &amp; Studies</button>
+			<button class="tablink" onclick="openCategory(evt, 'illustrations')">Illustrations</button>
+			<button class="tablink" onclick="openCategory(evt, 'flyers')">Flyers &amp; Social Media</button>
+			<button class="tablink" onclick="openCategory(evt, 'photos')">Photo Edits</button>
+		</nav>
+		
+		<article class="category sketches">
+			<h2>Sketches &amp; Studies</h2>
+		</article>
+
+		<article class="category illustrations">
 			<h2>Illustrations</h2>
 		</article>
-		<article class="category">
+
+		<article class="category flyers">
 			<h2>Flyers &amp; Social Media</h2>
 		</article>
-		<article class="category">
+
+		<article class="category photos">
 			<h2>Photo Edits</h2>
-		</article>
-		<article class="category">
-			<h2>Sketches &amp; Studies</h2>
 		</article>
 	</main>
 </body>

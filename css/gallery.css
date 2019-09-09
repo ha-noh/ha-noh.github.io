@@ -44,6 +44,12 @@ header {
 	display: flex;
 	flex-flow: column;
 }
+.displayed {
+	display: block;
+}
+.hidden {
+	display: none;
+}
 /* about me specific classes*/
 .aboutme-body {
 	width: 80%;

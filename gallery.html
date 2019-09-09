@@ -21,25 +21,25 @@
 
 	<main class="container-gallery">
 		<nav class="sidebar">
-			<button class="tablink" onclick="openCategory(evt, 'sketches')">Sketches &amp; Studies</button>
-			<button class="tablink" onclick="openCategory(evt, 'illustrations')">Illustrations</button>
-			<button class="tablink" onclick="openCategory(evt, 'flyers')">Flyers &amp; Social Media</button>
-			<button class="tablink" onclick="openCategory(evt, 'photos')">Photo Edits</button>
+			<button class="categoryLink active" onclick="openCategory(event, '.sketches')">Sketches &amp; Studies</button>
+			<button class="categoryLink" onclick="openCategory(event, '.illustrations')">Illustrations</button>
+			<button class="categoryLink" onclick="openCategory(event, '.flyers')">Flyers &amp; Social Media</button>
+			<button class="categoryLink" onclick="openCategory(event, '.photos')">Photo Edits</button>
 		</nav>
 		
-		<article class="category sketches">
+		<article class="category sketches displayed">
 			<h2>Sketches &amp; Studies</h2>
 		</article>
 
-		<article class="category illustrations">
+		<article class="category illustrations hidden">
 			<h2>Illustrations</h2>
 		</article>
 
-		<article class="category flyers">
+		<article class="category flyers hidden">
 			<h2>Flyers &amp; Social Media</h2>
 		</article>
 
-		<article class="category photos">
+		<article class="category photos hidden">
 			<h2>Photo Edits</h2>
 		</article>
 	</main>

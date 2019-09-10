@@ -20,7 +20,6 @@ h3 {
 }
 article img {
 	width: 100%;
-	height: auto;
 }
 /* determines icon size */
 header {
@@ -99,16 +98,18 @@ header {
 }
 
 /*====== Full layout ======*/
-@media screen and (min-width:700px){
+@media screen and (min-width:700px) {
 	h1 {
 		font-size: 55px;
 	}
 	article img {
-		width: 49%;
+		width: 49.5%;
+		object-fit: cover;
+		margin-bottom: 5px;
 	}
 	.gallery {
 		flex-flow: row wrap;
-		align-items: flex-start;
+		justify-content: space-between;
 	}
 	.aboutme-body {
 		min-width: 547px;
@@ -117,10 +118,24 @@ header {
 	.openButton {
 		top: 55px;
 	}
+	
 }
-
-@media screen and (min-width:1200px){
+@media screen and (min-width:900px) {
+	article img {
+		width: 33%;
+	}
+}
+@media screen and (min-width:1200px) {
 	.aboutme-body {
 		width: 600px;
+	}
+	article img {
+		width: 24.75%;
+	}
+}
+@media screen and (min-width:1500px) {
+	.gallery {
+		width: 1500px;
+		margin: auto;
 	}
 }

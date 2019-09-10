@@ -20,6 +20,7 @@ h3 {
 }
 article img {
 	width: 100%;
+	/*margin: 0 0 3px;*/
 }
 /* determines icon size */
 header {
@@ -105,11 +106,10 @@ header {
 	article img {
 		width: 49.5%;
 		object-fit: cover;
-		margin-bottom: 5px;
 	}
 	.gallery {
 		flex-flow: row wrap;
-		justify-content: space-between;
+		justify-content: flex-start;
 	}
 	.aboutme-body {
 		min-width: 547px;
@@ -118,7 +118,6 @@ header {
 	.openButton {
 		top: 55px;
 	}
-	
 }
 @media screen and (min-width:900px) {
 	article img {

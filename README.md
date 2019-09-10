@@ -1,5 +1,5 @@
-# manga-website-design
-Redesigned personal website that uses flexbox and other css magic to visually present my work
+#ha-noh.github.io
+A redesigned personal website that uses css & js magic to flex(box) my work
 
 ## Testing 
 1) run `python -m http.server 8000` in terminal from site's root directory
@@ -14,3 +14,5 @@ Redesigned personal website that uses flexbox and other css magic to visually pr
 6) Move down taborder of non-menu items when side navigation bar is open
 7) Add Aria labels to all buttons?
 8) Have navbar icons look more organized and not floating in space
+9) Change how image height is determined in the gallery
+10) Have the home page panels determine the landing tab in the gallery

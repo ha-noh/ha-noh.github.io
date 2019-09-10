@@ -1,15 +1,23 @@
 <!-- navbar html is localized to this file for convenience -->
 <script>
+		if(window.sessionStorage.getItem('nightmode') == 'true'){
+			toggleNightmode();
+			//doesn't need to wait for DOM to be ready since the call to this file already does
+		}
+
 		function toggleNightmode(){
 			document.querySelector('html').style.backgroundColor= '#1d1e1f';
 			document.querySelector('.fa-sun').style.display= 'inline';
 			document.querySelector('.fa-moon').style.display= 'none';
+			window.sessionStorage.setItem('nightmode','true');
+			console.log('nightmode set');
 		}
 
 		function toggleLightmode(){
 			document.querySelector('html').style.backgroundColor= 'white';
 			document.querySelector('.fa-sun').style.display='none';
 			document.querySelector('.fa-moon').style.display= 'inline';
+			window.sessionStorage.setItem('nightmode','false');
 		}
 </script>
 

@@ -8,11 +8,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:900i|Muli&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/e39645052f.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script>
-		$(document).ready(function() {
-  			$("#nav-placeholder").load("html/navbar.html");
-		});
-	</script>
+	<script src="js/homepage.js"></script>
 	<title>stuff by andrew</title>
 </head>
 
@@ -63,7 +59,7 @@
 
 		<div class="container-main container-bot">
 			<article class="panel panel-botleft" aria-label="Design and Edits Article">
-				<a href="gallery">
+				<a href="gallery" onclick="openDesignCategory()">
 					<picture>
 						<source srcset="images/bot-left-small.png" media="(max-width: 650px)">
 						<img src="images/bot-left.png" alt="image for design and edits article">

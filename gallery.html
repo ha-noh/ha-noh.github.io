@@ -21,12 +21,14 @@
 
 	<main class="container-gallery">
 		<nav class="sidebar">
+			<button class="closeButton" onclick="closeSidebar()">&times;</button>
 			<button class="categoryLink active" onclick="openCategory(event, '.sketches')">Sketches &amp; Studies</button>
 			<button class="categoryLink" onclick="openCategory(event, '.illustrations')">Illustrations</button>
 			<button class="categoryLink" onclick="openCategory(event, '.flyers')">Flyers &amp; Social Media</button>
 			<button class="categoryLink" onclick="openCategory(event, '.photos')">Photo Edits</button>
 		</nav>
-		
+		<span class="fas fa-bars fa-2x openButton" onclick="openSidebar()"></span>
+
 		<article class="category sketches displayed">
 			<h2>Sketches &amp; Studies</h2>
 		</article>

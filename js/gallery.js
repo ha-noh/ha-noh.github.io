@@ -24,3 +24,11 @@ function openCategory(e, categoryName){
 	newCategory.classList.remove('hidden');
 	e.currentTarget.className += ' active';
 }
+
+function openSidebar(){
+	document.querySelector('.sidebar').style.width = '250px';
+}
+
+function closeSidebar(){
+	document.querySelector('.sidebar').style.width = '0';
+}

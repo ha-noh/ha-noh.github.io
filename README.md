@@ -7,6 +7,10 @@ Redesigned personal website that uses flexbox and other css magic to visually pr
 
 ## TODO
 1) Create a landing page or page overlay for every panel -  right now some panels just link to external pages without any context
-2) Add dark borders to panels & try out background images
+2) ~~Add dark borders to panels & try out background images~~
 3) Pass nightmode state between pages
-4) localize navbar html & css to one file
+4) ~~Localize navbar html & css to one file~~
+5) Maybe move the gallery hamburger icon to somewhere closer to the rest of the content
+6) Move down taborder of non-menu items when side navigation bar is open
+7) Add Aria labels to all buttons?
+8) Have navbar icons look more organized and not floating in space

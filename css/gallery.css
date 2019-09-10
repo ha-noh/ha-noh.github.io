@@ -18,7 +18,10 @@ h3 {
 	color: #e72d80;
 	margin: auto;
 }
-
+article img {
+	width: 100%;
+	height: auto;
+}
 /* determines icon size */
 header {
 	text-align: center;
@@ -31,12 +34,9 @@ header {
 }
 
 /* gallery specific classes */
-.category {
+.gallery {
 	display: flex;
-	flex-flow: row;
-}
-.container-gallery {
-
+	flex-flow: column;
 }
 .sidebar {
 	display: flex;
@@ -55,9 +55,8 @@ header {
 	position: absolute;
 	top: 25px;
 	left: 25px;
-}
-.closeButton {
-
+	border: none;
+	background-color: inherit;
 }
 .sidebar {
 	height: 100%;
@@ -71,15 +70,21 @@ header {
 	transition: 0.4s;
 }
 .sidebar button {
-	padding: 10px 5px 10px;
+	padding: 20px 5px 20px;
 	border: none;
-	font-size: 25px;
+	font-size: 23px;
 	color: #e72d80;
 	background-color: #131414;
-	transition: 0.5s;
+	text-align: left;
+	white-space: pre;
 }
 .sidebar button:hover {
 	background-color: #3b1f2b;
+}
+.sidebar .closeButton {
+	font-size: 45px;
+	text-align: right;
+	padding: 0 10px 0 0;
 }
 
 /* about me specific classes*/
@@ -97,6 +102,13 @@ header {
 @media screen and (min-width:700px){
 	h1 {
 		font-size: 55px;
+	}
+	article img {
+		width: 49%;
+	}
+	.gallery {
+		flex-flow: row wrap;
+		align-items: flex-start;
 	}
 	.aboutme-body {
 		min-width: 547px;

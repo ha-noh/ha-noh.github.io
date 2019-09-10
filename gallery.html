@@ -19,7 +19,9 @@
 		<nav id="nav-placeholder"></nav>
 	</header>
 
-	<main class="container-gallery">
+	<main>
+		<button class="fas fa-bars fa-2x openButton" onclick="openSidebar()"></button>
+
 		<nav class="sidebar">
 			<button class="closeButton" onclick="closeSidebar()">&times;</button>
 			<button class="categoryLink active" onclick="openCategory(event, '.sketches')">Sketches &amp; Studies</button>
@@ -27,10 +29,15 @@
 			<button class="categoryLink" onclick="openCategory(event, '.flyers')">Flyers &amp; Social Media</button>
 			<button class="categoryLink" onclick="openCategory(event, '.photos')">Photo Edits</button>
 		</nav>
-		<span class="fas fa-bars fa-2x openButton" onclick="openSidebar()"></span>
 
 		<article class="category sketches displayed">
 			<h2>Sketches &amp; Studies</h2>
+			<div class="gallery">
+				<img src="images/gallery/sketches/pants.png" alt="woman in jumper painted from reference">
+				<img src="images/gallery/sketches/flapjack.png" alt="stylized octopus mermaid">
+				<img src="images/gallery/sketches/mural.png" alt="collage of various sketches">
+				<img src="images/gallery/sketches/ribbongirl.png" alt="stylized bust of a girl with a ribbon">
+			</div>
 		</article>
 
 		<article class="category illustrations hidden">

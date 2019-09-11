@@ -37,7 +37,7 @@ function closeSidebar(){
 // checks which link was clicked to reach this page
 if(window.sessionStorage.getItem('galleryLanding') == 'design'){
 	//document.querySelector('.design-nav-button').click();
-	openCategory(e,'.design');
+	openCategory(event,'.design');
 	//clear storage to return to default category on next page load
 	window.sessionStorage.removeItem('galleryLanding');
 }

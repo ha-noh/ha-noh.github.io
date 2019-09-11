@@ -17,13 +17,13 @@ function openCategory(e, categoryName){
 	currentCategory.classList.remove('displayed');
 
 	// remove the .active class from active category's button
-	document.querySelector('.active').classList.remove('active');
+	//document.querySelector('.active').classList.remove('active');
 
 	// open new category and add .active to its button's classes
 	let newCategory = document.querySelector(categoryName);
 	newCategory.classList.add('displayed');
 	newCategory.classList.remove('hidden');
-	e.currentTarget.className += ' active';
+	//e.currentTarget.className += ' active';
 }
 
 function openSidebar(){
@@ -36,7 +36,8 @@ function closeSidebar(){
 
 // checks which link was clicked to reach this page
 if(window.sessionStorage.getItem('galleryLanding') == 'design'){
-	document.querySelector('.design-nav-button').click();
+	//document.querySelector('.design-nav-button').click();
+	openCategory(e,'.design');
 	//clear storage to return to default category on next page load
 	window.sessionStorage.removeItem('galleryLanding');
 }

@@ -1,6 +1,13 @@
-// load navbar
+// load navbar and checks which link was clicked to reach this page
 $(document).ready(function() {
 	$('#nav-placeholder').load('html/navbar.html');
+
+	if(window.sessionStorage.getItem('galleryLanding') == 'design'){
+		//document.querySelector('.design-nav-button').click();
+		openCategory(event,'.design');
+		//clear storage to return to default category on next page load
+		window.sessionStorage.removeItem('galleryLanding');
+	}
 });
 
 //opens category based on what option is selected from the sidebar navigation
@@ -32,12 +39,4 @@ function openSidebar(){
 
 function closeSidebar(){
 	document.querySelector('.sidebar').style.width = '0';
-}
-
-// checks which link was clicked to reach this page
-if(window.sessionStorage.getItem('galleryLanding') == 'design'){
-	//document.querySelector('.design-nav-button').click();
-	openCategory(event,'.design');
-	//clear storage to return to default category on next page load
-	window.sessionStorage.removeItem('galleryLanding');
 }

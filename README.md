@@ -10,7 +10,7 @@ A redesigned personal website that uses css & js magic to flex(box) my work
 2) ~~Add dark borders to panels & try out background images~~
 3) ~~Pass nightmode state between pages~~
 4) ~~Localize navbar html & css to one file~~
-5) Maybe move the gallery hamburger icon to somewhere closer to the rest of the content
+5) ~~Maybe move the gallery hamburger icon to somewhere closer to the rest of the content~~
 6) Move down taborder of non-menu items when side navigation bar is open
 7) Add Aria labels to all buttons?
 8) Have navbar icons look more organized and not floating in space

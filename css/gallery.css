@@ -41,6 +41,7 @@ header {
 .sidebar {
 	display: flex;
 	flex-flow: column;
+	box-shadow: 5px 0 10px -3px #0d0305;
 }
 .displayed {
 	display: block;
@@ -92,8 +93,8 @@ header {
 .aboutme-body {
 	width: 80%;
 	margin: 0 auto 30px;
-	box-shadow: -3px 3px 10px -5px #1a0509;
-	padding: 10px;
+	box-shadow: 3px 5px 10px -3px #0d0305;
+	padding: 20px;
 }
 .profile {
 	width: 100%;
@@ -119,7 +120,9 @@ header {
 	.gallery-header {
 		position: sticky;
 		top: 0;
-		padding: 5px 0;
+		padding: 8px 0;
+		box-shadow: 0 5px 5px -5px #0d0305;
+		background-color: white;
 	}
 }
 @media screen and (min-width:900px) {

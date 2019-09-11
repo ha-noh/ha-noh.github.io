@@ -20,18 +20,8 @@
 	</header>
 
 	<main>
-		<button class="fas fa-bars fa-2x openButton" onclick="openSidebar()"></button>
-
-		<nav class="sidebar">
-			<button class="closeButton" onclick="closeSidebar()">&times;</button>
-			<button class="categoryLink active" onclick="openCategory(event, '.sketches')">Sketches &amp; Studies</button>
-			<button class="categoryLink" onclick="openCategory(event, '.illustrations')">Illustrations</button>
-			<button class="categoryLink design-nav-button" onclick="openCategory(event, '.design')">Social Media Design</button>
-			<button class="categoryLink" onclick="openCategory(event, '.photos')">Photo Edits</button>
-		</nav>
-	
 		<article class="category sketches displayed">
-			<h2>Sketches &amp; Studies</h2>
+			<h2 class="gallery-header"><button class="fas fa-bars fa-lg openButton" onclick="openSidebar()"></button> Sketches &amp; Studies</h2>
 			<div class="gallery">
 				<img src="images/gallery/sketches/pants.png" alt="woman in jumper painted from reference">
 				<img src="images/gallery/sketches/flapjack.png" alt="stylized octopus mermaid">
@@ -41,7 +31,7 @@
 		</article>
 
 		<article class="category illustrations hidden">
-			<h2>Illustrations</h2>
+			<h2 class="gallery-header"><button class="fas fa-bars fa-lg openButton" onclick="openSidebar()"></button>  Illustrations</h2>
 			<div class="gallery">
 				<img src="images/gallery/drawings/bmo.png" alt="BMO holding Jake shaped as an umbrella">
 				<img src="images/gallery/drawings/KDAxOW.png" alt="League of Legends KDA and Overwatch casually hanging out">
@@ -51,7 +41,7 @@
 		</article>
 
 		<article class="category design hidden">
-			<h2>Social Media Design</h2>
+			<h2 class="gallery-header"><button class="fas fa-bars fa-lg openButton" onclick="openSidebar()"></button>  Social Media Design</h2>
 			<div class="gallery">
 				<img src="images/gallery/flyers/aacc_wp.png" alt="Flyer for an event">
 				<img src="images/gallery/flyers/aacc_palny.png" alt="Flyer for an event">
@@ -64,13 +54,21 @@
 		</article>
 
 		<article class="category photos hidden">
-			<h2>Photo Edits</h2>
+			<h2 class="gallery-header"><button class="fas fa-bars fa-lg openButton" onclick="openSidebar()"></button>  Photo Edits</h2>
 			<div class="gallery">
 				<img src="images/gallery/photos/field_portrait.jpg" alt="A portrait with manga style SFX edited in">
 				<img src="images/gallery/photos/kojima_cool.png" alt="A cool photo of Hideo Kojima from the vaporwave dimension">
 				<img src="images/bot-left.png" alt="A photo of a Korean temple with an unnatural sky in the background">
 			</div>
 		</article>
+
+		<nav class="sidebar">
+			<button class="closeButton" onclick="closeSidebar()">&times;</button>
+			<button class="categoryLink active" onclick="openCategory(event, '.sketches')">Sketches &amp; Studies</button>
+			<button class="categoryLink" onclick="openCategory(event, '.illustrations')">Illustrations</button>
+			<button class="categoryLink design-nav-button" onclick="openCategory(event, '.design')">Social Media Design</button>
+			<button class="categoryLink" onclick="openCategory(event, '.photos')">Photo Edits</button>
+		</nav>
 
 		<h3 style="text-align:center"><br>The gallery is still under construction - for now please open the images in a separate tab (i.e. right clicking them) if you want a closer look!
 		</h3>

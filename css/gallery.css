@@ -75,16 +75,17 @@ header {
 	z-index: 1;
 	top: 0;
 	left: 0;
-	background-color: #131414;
+	background-color: #1f1f24;
 	overflow-x: hidden; /* disable horizontal scroll */
 	transition: 0.4s;
+	opacity: .97;
 }
 .sidebar button {
 	padding: 20px 5px 20px;
 	border: none;
 	font-size: 23px;
 	color: #e72d80;
-	background-color: #131414;
+	background-color: #1f1f24;
 	text-align: left;
 	white-space: pre;
 }

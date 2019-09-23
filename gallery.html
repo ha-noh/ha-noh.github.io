@@ -4,6 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="css/gallery.css">
+	<link rel="stylesheet" href="css/gallery-modal-style.css">
 	<link rel="icon" type="image/png" href="images/icon.png">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:900i|Muli&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/e39645052f.js"></script>
@@ -11,17 +12,15 @@
 	<script src="js/gallery.js"></script>
 	<title>gallery</title>
 </head>
-
-
 <body>
 	<header>
 		<h1>gallery</h1>
 		<nav id="nav-placeholder"></nav>
 	</header>
 
-	<main>
-		<article class="category sketches displayed">
-			<h2 class="gallery-header"><button class="fas fa-bars fa-lg openButton" onclick="openSidebar()"></button> Sketches &amp; Studies</h2>
+	<main class="gallery-modal-ready">
+		<article class="category sketches category-displayed">
+			<h2 class="gallery-header"><button class="fas fa-bars fa-lg openButton" onclick="openSidebar()"></button> Sketches & Studies</h2>
 			<div class="gallery">
 				<img src="images/gallery/sketches/pants.png" alt="woman in jumper painted from reference">
 				<img src="images/gallery/sketches/flapjack.png" alt="stylized octopus mermaid">
@@ -30,7 +29,7 @@
 			</div>
 		</article>
 
-		<article class="category illustrations hidden">
+		<article class="category illustrations category-hidden">
 			<h2 class="gallery-header"><button class="fas fa-bars fa-lg openButton" onclick="openSidebar()"></button>  Illustrations</h2>
 			<div class="gallery">
 				<img src="images/gallery/drawings/bmo.png" alt="BMO holding Jake shaped as an umbrella">
@@ -40,7 +39,7 @@
 			</div>
 		</article>
 
-		<article class="category design hidden">
+		<article class="category design category-hidden">
 			<h2 class="gallery-header"><button class="fas fa-bars fa-lg openButton" onclick="openSidebar()"></button>  Social Media Design</h2>
 			<div class="gallery">
 				<img src="images/gallery/flyers/aacc_wp.png" alt="Flyer for an event">
@@ -53,7 +52,7 @@
 			</div>
 		</article>
 
-		<article class="category photos hidden">
+		<article class="category photos category-hidden">
 			<h2 class="gallery-header"><button class="fas fa-bars fa-lg openButton" onclick="openSidebar()"></button>  Photo Edits</h2>
 			<div class="gallery">
 				<img src="images/gallery/photos/field_portrait.jpg" alt="A portrait with manga style SFX edited in">
@@ -63,15 +62,27 @@
 		</article>
 
 		<nav class="sidebar">
-			<button class="closeButton" onclick="closeSidebar()">&times;</button>
-			<button class="categoryLink active" onclick="openCategory(event, '.sketches')">Sketches &amp; Studies</button>
-			<button class="categoryLink" onclick="openCategory(event, '.illustrations')">Illustrations</button>
-			<button class="categoryLink design-nav-button" onclick="openCategory(event, '.design')">Social Media Design</button>
-			<button class="categoryLink" onclick="openCategory(event, '.photos')">Photo Edits</button>
+			<button class="closeButton" onclick="closeSidebar()" tabindex="-1">×</button>
+			<button class="categoryLink active" onclick="openCategory(event, '.sketches')" tabindex="-1">Sketches & Studies</button>
+			<button class="categoryLink" onclick="openCategory(event, '.illustrations')" tabindex="-1">Illustrations</button>
+			<button class="categoryLink design-nav-button" onclick="openCategory(event, '.design')" tabindex="-1">Social Media Design</button>
+			<button class="categoryLink" onclick="openCategory(event, '.photos')" tabindex="-1">Photo Edits</button>
 		</nav>
-
-		<h3 style="text-align:center"><br>The gallery is still under construction - for now please open the images in a separate tab (i.e. right clicking them) if you want a closer look!
-		</h3>
 	</main>
+
+	<section class="gallery-modal-container">
+		<button class="gallery-modal-button modal-close-button" onclick="imageGalleryModal.closeGalleryModal()">×</button>
+		<button class="gallery-modal-button modal-prev-button" onclick="imageGalleryModal.prevGalleryImage()">‹</button>
+		<img id="gallery-modal-image" src="">
+		<!-- 
+		<span class="gallery-modal-index">
+			<span id="gallery-modal-currentindex"></span>
+			/
+			<span id="gallery-modal-length"></span>
+		</span>
+		 -->
+		<button class="gallery-modal-button modal-next-button" onclick="imageGalleryModal.nextGalleryImage()">›</button>
+	</section>
+	<script src="js/gallery-modal-scripts.js"></script>
 </body>
 </html>

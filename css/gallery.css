@@ -46,15 +46,10 @@ header {
 	box-shadow: 1px 5px 15px -6px #0d0305;
 	background-color: white;
 }
-.sidebar {
-	display: flex;
-	flex-flow: column;
-	box-shadow: 5px 0 10px -3px #0d0305;
-}
-.displayed {
+.category-displayed {
 	display: block;
 }
-.hidden {
+.category-hidden {
 	display: none;
 }
 
@@ -69,6 +64,7 @@ header {
 	color: #b31d51;
 }
 .sidebar {
+	display: flex;
 	height: 100%;
 	width: 0; /* change with js */
 	position: fixed;
@@ -79,6 +75,8 @@ header {
 	overflow-x: hidden; /* disable horizontal scroll */
 	transition: 0.4s;
 	opacity: .97;
+	flex-flow: column;
+	box-shadow: 5px 0 10px -3px #0d0305;
 }
 .sidebar button {
 	padding: 20px 5px 20px;

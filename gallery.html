@@ -13,12 +13,8 @@
 	<title>gallery</title>
 </head>
 <body>
-	<header>
-		<h1>gallery</h1>
-		<nav id="nav-placeholder"></nav>
-	</header>
-
-	<section class="gallery-modal-container" tabindex="0">
+	<!-- set tabindex to -1 because the container shouldn't be focusable in general cases, only when it's first opened to make its buttons more accessible -->
+	<section class="gallery-modal-container" tabindex="-1">
 		<button class="gallery-modal-button modal-close-button" onclick="imageGalleryModal.closeGalleryModal()">×</button>
 		<button class="gallery-modal-button modal-prev-button" onclick="imageGalleryModal.prevGalleryImage()">‹</button>
 		<img id="gallery-modal-image" src="">
@@ -31,7 +27,12 @@
 		 -->
 		<button class="gallery-modal-button modal-next-button" onclick="imageGalleryModal.nextGalleryImage()">›</button>
 	</section>
-	
+
+	<header>
+		<h1>gallery</h1>
+		<nav id="nav-placeholder"></nav>
+	</header>
+
 	<main class="gallery-modal-ready">
 		<article class="category sketches category-displayed">
 			<h2 class="gallery-header"><button class="fas fa-bars fa-lg openButton" onclick="openSidebar()"></button> Sketches & Studies</h2>

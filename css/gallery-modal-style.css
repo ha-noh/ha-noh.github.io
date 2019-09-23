@@ -10,6 +10,9 @@
 	background-color: rgba(31,31,36,.97);
 	display: none;
 }
+.gallery-modal-container:focus {
+	outline: none;
+}
 .gallery-modal-button {
 	border: none;
 	color: #97fae4;

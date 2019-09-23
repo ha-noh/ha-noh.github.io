@@ -18,6 +18,20 @@
 		<nav id="nav-placeholder"></nav>
 	</header>
 
+	<section class="gallery-modal-container" tabindex="0">
+		<button class="gallery-modal-button modal-close-button" onclick="imageGalleryModal.closeGalleryModal()">×</button>
+		<button class="gallery-modal-button modal-prev-button" onclick="imageGalleryModal.prevGalleryImage()">‹</button>
+		<img id="gallery-modal-image" src="">
+		<!-- 
+		<span class="gallery-modal-index">
+			<span id="gallery-modal-currentindex"></span>
+			/
+			<span id="gallery-modal-length"></span>
+		</span>
+		 -->
+		<button class="gallery-modal-button modal-next-button" onclick="imageGalleryModal.nextGalleryImage()">›</button>
+	</section>
+	
 	<main class="gallery-modal-ready">
 		<article class="category sketches category-displayed">
 			<h2 class="gallery-header"><button class="fas fa-bars fa-lg openButton" onclick="openSidebar()"></button> Sketches & Studies</h2>
@@ -69,20 +83,6 @@
 			<button class="categoryLink" onclick="openCategory(event, '.photos')" tabindex="-1">Photo Edits</button>
 		</nav>
 	</main>
-
-	<section class="gallery-modal-container">
-		<button class="gallery-modal-button modal-close-button" onclick="imageGalleryModal.closeGalleryModal()">×</button>
-		<button class="gallery-modal-button modal-prev-button" onclick="imageGalleryModal.prevGalleryImage()">‹</button>
-		<img id="gallery-modal-image" src="">
-		<!-- 
-		<span class="gallery-modal-index">
-			<span id="gallery-modal-currentindex"></span>
-			/
-			<span id="gallery-modal-length"></span>
-		</span>
-		 -->
-		<button class="gallery-modal-button modal-next-button" onclick="imageGalleryModal.nextGalleryImage()">›</button>
-	</section>
 	<script src="js/gallery-modal-scripts.js"></script>
 </body>
 </html>

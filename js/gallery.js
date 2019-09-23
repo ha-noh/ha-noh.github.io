@@ -11,9 +11,9 @@ $(document).ready(function() {
 });
 
 //opens category based on what option is selected from the sidebar navigation
-function openCategory(e, categoryName){
+function openCategory(e, categoryName) {
 	// if the function is trying to open the current category, return
-	if(document.querySelector('.category-displayed').classList.contains(categoryName.slice(1))){
+	if(document.querySelector('.category-displayed').classList.contains(categoryName.slice(1))) {
 		console.log(`${categoryName} is already active`);
 		return;
 	}
@@ -33,20 +33,20 @@ function openCategory(e, categoryName){
 	//e.currentTarget.className += ' active';
 }
 
-function openSidebar(){
+function openSidebar() {
 	document.querySelector('.sidebar').style.width = '250px';
 
 	const buttons = document.querySelectorAll('.sidebar button');
-	for(const button of buttons){
+	for(const button of buttons) {
 		button.tabIndex = 0;
 	}
 }
 
-function closeSidebar(){
+function closeSidebar() {
 	document.querySelector('.sidebar').style.width = '0';
-	
+
 	const buttons = document.querySelectorAll('.sidebar button');
-	for(const button of buttons){
+	for(const button of buttons) {
 		button.tabIndex = -1;
 	}
 }

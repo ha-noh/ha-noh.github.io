@@ -68,7 +68,7 @@ header {
 	transition: transform 0.1s;
 }
 .panel:hover {
-	transform: scale(0.97);
+	transform: scale(.97);
 }
 
 /* one last responsive hail mary for tiny viewports

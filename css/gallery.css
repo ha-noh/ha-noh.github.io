@@ -45,6 +45,7 @@ header {
 	padding: 10px 0;
 	box-shadow: 1px 5px 15px -6px #0d0305;
 	background-color: white;
+	z-index: 1;
 }
 .category-displayed {
 	display: block;
@@ -124,12 +125,23 @@ header {
 		min-width: 547px;
 		max-width: 600px;
 	}
+	.gallery img {
+		transition: transform 0.1s;
+		z-index: 0;
+	}
+	.gallery img:hover {
+		transform: scale(.95);
+	}
 }
+
+/*3 columns*/
 @media screen and (min-width:900px) {
 	article img {
 		width: 33%;
 	}
 }
+
+/* 4 columns*/
 @media screen and (min-width:1200px) {
 	.aboutme-body {
 		width: 600px;

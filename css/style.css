@@ -31,7 +31,6 @@ header {
 	margin-bottom: 30px;
 }
 
-
 /* ============== Default, mobile layout ============== */
 .icon {
 	color:#34b89a;
@@ -53,6 +52,7 @@ header {
 .panel img {
 	width: 100%;
 	/* height: 100%; messes with .aboutme-overlay */
+	border: 3px solid black;
 }
 .overlay {
 	position: absolute;
@@ -62,25 +62,13 @@ header {
 	text-align: center;
 }
 
-/* hide overlay image in mobile layout */
-.aboutme-overlay {
-	position: absolute;
-	overflow: hidden;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	width: 100%;
-	height: 0;
-	transition: .2s ease;
-}
-
 /* animated elements & overlays */
 .panel {
-	transition: transform 0.1s;
 	position: relative;
+	transition: transform 0.1s;
 }
 .panel:hover {
-	transform: scale(0.95);
+	transform: scale(0.97);
 }
 
 /* one last responsive hail mary for tiny viewports
@@ -105,10 +93,10 @@ header {
 	/* set up grid layout */
 	.container-topleft {
 		flex-flow: column;
-		margin-right: 5px;
+		margin-right: 10px;
 	}
-	.container-top > *, .container-topleft > * {
-		flex: 1 calc(50% - 2.5px);
+	.container-top > * {
+		flex: 1 calc(50% - 5px);
 	}
 	.panel-topleft {
 		order:1;
@@ -121,19 +109,18 @@ header {
 		margin-top: 5px;
 	}
 	.panel-botleft {
-		flex: 1 calc(60% - 2.5px);
-		/*margin-right: 2.5px;*/
+		flex: 1 calc(60% - 5px);
 	}
 	.panel-botright {
-		flex: 1 calc(40% - 2.5px);
-		margin-left: 5px;
+		flex: 1 calc(40% - 5px);
+		margin-left: 10px;
 	}
 	.panel-topright img{
-		height: 100%;
+		height: 99.5%;
 	}
 	.page {
 		box-shadow: 5px 5px 15px -8px #0d0305;
-		padding: 10px;
+		padding: 20px;
 		margin-bottom: 30px;
 	}
 
@@ -148,10 +135,6 @@ header {
 	}
 
 	/* trigger css animations only in wide viewports */
-	.panel-botright:hover .aboutme-overlay {
-		height: 100%;
-	}
-
 	.panel:hover .overlay {
 		width: 100%;
 		left: 0;

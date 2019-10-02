@@ -12,7 +12,7 @@ A redesigned personal website that uses css & js magic to flex(box) my work
 4) ~~Localize navbar html & css to one file~~
 5) ~~Maybe move the gallery hamburger icon to somewhere closer to the rest of the content~~
 6) ~~Move down taborder of non-menu items when side navigation bar is open~~
-7) Add Aria labels to all buttons?
+7) ~~Add Aria labels to all buttons?~~
 8) Have navbar icons look more organized and not floating in space
 9) Change how image height is determined in the gallery
 10) ~~Have the home page panels determine the landing tab in the gallery~~

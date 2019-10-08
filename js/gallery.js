@@ -19,13 +19,13 @@ $(document).ready(function() {
 function openCategory(e, categoryName) {
 	// if the function is trying to open the current category, return
 	let currentCat = document.querySelector('.category-displayed');
-	if(currentCat != null && currentCat.classList.contains(categoryName.slice(1))) {
-		console.log(`${categoryName} is already active`);
-		return;
-	}
+	if(currentCat != null) {
+		if(currentCat.classList.contains(categoryName.slice(1))) {		
+			console.log(`${categoryName} is already active`);
+			return;
+		}
 
-	// hide active gallery section, if it exists, by toggling .category-displayed and .category-hidden classes
-	if(currentCat != null) {	
+		// hide active gallery section, if it exists, by toggling .category-displayed and .category-hidden classes
 		currentCat.classList.add('category-hidden');
 		currentCat.classList.remove('category-displayed');
 	}

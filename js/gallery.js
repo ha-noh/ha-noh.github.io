@@ -2,26 +2,33 @@
 $(document).ready(function() {
 	$('#nav-placeholder').load('html/navbar.html');
 
-	if(window.sessionStorage.getItem('galleryLanding') == 'design'){
+	//if the design panel was clicked to reach the gallery
+	if(window.sessionStorage.getItem('galleryLanding') == 'design') {
 		//document.querySelector('.design-nav-button').click();
 		openCategory(event,'.design');
 		//clear storage to return to default category on next page load
 		window.sessionStorage.removeItem('galleryLanding');
 	}
+	else {
+		//open the sketches category by default
+		openCategory(event, '.sketches');
+	}
 });
 
-//opens category based on what option is selected from the sidebar navigation
+//opens category based on the category name passed into it
 function openCategory(e, categoryName) {
 	// if the function is trying to open the current category, return
-	if(document.querySelector('.category-displayed').classList.contains(categoryName.slice(1))) {
+	let currentCat = document.querySelector('.category-displayed');
+	if(currentCat != null && currentCat.classList.contains(categoryName.slice(1))) {
 		console.log(`${categoryName} is already active`);
 		return;
 	}
 
-	// hide active gallery section by toggling .category-displayed and .category-hidden classes
-	let currentCategory = document.querySelector('.category-displayed');
-	currentCategory.classList.add('category-hidden');
-	currentCategory.classList.remove('category-displayed');
+	// hide active gallery section, if it exists, by toggling .category-displayed and .category-hidden classes
+	if(currentCat != null) {	
+		currentCat.classList.add('category-hidden');
+		currentCat.classList.remove('category-displayed');
+	}
 
 	// remove the .active class from active category's button
 	//document.querySelector('.active').classList.remove('active');

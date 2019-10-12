@@ -4,28 +4,36 @@ $(document).ready(function() {
 
 	//if the design panel was clicked to reach the gallery
 	if(window.sessionStorage.getItem('galleryLanding') == 'design') {
-		//document.querySelector('.design-nav-button').click();
 		openCategory(event,'.design');
 		//clear storage to return to default category on next page load
 		window.sessionStorage.removeItem('galleryLanding');
 	}
+	
+	//open the sketches category by default
 	else {
-		//open the sketches category by default
 		openCategory(event, '.sketches');
 	}
+
+	//can't figure out why addEventListener only works with arrow functions 
+	document.querySelector('.sidebar-close-button').onclick = closeSidebar;
+	document.querySelector('.link-sketches').addEventListener('click', () => openCategory(event, '.sketches'));
+	document.querySelector('.link-illustrations').addEventListener('click', () => openCategory(event, '.illustrations'));
+	document.querySelector('.link-design').addEventListener('click', () => openCategory(event, '.design'));
+	document.querySelector('.link-photos').addEventListener('click', () => openCategory(event, '.photos'));
 });
 
-//opens category based on the category name passed into it
+// opens category based on the category name passed into it, currently event parameter is unused.
 function openCategory(e, categoryName) {
 	// if the function is trying to open the current category, return
 	let currentCat = document.querySelector('.category-displayed');
+
 	if(currentCat != null) {
 		if(currentCat.classList.contains(categoryName.slice(1))) {		
 			console.log(`${categoryName} is already active`);
 			return;
 		}
 
-		// hide active gallery section, if it exists, by toggling .category-displayed and .category-hidden classes
+		// hide active gallery section by toggling .category-displayed and .category-hidden classes
 		currentCat.classList.add('category-hidden');
 		currentCat.classList.remove('category-displayed');
 	}

@@ -6,8 +6,13 @@ const imageGalleryModal = (function(){
 	//gallery is closed by default, and so no valid image index is available
 	let currentImageIndex = -1;
 
+	//listen for user clicks on the modal buttons
+	document.querySelector('.modal-close-button').addEventListener('click', () => closeGalleryModal());
+	document.querySelector('.modal-prev-button').addEventListener('click', () => prevGalleryImage());
+	document.querySelector('.modal-next-button').addEventListener('click', () => nextGalleryImage());
+	
 	// not sure if this works with <picture> elements
-	document.querySelector('.gallery-modal-ready').addEventListener('click', e => openGalleryModal(e));
+	document.querySelector('.gallery-modal-ready').addEventListener('click', () => openGalleryModal(event));
 
 	// event listener; lets arrows keys handle gallery navigation and esc close the modal
 	document.addEventListener('keyup', function(e) {
@@ -27,8 +32,9 @@ const imageGalleryModal = (function(){
 
 	//---------- Helper Functions ----------------
 	const openGalleryModal = function(e) {
+		//returns on clicks on gallery header, etc.
 		if(!(e.target.nodeName === 'IMG')) return;
-
+		
 		loadGalleryImage(e);
 		document.querySelector('.gallery-modal-container').style.display = 'block';
 		document.querySelector('.gallery-modal-container').focus();
@@ -88,7 +94,6 @@ const imageGalleryModal = (function(){
 
 	};
 
-	//public functions for the modal html to use
 	return {
 		openGalleryModal: openGalleryModal,
 		closeGalleryModal: closeGalleryModal,

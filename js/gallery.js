@@ -14,15 +14,14 @@ $(document).ready(function() {
 		openCategory(event, '.sketches');
 	}
 
-	//can't figure out why addEventListener only works with arrow functions 
-	document.querySelector('.sidebar-close-button').onclick = closeSidebar;
+	document.querySelector('.sidebar-close-button').addEventListener('click', closeSidebar);
 	document.querySelector('.link-sketches').addEventListener('click', () => openCategory(event, '.sketches'));
 	document.querySelector('.link-illustrations').addEventListener('click', () => openCategory(event, '.illustrations'));
 	document.querySelector('.link-design').addEventListener('click', () => openCategory(event, '.design'));
 	document.querySelector('.link-photos').addEventListener('click', () => openCategory(event, '.photos'));
 });
 
-// opens category based on the category name passed into it, currently event parameter is unused.
+// opens category based on the category name passed into it, currently the event parameter is unused.
 function openCategory(e, categoryName) {
 	// if the function is trying to open the current category, return
 	let currentCat = document.querySelector('.category-displayed');
@@ -33,19 +32,17 @@ function openCategory(e, categoryName) {
 			return;
 		}
 
-		// hide active gallery section by toggling .category-displayed and .category-hidden classes
+		// hide and remove event listener from currently displayed gallery section
+		document.querySelector(`.category-displayed .openButton`).removeEventListener('click', openSidebar);
 		currentCat.classList.add('category-hidden');
 		currentCat.classList.remove('category-displayed');
 	}
 
-	// remove the .active class from active category's button
-	//document.querySelector('.active').classList.remove('active');
-
-	// open new category and add .active to its button's classes
+	// open new category and adjust its classList
 	let newCategory = document.querySelector(categoryName);
 	newCategory.classList.add('category-displayed');
 	newCategory.classList.remove('category-hidden');
-	//e.currentTarget.className += ' active';
+	document.querySelector(`${categoryName} .openButton`).addEventListener('click', openSidebar);
 }
 
 function openSidebar() {

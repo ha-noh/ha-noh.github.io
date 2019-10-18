@@ -27,6 +27,14 @@
 	color: #e72d80;
 	background-color: rgba(31,31,36,.75);
 }
+.gallery-modal-index {
+	position: absolute;
+	left: 0;
+	font-size: 30px;
+	color: #97fae4;
+	height: 60px;
+	padding: 12px;
+}
 .modal-close-button {
 	position: absolute;
 	right: 0;

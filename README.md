@@ -1,5 +1,5 @@
 #ha-noh.github.io
-A redesigned personal website that uses css & js magic to flex(box) my work
+A website to catalog my various endeavors
 
 ## Testing 
 1) run `python -m http.server 8000` in terminal from site's root directory

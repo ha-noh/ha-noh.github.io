@@ -2,7 +2,7 @@
  * ex: <script src="yourfolder/gallery-modal-scripts.js"></script>
  *
  */
-const imageGalleryModal = (function(){
+const imageGalleryModal = (function() {
 	//gallery is closed by default, and so no valid image index is available
 	let currentImageIndex = -1;
 
@@ -95,7 +95,7 @@ const imageGalleryModal = (function(){
 	const updateImageIndex = function() {
 		const imageIndexString = `${currentImageIndex + 1} / ${galleryImages.length}`;
 		console.log(imageIndexString);
-		document.querySelector('.gallery-modal-index').innerHTML = imageIndexString;
+		document.querySelector('.gallery-modal-index').innerText = imageIndexString;
 	};
 
 	return {

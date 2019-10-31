@@ -16,10 +16,10 @@
 	<!-- set tabindex to -1 because the container shouldn't be focusable in general cases, only when it's first opened to make its buttons immediately accessible -->
 	<section class="gallery-modal-container" tabindex="-1">
 		<span class="gallery-modal-index"></span>
-		<button class="gallery-modal-button modal-close-button">×</button>
-		<button class="gallery-modal-button modal-prev-button">‹</button>
+		<button aria-label="close modal" class="gallery-modal-button modal-close-button">×</button>
+		<button aria-label="previous image" class="gallery-modal-button modal-prev-button">‹</button>
 		<img id="gallery-modal-image" src="">
-		<button class="gallery-modal-button modal-next-button">›</button>
+		<button aria-label="next image" class="gallery-modal-button modal-next-button">›</button>
 	</section>
 
 	<header>
@@ -29,7 +29,7 @@
 
 	<main class="gallery-modal-ready">
 		<article class="category sketches category-hidden">
-			<h2 class="gallery-header"><button class="fas fa-bars fa-lg openButton"></button> Sketches & Studies</h2>
+			<h2 class="gallery-header"><button aria-label="open sidebar" class="fas fa-bars fa-lg openButton"></button> Sketches & Studies</h2>
 			<div class="gallery">
 				<img src="images/gallery/sketches/pants.png" alt="woman in jumper painted from reference">
 				<img src="images/gallery/sketches/snakehands.png" alt="2 overlapping hands painted from reference">
@@ -38,7 +38,7 @@
 		</article>
 
 		<article class="category illustrations category-hidden">
-			<h2 class="gallery-header"><button class="fas fa-bars fa-lg openButton"></button>  Illustrations</h2>
+			<h2 class="gallery-header"><button aria-label="open sidebar" class="fas fa-bars fa-lg openButton"></button>  Illustrations</h2>
 			<div class="gallery">
 				<img src="images/gallery/drawings/bmo.png" alt="BMO holding Jake shaped as an umbrella">
 				<img src="images/gallery/drawings/witch.png" alt="A Witch with a brush and a fiery familiar">
@@ -46,7 +46,7 @@
 		</article>
 
 		<article class="category design category-hidden">
-			<h2 class="gallery-header"><button class="fas fa-bars fa-lg openButton"></button>  Social Media Design</h2>
+			<h2 class="gallery-header"><button aria-label="open sidebar" class="fas fa-bars fa-lg openButton"></button>  Social Media Design</h2>
 			<div class="gallery">
 				<img src="images/gallery/flyers/aacc_wp.png" alt="Flyer for an event">
 				<img src="images/gallery/flyers/aacc_palny.png" alt="Flyer for an event">
@@ -59,7 +59,7 @@
 		</article>
 
 		<article class="category photos category-hidden">
-			<h2 class="gallery-header"><button class="fas fa-bars fa-lg openButton"></button>  Photo Edits</h2>
+			<h2 class="gallery-header"><button aria-label="open sidebar" class="fas fa-bars fa-lg openButton"></button>  Photo Edits</h2>
 			<div class="gallery">
 				<img src="images/gallery/photos/field_portrait.jpg" alt="A portrait with manga style SFX edited in">
 				<img src="images/gallery/photos/kojima_cool.png" alt="A cool photo of Hideo Kojima from the vaporwave dimension">
@@ -68,7 +68,7 @@
 		</article>
 
 		<nav class="sidebar">
-			<button class="sidebar-close-button" tabindex="-1">×</button>
+			<button aria-label="close sidebar" class="sidebar-close-button" tabindex="-1">×</button>
 			<button class="link-sketches" tabindex="-1">Sketches & Studies</button>
 			<button class="link-illustrations" tabindex="-1">Illustrations</button>
 			<button class="link-design" tabindex="-1">Social Media Design</button>

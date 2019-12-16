@@ -1,0 +1,141 @@
+@use 'common';
+
+h1 {
+	font-size: 55px;
+	margin-bottom:0;
+}
+h2 {
+	position: absolute;
+	top: 0;
+	left:0;
+	width: 100%;
+	font-family: common.$header-font;
+	font-size: 50px;
+	text-shadow: -3px 0 common.$secondary-color-shadow;
+}
+header {
+	margin-bottom: 30px;
+}
+
+/* ============== Default, mobile layout ============== */
+.container-main {
+	display: flex;
+	flex-flow: row wrap;
+}
+.container-main > * {
+	flex: 1 100%;
+}
+.panel-topright {
+	margin-bottom: 5px;
+}
+.container-bot > * {
+	margin-bottom: 5px;
+}
+.panel img {
+	width: 100%;
+	/* height: 100%; messes with .aboutme-overlay */
+	border: 3px solid #121212;
+	border-radius: 2.5px 3px 1.75px;
+}
+.overlay {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+}
+
+/* animated elements & overlays */
+.panel {
+	position: relative;
+	transition: transform 0.1s;
+}
+.panel:hover {
+	transform: scale(.97);
+}
+
+/* one last responsive hail mary for tiny viewports
+ * layout breaks around 300px width
+ */
+@media screen and (min-width:0) and (max-width: 500px) {
+	h1 {
+		font-size: 2em;
+	}
+	h2 {
+		font-size: 2em;
+	}
+}
+
+/* ============== Full panel display layout ============== */
+/* if breakpoint is changed, the media rule in <picture> tags should also be adjusted */
+@media screen and (min-width:650px) {
+	header {
+		font-size: 18px;
+	}
+
+	/* set up grid layout */
+	.container-topleft {
+		flex-flow: column;
+		margin-right: 10px;
+	}
+	.container-top > * {
+		flex: 1 calc(50% - 5px);
+	}
+	.panel-topleft {
+		order:1;
+	}
+	.panel-midleft {
+		order:2;
+		margin-top: 5px;
+	}
+	.container-bot {
+		margin-top: 5px;
+	}
+	.panel-botleft {
+		flex: 1 calc(60% - 5px);
+	}
+	.panel-botright {
+		flex: 1 calc(40% - 5px);
+		margin-left: 10px;
+	}
+	.panel-topright img{
+		height: 99.5%;
+	}
+	.page {
+		box-shadow: 5px 5px 15px -8px #0d0305;
+		padding: 20px;
+		margin-bottom: 30px;
+	}
+
+	/* hide overlay text */
+	.overlay {
+		position: absolute;
+		overflow: hidden;
+		left: 100%;
+		width: 0;
+		height: 100%;
+		text-align: center;
+	}
+
+	/* trigger css animations only in wide viewports */
+	.panel:hover .overlay {
+		width: 100%;
+		left: 0;
+	}
+
+	.panel:hover img {
+		filter: blur(3px);
+	}
+}
+
+/* add margins when viewport is larger than max resolution images */
+@media screen and (min-width:1200px) {
+	.container-main {
+		width:1200px;
+	}
+	.page {
+		width:1200px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

@@ -1,11 +1,31 @@
 $body-font: 'Muli', sans-serif;
 $header-font: 'Montserrat', sans-serif;
+//shades of aqua
+$primary-color: #97fae4;
+$primary-color-shadow: #34b89a;
+//shades of amaranth
+$secondary-color: #e72d80;
+$secondary-color-shadow: #ac206e;
+
+@charset "utf-8";
 
 * {
-	font-family: 'Muli', sans-serif;
+	font-family: $body-font;
 }
 h1 {
 	text-align: center;
-	font-family: 'Montserrat', sans-serif;
-	color: #97fae4;
+	font-family: $header-font;
+	color: $primary-color;
+}
+h2 {
+	color: $secondary-color;
+}
+/* determines icon size */
+header {
+	text-align: center;
+	font-size: 15px;
+}
+.icon {
+	color: $primary-color-shadow;
+	padding: 0 20px;
 }

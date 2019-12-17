@@ -157,12 +157,12 @@ header {
   }
 
   /* trigger css animations only in wide viewports */
-  .panel:hover .overlay {
+  .panel:hover .overlay, a:focus .overlay {
     width: 100%;
     left: 0;
   }
 
-  .panel:hover img {
+  .panel:hover img, a:focus img {
     filter: blur(3px);
   }
 }

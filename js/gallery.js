@@ -23,9 +23,9 @@ $(document).ready(function() {
 
 // opens category based on the category name passed into it, currently the event parameter is unused.
 function openCategory(e, categoryName) {
-	// if the function is trying to open the current category, return
 	let currentCat = document.querySelector('.category-displayed');
 
+	// if the function is trying to open the current category, return
 	if(currentCat != null) {
 		if(currentCat.classList.contains(categoryName.slice(1))) {		
 			console.log(`${categoryName} is already active`);

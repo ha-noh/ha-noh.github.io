@@ -14,7 +14,9 @@
 			//if this is the gallery page, also change the category header bg color to match
 			let galleryHeaders = document.querySelectorAll('.gallery-header'); 
 			if(galleryHeaders.length > 0){
-				galleryHeaders.forEach(header => header.style.backgroundColor = '#1d1e1f');
+				for(const header of galleryHeaders) { 
+					header.style.backgroundColor = '#1d1e1f';
+				}
 			}
 		}
 
@@ -26,15 +28,21 @@
 
 			let galleryHeaders = document.querySelectorAll('.gallery-header'); 
 			if(galleryHeaders.length > 0){
-				galleryHeaders.forEach(header => header.style.backgroundColor = 'white');
+				for(const header of galleryHeaders) {
+					header.style.backgroundColor = 'white';
+				}
 			}
 		}
 </script>
 
 <style>
 	/* navbar icons change color on hover */
-	nav .fas:hover, nav .fab:hover {color: #97fae4;}
-	nav .fas, nav.fab{transition:.2s;}
+	nav .fas:hover, nav .fab:hover {
+		color: #97fae4;
+	}
+	nav .fas, nav.fab{
+		transition:.2s;
+	}
 </style>
 
 <a href="https://ha-noh.github.io"><span class="fas fa-home fa-lg icon" aria-label="home"></span></a>

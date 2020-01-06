@@ -1,12 +1,12 @@
 #ha-noh.github.io
-A website to catalog my various endeavors
+A website to catalog my various personal projects, including artwork, software, and music.
 
 ## Testing 
 1) run `python -m http.server 8000` in terminal from site's root directory
 2) open `localhost:8000` in browser
 
 ## TODO
-1) Create a landing page or page overlay for every panel -  right now some panels just link to external pages without any context
+1) ~~Have home page panels redirect to the appropriate gallery category~~ 
 2) ~~Add dark borders to panels & try out background images~~
 3) ~~Pass nightmode state between pages~~
 4) ~~Localize navbar html & css to one file~~
@@ -15,4 +15,4 @@ A website to catalog my various endeavors
 7) ~~Add Aria labels to all buttons?~~
 8) Have navbar icons look more organized and not floating in space
 9) Change how image height is determined in the gallery
-10) ~~Have the home page panels determine the landing tab in the gallery~~
+10) Create a landing page or page overlay for every panel -  right now some panels just link to external pages without any context

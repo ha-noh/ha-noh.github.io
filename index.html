@@ -18,6 +18,11 @@
 		<nav id="nav-placeholder"></nav>
 	</header>
 
+	<div class="nightmode-toggle" style="display:none">
+		<button class="nightmode-button"></button>
+		<button class="lightmode-button"></button>
+	</div>
+
 	<main>
 	<div class="page">
 		<div class="container-main container-top">
@@ -59,12 +64,13 @@
 
 		<div class="container-main container-bot">
 			<article class="panel panel-botleft" aria-label="Design and Edits Article">
-				<a href="gallery" onclick="openDesignCategory()">
+				<a href="gallery">
 					<picture>
 						<source srcset="images/bot-left-small.png" media="(max-width: 650px)">
 						<img src="images/bot-left.png" alt="image for design and edits article">
 					</picture>
 					
+					<!-- specific color for readability -->
 					<section class="overlay"><h2 style="color:#ee9e35;text-shadow: -3px 0 #100f17">design&edits</h2></section>
 				</a>
 			</article>

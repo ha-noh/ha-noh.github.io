@@ -18,6 +18,15 @@ header {
   font-size: 15px;
 }
 
+a, a:visited {
+  text-decoration: none;
+  color: #ac206e;
+}
+
+button {
+  border: none;
+}
+
 .icon {
   color: #34b89a;
   padding: 0 20px;

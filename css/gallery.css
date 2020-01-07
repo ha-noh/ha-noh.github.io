@@ -23,6 +23,10 @@ a {
   color: #ac206e;
 }
 
+button {
+  border: none;
+}
+
 .icon {
   color: #34b89a;
   padding: 0 20px;

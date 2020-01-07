@@ -7,19 +7,17 @@ h2 {
 	text-align: center;
 }
 /* about me body text */
-h3 {
+h3, p {
 	color: common.$secondary-color;
 }
 article img {
 	width: 100%;
 	margin: 0 0 3px;
 }
-
 /* determines icon size */
 header {
 	margin-bottom: 50px;
 }
-
 /* gallery specific classes */
 .gallery {
 	display: flex;

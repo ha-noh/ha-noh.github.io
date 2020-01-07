@@ -25,6 +25,10 @@ header {
 	text-align: center;
 	font-size: 15px;
 }
+a {
+	text-decoration: none;
+	color: $secondary-color-shadow;
+}
 .icon {
 	color: $primary-color-shadow;
 	padding: 0 20px;

@@ -18,6 +18,11 @@ header {
   font-size: 15px;
 }
 
+a {
+  text-decoration: none;
+  color: #ac206e;
+}
+
 .icon {
   color: #34b89a;
   padding: 0 20px;
@@ -32,7 +37,7 @@ h2 {
 }
 
 /* about me body text */
-h3 {
+h3, p {
   color: #e72d80;
 }
 

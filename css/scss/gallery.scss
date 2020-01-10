@@ -1,4 +1,6 @@
 @use 'common';
+$gallery-shadow-color: #0d0305;
+$sidebar-color: #1f1f24;
 
 h1 {
 	margin-bottom: 4px;
@@ -27,7 +29,7 @@ header {
 	position: sticky;
 	top: 0;
 	padding: 10px 0;
-	box-shadow: 1px 5px 15px -6px #0d0305;
+	box-shadow: 1px 5px 15px -6px $gallery-shadow-color;
 	background-color: white;
 	z-index: 1;
 }
@@ -56,19 +58,19 @@ header {
 	z-index: 1;
 	top: 0;
 	left: 0;
-	background-color: #1f1f24;
+	background-color: $sidebar-color;
 	overflow-x: hidden; /* disable horizontal scroll */
 	transition: 0.4s;
 	opacity: .97;
 	flex-flow: column;
-	box-shadow: 5px 0 10px -3px #0d0305;
+	box-shadow: 5px 0 10px -3px $gallery-shadow-color;
 }
 .sidebar button {
 	padding: 20px 5px 20px;
 	border: none;
 	font-size: 23px;
 	color: #e72d80;
-	background-color: #1f1f24;
+	background-color: $sidebar-color;
 	text-align: left;
 	white-space: pre;
 }
@@ -85,7 +87,7 @@ header {
 .aboutme-body {
 	width: 80%;
 	margin: 0 auto 30px;
-	box-shadow: 3px 5px 10px -3px #0d0305;
+	box-shadow: 3px 5px 10px -3px $gallery-shadow-color;
 	padding: 20px;
 }
 .profile {

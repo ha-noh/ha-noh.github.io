@@ -8,6 +8,10 @@ $secondary-color: #e72d80;
 $secondary-color-shadow: #ac206e;
 
 @charset "utf-8";
+@font-face{
+	font-family: icomoon;
+	src: url("../fonts/icomoon.woff");
+}
 
 * {
 	font-family: $body-font;

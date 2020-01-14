@@ -31,30 +31,24 @@ header {
 }
 a, a:visited {
 	text-decoration: none;
-	color: $secondary-color-shadow;
+	color: $secondary-color;
 }
 button {
 	border: none;
 }
-/////////// To replace
-.icon {
-	color: $primary-color-shadow;
-	padding: 0 20px;
-}
-/* navbar icons change color on hover */
-nav .fas:hover, nav .fab:hover {
-	color: #97fae4;
-}
-nav .fas, nav.fab{
-	transition:.2s;
-}
-///////////
+
 %icomoon {
 	color: $primary-color-shadow;
-	padding: 0 20px;
+	font-family: icomoon;
+	font-size: 22px;
+	padding: 5px 20px;
+	transition:.2s;
 }
-.icon {
+.inline-icon {
 	@extend %icomoon;
+	color: $secondary-color;
+	padding: 0;
+	font-size: inherit;
 }
 .sun {
 	@extend %icomoon;
@@ -65,3 +59,8 @@ nav .fas, nav.fab{
 	border: none;
 	display: none;
 }
+/* navbar icons change color on hover */
+.sun:hover, .moon:hover {
+	color: #97fae4;
+}
+

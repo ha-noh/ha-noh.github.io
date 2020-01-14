@@ -24,30 +24,25 @@ header {
 
 a, a:visited {
   text-decoration: none;
-  color: #ac206e;
+  color: #e72d80;
 }
 
 button {
   border: none;
 }
 
-.icon {
+.moon, .sun, .inline-icon {
   color: #34b89a;
-  padding: 0 20px;
-}
-
-/* navbar icons change color on hover */
-nav .fas:hover, nav .fab:hover {
-  color: #97fae4;
-}
-
-nav .fas, nav.fab {
+  font-family: icomoon;
+  font-size: 22px;
+  padding: 5px 20px;
   transition: 0.2s;
 }
 
-.moon, .sun, .icon {
-  color: #34b89a;
-  padding: 0 20px;
+.inline-icon {
+  color: #e72d80;
+  padding: 0;
+  font-size: inherit;
 }
 
 .sun {
@@ -57,6 +52,11 @@ nav .fas, nav.fab {
 .moon {
   border: none;
   display: none;
+}
+
+/* navbar icons change color on hover */
+.sun:hover, .moon:hover {
+  color: #97fae4;
 }
 
 h1 {
@@ -79,7 +79,7 @@ article img {
 
 /* determines icon size */
 header {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 /* gallery specific classes */

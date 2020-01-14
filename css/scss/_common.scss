@@ -28,6 +28,16 @@ h2 {
 header {
 	text-align: center;
 	font-size: 15px;
+	transition: .2s;
+
+	a, a:visited {
+		text-decoration: none;
+		color: $primary-color;
+		font-family: $header-font;
+	}
+	a:hover {
+		color: $primary-color-shadow;
+	}
 }
 a, a:visited {
 	text-decoration: none;
@@ -41,14 +51,14 @@ button {
 	color: $primary-color-shadow;
 	font-family: icomoon;
 	font-size: 22px;
-	padding: 5px 20px;
+	padding: 10px 20px;
 	transition:.2s;
 	background-color:inherit;
 }
 .inline-icon {
 	@extend %icomoon;
 	color: $secondary-color;
-	padding: 0;
+	padding: 0 5px;
 	font-size: inherit;
 }
 .sun {

@@ -20,6 +20,15 @@ h2 {
 header {
   text-align: center;
   font-size: 15px;
+  transition: 0.2s;
+}
+header a, header a:visited {
+  text-decoration: none;
+  color: #97fae4;
+  font-family: "Montserrat", sans-serif;
+}
+header a:hover {
+  color: #34b89a;
 }
 
 a, a:visited {
@@ -35,14 +44,14 @@ button {
   color: #34b89a;
   font-family: icomoon;
   font-size: 22px;
-  padding: 5px 20px;
+  padding: 10px 20px;
   transition: 0.2s;
   background-color: inherit;
 }
 
 .inline-icon {
   color: #e72d80;
-  padding: 0;
+  padding: 0 5px;
   font-size: inherit;
 }
 

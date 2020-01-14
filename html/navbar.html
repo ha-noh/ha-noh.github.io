@@ -1,45 +1,42 @@
 <!-- navbar html is localized to this file for convenience -->
 <script>
-		if(window.sessionStorage.getItem('nightmode') == 'true'){
-			toggleNightmode();
-			//doesn't need to wait for DOM to be ready since the call to this file already does
-		}
+	document.querySelector('.sun').addEventListener('click', toggleLightmode);
+	document.querySelector('.moon').addEventListener('click', toggleNightmode);
 
-		function toggleNightmode(){
-			document.querySelector('html').style.backgroundColor = '#1d1e1f';
-			document.querySelector('.sun').style.display = 'inline';
-			document.querySelector('.moon').style.display = 'none';
-			window.sessionStorage.setItem('nightmode','true');
+	if(window.sessionStorage.getItem('nightmode') == 'true'){
+		toggleNightmode();
+		//doesn't need to wait for DOM to be ready since the call to this file already does
+	}
 
-			//if this is the gallery page, also change the category header bg color to match
-			let galleryHeaders = document.querySelectorAll('.gallery-header'); 
-			if(galleryHeaders.length > 0){
-				for(const header of galleryHeaders) { 
-					header.style.backgroundColor = '#1d1e1f';
-				}
+	function toggleNightmode(){
+		document.querySelector('html').style.backgroundColor = '#1d1e1f';
+		document.querySelector('.sun').style.display = 'inline';
+		document.querySelector('.moon').style.display = 'none';
+		window.sessionStorage.setItem('nightmode','true');
+
+		//if this is the gallery page, also change the category header bg color to match
+		let galleryHeaders = document.querySelectorAll('.gallery-header'); 
+		if(galleryHeaders.length > 0){
+			for(const header of galleryHeaders) { 
+				header.style.backgroundColor = '#1d1e1f';
 			}
 		}
+	}
 
-		function toggleLightmode(){
-			document.querySelector('html').style.backgroundColor = 'white';
-			document.querySelector('.sun').style.display ='none';
-			document.querySelector('.moon').style.display = 'inline';
-			window.sessionStorage.setItem('nightmode','false');
+	function toggleLightmode(){
+		document.querySelector('html').style.backgroundColor = 'white';
+		document.querySelector('.sun').style.display ='none';
+		document.querySelector('.moon').style.display = 'inline';
+		window.sessionStorage.setItem('nightmode','false');
 
-			let galleryHeaders = document.querySelectorAll('.gallery-header'); 
-			if(galleryHeaders.length > 0){
-				for(const header of galleryHeaders) {
-					header.style.backgroundColor = 'white';
-				}
+		let galleryHeaders = document.querySelectorAll('.gallery-header'); 
+		if(galleryHeaders.length > 0){
+			for(const header of galleryHeaders) {
+				header.style.backgroundColor = 'white';
 			}
 		}
+	}
 </script>
 
-<!-- <a href="https://ha-noh.github.io"><span class="fas fa-home fa-lg icon" aria-label="home"></span></a>
-<a href="https://www.linkedin.com/in/ha-noh/" target="_blank"><span class="fab fa-linkedin fa-lg icon" aria-label="linkedin"></span></a>
-<a href="mailto:andrew@hanoh.studio"><span class="fas fa-envelope fa-lg icon" aria-label="email"></span></a>
-<button class="fas fa-moon fa-lg icon" aria-label="nightmode" onclick="toggleNightmode()" style="background-color:inherit;border:none"></button>
-<button class="fas fa-sun fa-lg icon" aria-label="lightmode" onclick="toggleLightmode()" style="display:none;background-color:inherit;border:none"></button> -->
-
-<button class="moon" aria-label="nightmode button" onclick="toggleNightmode()" style="background-color:inherit">&#xe904;</button>
-<button class="sun" aria-label="lightmode button" onclick="toggleLightmode()" style="display:none;background-color:inherit">&#xe905;</button>
+<button class="moon" aria-label="nightmode button">&#xe904;</button>
+<button class="sun" aria-label="lightmode button">&#xe905;</button>

@@ -43,6 +43,7 @@ button {
 	font-size: 22px;
 	padding: 5px 20px;
 	transition:.2s;
+	background-color:inherit;
 }
 .inline-icon {
 	@extend %icomoon;
@@ -53,6 +54,7 @@ button {
 .sun {
 	@extend %icomoon;
 	border: none;
+	display:none;
 }
 .moon {
 	@extend %icomoon;

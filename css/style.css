@@ -36,6 +36,29 @@ button {
   padding: 0 20px;
 }
 
+/* navbar icons change color on hover */
+nav .fas:hover, nav .fab:hover {
+  color: #97fae4;
+}
+
+nav .fas, nav.fab {
+  transition: 0.2s;
+}
+
+.moon, .sun, .icon {
+  color: #34b89a;
+  padding: 0 20px;
+}
+
+.sun {
+  border: none;
+}
+
+.moon {
+  border: none;
+  display: none;
+}
+
 h1 {
   font-size: 55px;
   margin-bottom: 0;

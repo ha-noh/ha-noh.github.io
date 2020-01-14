@@ -36,7 +36,32 @@ a, a:visited {
 button {
 	border: none;
 }
+/////////// To replace
 .icon {
 	color: $primary-color-shadow;
 	padding: 0 20px;
+}
+/* navbar icons change color on hover */
+nav .fas:hover, nav .fab:hover {
+	color: #97fae4;
+}
+nav .fas, nav.fab{
+	transition:.2s;
+}
+///////////
+%icomoon {
+	color: $primary-color-shadow;
+	padding: 0 20px;
+}
+.icon {
+	@extend %icomoon;
+}
+.sun {
+	@extend %icomoon;
+	border: none;
+}
+.moon {
+	@extend %icomoon;
+	border: none;
+	display: none;
 }

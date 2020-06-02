@@ -94,7 +94,7 @@ const imageGalleryModal = (function() {
 	//optional function for adjusting modal content to reflect the image index, e.g. displaying 2 / 5 
 	const updateImageIndex = function() {
 		const imageIndexString = `${currentImageIndex + 1} / ${galleryImages.length}`;
-		console.log(imageIndexString);
+		//console.log(imageIndexString);
 		document.querySelector('.gallery-modal-index').innerText = imageIndexString;
 	};
 

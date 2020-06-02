@@ -19,6 +19,16 @@ $(document).ready(function() {
 	document.querySelector('.link-illustrations').addEventListener('click', () => openCategory(event, '.illustrations'));
 	document.querySelector('.link-design').addEventListener('click', () => openCategory(event, '.design'));
 	document.querySelector('.link-photos').addEventListener('click', () => openCategory(event, '.photos'));
+
+	//this allows a focused image to be 'clicked' on with the Enter key
+	document.addEventListener('keyup', function(e) {
+		//I use an object here for a single keycode for future-proofing
+		let allowedKeys = {
+			13: 'enter'
+		};
+
+		handleInput(e, allowedKeys[e.keyCode]);
+	});
 });
 
 // opens category based on the category name passed into it, currently the event parameter is unused.
@@ -81,5 +91,13 @@ function closeSidebar() {
 	const buttons = document.querySelectorAll('.sidebar button');
 	for(const button of buttons) {
 		button.tabIndex = -1;
+	}
+}
+
+//helps handle keyup events
+function handleInput(event, keystroke) {
+	switch(keystroke) {
+		case 'enter':
+			imageGalleryModal.openGalleryModal(event);
 	}
 }

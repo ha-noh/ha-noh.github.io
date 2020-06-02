@@ -2,7 +2,7 @@
 $(document).ready(function() {
 	$('#nav-placeholder').load('html/navbar.html');
 
-	//if the design panel was clicked to reach the gallery
+	//if the design panel was clicked to reach the gallery, open the design category by default
 	if(window.sessionStorage.getItem('galleryLanding') == 'design') {
 		openCategory(event,'.design');
 		//clear storage to return to default category on next page load
@@ -25,23 +25,41 @@ $(document).ready(function() {
 function openCategory(e, categoryName) {
 	let currentCat = document.querySelector('.category-displayed');
 
-	// if the function is trying to open the current category, return
+	//if there is a category open
 	if(currentCat != null) {
+		// if opening the current category, cancel the operation
 		if(currentCat.classList.contains(categoryName.slice(1))) {		
 			console.log(`${categoryName} is already active`);
 			return;
 		}
 
-		// hide and remove event listener from currently displayed gallery section
+		// otherwise, hide currently displayed category, 
+		// remove the listener from its local 'open sidebar' button,
+		// and set tabindex for non rendered images to -1
 		document.querySelector(`.category-displayed .openButton`).removeEventListener('click', openSidebar);
+
+		//make currently visible gallery images unfocusable
+		const visibleImages = document.querySelectorAll('category-displayed img');
+		for(const image of visibleImages) {
+			image.tabIndex = -1;
+		}
+
 		currentCat.classList.add('category-hidden');
 		currentCat.classList.remove('category-displayed');
 	}
 
-	// open new category and adjust its classList
+	// open a new category and adjust its classList
 	let newCategory = document.querySelector(categoryName);
 	newCategory.classList.add('category-displayed');
 	newCategory.classList.remove('category-hidden');
+
+	// make all images in the current open category focusable
+	const images = document.querySelectorAll(`${categoryName} img`);
+	for (const image of images) {
+		image.tabIndex = 0;
+	}
+
+	//add listener to the local 'open sidebar' button
 	document.querySelector(`${categoryName} .openButton`).addEventListener('click', openSidebar);
 }
 
@@ -52,6 +70,9 @@ function openSidebar() {
 	for(const button of buttons) {
 		button.tabIndex = 0;
 	}
+
+	//makes the first tab-able element the newly opened sidebar
+	document.querySelector('.sidebar button').focus();
 }
 
 function closeSidebar() {

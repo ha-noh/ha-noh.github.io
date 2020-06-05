@@ -4,7 +4,8 @@ A website to catalog my various personal projects, including artwork, software, 
 ## Testing 
 1) run `python -m http.server 8000` in terminal from site's root directory
 2) open `localhost:8000` in browser
-
+## Sass
+1) `sass --watch css/scss:css`
 ## TODO
 1) ~~Have home page panels redirect to the appropriate gallery category~~ 
 2) ~~Add dark borders to panels & try out background images~~

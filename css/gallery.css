@@ -154,7 +154,7 @@ header {
   white-space: pre;
 }
 
-.sidebar button:hover {
+.sidebar button:hover, .sidebar button:focus {
   background-color: #3b1f2b;
 }
 

@@ -81,7 +81,7 @@ function openSidebar() {
 		button.tabIndex = 0;
 	}
 
-	//makes the first tab-able element the newly opened sidebar
+	//makes the first tabbable element the newly opened sidebar
 	document.querySelector('.sidebar button').focus();
 }
 

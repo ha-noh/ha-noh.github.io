@@ -74,7 +74,7 @@ header {
 	text-align: left;
 	white-space: pre;
 }
-.sidebar button:hover {
+.sidebar button:hover, .sidebar button:focus {
 	background-color: #3b1f2b;
 }
 .sidebar .sidebar-close-button {

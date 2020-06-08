@@ -202,7 +202,7 @@ header {
     z-index: 0;
   }
 
-  .gallery img:hover {
+  .gallery img:hover, .gallery img:focus {
     transform: scale(0.95);
   }
 }

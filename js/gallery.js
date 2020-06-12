@@ -56,6 +56,8 @@ function openCategory(e, categoryName) {
 
 		currentCat.classList.add('category-hidden');
 		currentCat.classList.remove('category-displayed');
+		
+		closeSidebar();
 	}
 
 	// open a new category and adjust its classList

@@ -42,27 +42,33 @@ const imageGalleryModal = (function() {
 
 	const closeGalleryModal = function() {
 		document.querySelector('.gallery-modal-container').style.display = 'none';
+		removeImageTransition(document.querySelector('#gallery-modal-image'));
 		currentImageIndex = -1;
 	};
 
 	const prevGalleryImage = function() {
-		//currently displaying the first image
+		//if displaying the first image, end operation
 		if(currentImageIndex == 0) return;
+
 		currentImageIndex--;
 		openGalleryImage();
 	};
 
 	const nextGalleryImage = function() {
-		//currently displaying the last image
+		//if displaying the last image, end operation
 		if(currentImageIndex + 1 ==  galleryImages.length) return;
+
 		currentImageIndex++;
 		openGalleryImage();
 	};
 
 	//opens an image after it's clicked
 	const loadGalleryImage = function(e) {
-		document.querySelector('#gallery-modal-image').src = e.target.src;
+		let modalImage = document.querySelector('#gallery-modal-image'); 
+		modalImage.src = e.target.src;
+		addImageTransition(modalImage);
 
+		//iterate through images to find the current image's index (its position in order)
 		for(let x = 0; x < galleryImages.length; x++) {
 			if(galleryImages.item(x).src == e.target.src) currentImageIndex = x;
 		}
@@ -71,9 +77,17 @@ const imageGalleryModal = (function() {
 
 	//opens an image from its index in the list of gallery images
 	const openGalleryImage = function() {
-		let currentImgSrc = galleryImages.item(currentImageIndex).src;
-		document.querySelector('#gallery-modal-image').src = currentImgSrc;
+		let newImgSrc = galleryImages.item(currentImageIndex).src;
+		document.querySelector('#gallery-modal-image').src = newImgSrc;
 		updateImageIndex();
+	}
+
+	function addImageTransition(element) {
+		element.classList.add('image-fx');
+	}
+
+	function removeImageTransition(element) {
+		element.classList.remove('image-fx');
 	}
 
 	const handleInput = function(keystroke) {

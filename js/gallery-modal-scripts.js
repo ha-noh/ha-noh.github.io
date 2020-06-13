@@ -32,8 +32,8 @@ const imageGalleryModal = (function() {
 
 	//---------- Helper Functions ----------------
 	const openGalleryModal = function(e) {
-		//returns on clicks on gallery header, etc.
-		if(!(e.target.nodeName === 'IMG')) return;
+		//end operation if click event target is not an image
+		if(e.target.nodeName !== 'IMG') return;
 		
 		loadGalleryImage(e);
 		document.querySelector('.gallery-modal-container').style.display = 'block';

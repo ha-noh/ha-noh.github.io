@@ -83,11 +83,11 @@ const imageGalleryModal = (function() {
 	}
 
 	function addImageTransition(element) {
-		element.classList.add('image-fx');
+		// element.classList.add('image-fx');
 	}
 
 	function removeImageTransition(element) {
-		element.classList.remove('image-fx');
+		// element.classList.remove('image-fx');
 	}
 
 	const handleInput = function(keystroke) {

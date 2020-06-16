@@ -31,7 +31,7 @@ header {
 	padding: 10px 0;
 	box-shadow: 1px 5px 15px -6px $gallery-shadow-color;
 	background-color: white;
-	z-index: 1; //keeps header above gallery images while scrolling
+	//z-index: 1;
 }
 .category-displayed {
 	display: block;
@@ -55,7 +55,7 @@ header {
 	height: 100%;
 	width: 0; /* change with js */
 	position: fixed;
-	z-index: 2; //keeps sidebar above gallery header
+	z-index: 1;
 	top: 0;
 	left: 0;
 	background-color: $sidebar-color;

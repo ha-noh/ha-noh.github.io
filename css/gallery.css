@@ -104,7 +104,6 @@ header {
   padding: 10px 0;
   box-shadow: 1px 5px 15px -6px #0d0305;
   background-color: white;
-  z-index: 1;
 }
 
 .category-displayed {
@@ -133,7 +132,7 @@ header {
   width: 0;
   /* change with js */
   position: fixed;
-  z-index: 2;
+  z-index: 1;
   top: 0;
   left: 0;
   background-color: #1f1f24;

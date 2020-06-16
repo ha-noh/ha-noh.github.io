@@ -42,7 +42,7 @@ const imageGalleryModal = (function() {
 
 	const closeGalleryModal = function() {
 		document.querySelector('.gallery-modal-container').style.display = 'none';
-		removeImageTransition(document.querySelector('#gallery-modal-image'));
+		// removeImageTransition(document.querySelector('#gallery-modal-image'));
 		currentImageIndex = -1;
 	};
 
@@ -66,28 +66,28 @@ const imageGalleryModal = (function() {
 	const loadGalleryImage = function(e) {
 		let modalImage = document.querySelector('#gallery-modal-image'); 
 		modalImage.src = e.target.src;
-		addImageTransition(modalImage);
+		// addImageTransition(modalImage);
 
 		//iterate through images to find the current image's index (its position in order)
 		for(let x = 0; x < galleryImages.length; x++) {
 			if(galleryImages.item(x).src == e.target.src) currentImageIndex = x;
 		}
-		updateImageIndex();
+		imageIndexDidUpdate();
 	};
 
 	//opens an image from its index in the list of gallery images
 	const openGalleryImage = function() {
 		let newImgSrc = galleryImages.item(currentImageIndex).src;
 		document.querySelector('#gallery-modal-image').src = newImgSrc;
-		updateImageIndex();
+		imageIndexDidUpdate();
 	}
 
 	function addImageTransition(element) {
-		// element.classList.add('image-fx');
+		element.classList.add('image-fx');
 	}
 
 	function removeImageTransition(element) {
-		// element.classList.remove('image-fx');
+		element.classList.remove('image-fx');
 	}
 
 	const handleInput = function(keystroke) {
@@ -106,7 +106,7 @@ const imageGalleryModal = (function() {
 	}
 
 	//optional function for adjusting modal content to reflect the image index, e.g. displaying 2 / 5 
-	const updateImageIndex = function() {
+	function imageIndexDidUpdate() {
 		const imageIndexString = `${currentImageIndex + 1} / ${galleryImages.length}`;
 		//console.log(imageIndexString);
 		document.querySelector('.gallery-modal-index').innerText = imageIndexString;

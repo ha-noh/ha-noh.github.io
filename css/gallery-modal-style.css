@@ -15,7 +15,7 @@
 }
 .gallery-modal-button {
 	border: none;
-	color: #97fae4;
+	color: white;
 	background-color: rgba(31,31,36,0); /*transparent background*/
 	font-size: 50px;
 	text-shadow: 1px 1px 4px white;
@@ -28,12 +28,13 @@
 	background-color: rgba(31,31,36,.75);
 }
 .gallery-modal-index {
-	position: absolute;
-	left: 0;
-	font-size: 30px;
-	color: #97fae4;
-	height: 60px;
-	padding: 12px;
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 20px;
+	color: white;
+	text-shadow: 1px 1px black;
 	z-index: 1;
 }
 .modal-close-button {

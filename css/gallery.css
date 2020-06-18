@@ -134,6 +134,7 @@ header {
   /* change with js */
   position: fixed;
   z-index: 2;
+  /*keeps sidebar above gallery header*/
   top: 0;
   left: 0;
   background-color: #1f1f24;
@@ -199,12 +200,25 @@ header {
   }
 
   .gallery img {
-    transition: transform 0.1s;
+    transition: transform 0.3s;
     z-index: 0;
   }
 
   .gallery img:hover, .gallery img:focus {
     transform: scale(0.95);
+    object-fit: contain;
+    animation-name: image-transform;
+    animation-duration: 0.3s;
+  }
+
+  @keyframes image-transform {
+    0% {
+      object-fit: cover;
+    }
+    100% {
+      object-fit: contain;
+      transform: scale(0.95);
+    }
   }
 }
 /*3 columns*/

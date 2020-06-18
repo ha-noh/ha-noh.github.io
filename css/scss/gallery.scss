@@ -55,7 +55,7 @@ header {
 	height: 100%;
 	width: 0; /* change with js */
 	position: fixed;
-	z-index: 2; //keeps sidebar above gallery header
+	z-index: 2; /*keeps sidebar above gallery header*/
 	top: 0;
 	left: 0;
 	background-color: $sidebar-color;
@@ -112,11 +112,18 @@ header {
 		max-width: 600px;
 	}
 	.gallery img {
-		transition: transform 0.1s;
+		transition: transform 0.3s;
 		z-index: 0;
 	}
 	.gallery img:hover, .gallery img:focus {
 		transform: scale(.95);
+		object-fit: contain;
+		animation-name: image-transform;
+		animation-duration: .3s;
+	}
+	@keyframes image-transform {
+		0% {object-fit: cover;}
+		100% {object-fit: contain;transform: scale(.95);}
 	}
 }
 

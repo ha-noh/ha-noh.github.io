@@ -8,19 +8,18 @@ h1 {
 h2 {
 	text-align: center;
 }
-/* about me body text */
-h3, p {
+h3, p { //about me body text
 	color: common.$secondary-color;
 }
 article img {
 	width: 100%;
 	margin: 0 0 3px;
 }
-/* determines icon size */
-header {
+header { //determines icon size
 	margin-bottom: 30px;
 }
-/* gallery specific classes */
+
+/*gallery specific classes*/
 .gallery {
 	display: flex;
 	flex-flow: column;
@@ -40,7 +39,7 @@ header {
 	display: none;
 }
 
-/* sidebar navigation */
+/*sidebar navigation*/
 .openButton {
 	color: common.$secondary-color;
 	border: none;
@@ -53,13 +52,13 @@ header {
 .sidebar {
 	display: flex;
 	height: 100%;
-	width: 0; /* change with js */
+	width: 0; //changes with js
 	position: fixed;
-	z-index: 2; /*keeps sidebar above gallery header*/
+	z-index: 2; //keeps sidebar above gallery header
 	top: 0;
 	left: 0;
 	background-color: $sidebar-color;
-	overflow-x: hidden; /* disable horizontal scroll */
+	overflow-x: hidden; //disable horizontal scroll
 	transition: 0.4s;
 	opacity: .97;
 	flex-flow: column;
@@ -83,7 +82,7 @@ header {
 	padding: 0 10px 0 0;
 }
 
-/* about me specific classes*/
+/*about me specific classes*/
 .aboutme-body {
 	width: 80%;
 	margin: 0 auto 30px;
@@ -134,7 +133,7 @@ header {
 	}
 }
 
-/* 4 columns*/
+/*4 columns*/
 @media screen and (min-width:1200px) {
 	.aboutme-body {
 		width: 600px;

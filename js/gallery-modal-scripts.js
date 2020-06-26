@@ -38,11 +38,12 @@ const imageGalleryModal = (function() {
 		loadGalleryImage(e);
 		document.querySelector('.gallery-modal-container').style.display = 'block';
 		document.querySelector('.gallery-modal-container').focus();
+		addImageTransition(document.querySelector('.gallery-modal-image'));
 	};
 
 	const closeGalleryModal = function() {
-		document.querySelector('.gallery-modal-container').style.display = 'none';
 		removeImageTransition(document.querySelector('.gallery-modal-image'));
+		document.querySelector('.gallery-modal-container').style.display = 'none';
 		currentImageIndex = -1;
 	};
 
@@ -62,11 +63,9 @@ const imageGalleryModal = (function() {
 		openGalleryImage();
 	};
 
-	//opens an image after it's clicked
+	//opens an image based on the click event target
 	const loadGalleryImage = function(e) {
-		let modalImage = document.querySelector('.gallery-modal-image'); 
-		modalImage.src = e.target.src;
-		addImageTransition(modalImage);
+		document.querySelector('.gallery-modal-image').src = e.target.src;
 
 		//iterate through images to find the current image's index (its position in order)
 		for(let x = 0; x < galleryImages.length; x++) {
@@ -75,7 +74,7 @@ const imageGalleryModal = (function() {
 		imageIndexDidUpdate();
 	};
 
-	//opens an image from its index in the list of gallery images
+	//opens an image based on its index in the gallery image list
 	const openGalleryImage = function() {
 		let newImgSrc = galleryImages.item(currentImageIndex).src;
 		document.querySelector('.gallery-modal-image').src = newImgSrc;
@@ -83,11 +82,11 @@ const imageGalleryModal = (function() {
 	}
 
 	function addImageTransition(element) {
-		element.classList.add('image-fx');
+		element.classList.toggle('image-fx');
 	}
 
 	function removeImageTransition(element) {
-		element.classList.remove('image-fx');
+		element.classList.toggle('image-fx');
 	}
 
 	const handleInput = function(keystroke) {

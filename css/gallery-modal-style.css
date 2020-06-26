@@ -50,9 +50,6 @@
 	top: 50%;
 	right: 0;
 }
-.image-fx { 
-
-}
 .gallery-modal-image {
 	position: absolute;
 	top: 50%;
@@ -62,7 +59,11 @@
 	max-height: 100vh;
 	/*width: auto;
 	height: auto;*/
-	transition: all 0.3s;
+	transition: all .4s;
+	opacity: 0;
+}
+.image-fx.gallery-modal-image{ 
+	opacity: 1;
 }
 
 /*

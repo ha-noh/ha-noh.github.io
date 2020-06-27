@@ -38,6 +38,13 @@ header { //determines icon size
 .category-hidden {
 	display: none;
 }
+.img-description {
+	position: fixed;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 10px;
+	display: none;
+}
 
 /*sidebar navigation*/
 .openButton {
@@ -113,8 +120,11 @@ header { //determines icon size
 	.gallery img {
 		z-index: 0;
 	}
-	.gallery img:hover, .gallery img:focus {
+	.gallery img:hover {
 		object-fit: contain;
+		//animation not present for hover due to epilepsy inducing flicker if you mouse over the boundaries of an img
+	}
+	.gallery img:focus {
 		animation-name: image-transform;
 		animation-duration: .3s;
 		animation-fill-mode: forwards;

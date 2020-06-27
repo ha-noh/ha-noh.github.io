@@ -113,6 +113,14 @@ header {
   display: none;
 }
 
+.img-description {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+  display: none;
+}
+
 /*sidebar navigation*/
 .openButton {
   color: #e72d80;
@@ -198,8 +206,11 @@ header {
     z-index: 0;
   }
 
-  .gallery img:hover, .gallery img:focus {
+  .gallery img:hover {
     object-fit: contain;
+  }
+
+  .gallery img:focus {
     animation-name: image-transform;
     animation-duration: 0.3s;
     animation-fill-mode: forwards;

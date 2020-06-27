@@ -13,6 +13,9 @@
 .gallery-modal-container:focus {
 	outline: none; /*remove outline because the modal container it's not important that the modal itself is in focus*/
 }
+.modal-display{
+	display: block;
+}
 .gallery-modal-button {
 	border: none;
 	color: white;
@@ -55,14 +58,16 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-  	max-width: 100vw;
-	max-height: 100vh;
+	max-width: 80vw;
+	max-height: 80vh;
 	/*width: auto;
 	height: auto;*/
-	transition: all .4s;
+	transition: all .1s;
 	opacity: 0;
 }
 .image-fx.gallery-modal-image{ 
+	max-width: 100vw;
+	max-height: 100vh;
 	opacity: 1;
 }
 

@@ -36,14 +36,14 @@ const imageGalleryModal = (function() {
 		if(e.target.nodeName !== 'IMG') return;
 		
 		loadGalleryImage(e);
-		document.querySelector('.gallery-modal-container').style.display = 'block';
+		document.querySelector('.gallery-modal-container').classList.toggle('modal-display');
 		document.querySelector('.gallery-modal-container').focus();
-		addImageTransition(document.querySelector('.gallery-modal-image'));
+		toggleGalleryImageFx();
 	};
 
 	const closeGalleryModal = function() {
-		removeImageTransition(document.querySelector('.gallery-modal-image'));
-		document.querySelector('.gallery-modal-container').style.display = 'none';
+		toggleGalleryImageFx();
+		setTimeout(toggleModalDisplay, 100);
 		currentImageIndex = -1;
 	};
 
@@ -81,12 +81,12 @@ const imageGalleryModal = (function() {
 		imageIndexDidUpdate();
 	}
 
-	function addImageTransition(element) {
-		element.classList.toggle('image-fx');
+	function toggleGalleryImageFx() {
+		document.querySelector('.gallery-modal-image').classList.toggle('image-fx');
 	}
 
-	function removeImageTransition(element) {
-		element.classList.toggle('image-fx');
+	function toggleModalDisplay() {
+		document.querySelector('.gallery-modal-container').classList.toggle('modal-display');
 	}
 
 	const handleInput = function(keystroke) {

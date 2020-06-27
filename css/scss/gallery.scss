@@ -111,18 +111,18 @@ header { //determines icon size
 		max-width: 600px;
 	}
 	.gallery img {
-		transition: transform 0.3s;
 		z-index: 0;
 	}
 	.gallery img:hover, .gallery img:focus {
-		transform: scale(.95);
 		object-fit: contain;
 		animation-name: image-transform;
 		animation-duration: .3s;
+		animation-fill-mode: forwards;
 	}
 	@keyframes image-transform {
-		0% {object-fit: cover;}
-		100% {object-fit: contain;transform: scale(.95);}
+		0% {object-fit: cover; transform: scale(.8);}
+		50% {object-fit: contain; transform: scale(.65) ;}
+		100% {object-fit: contain; transform: scale(.95);}
 	}
 }
 

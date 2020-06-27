@@ -195,20 +195,24 @@ header {
   }
 
   .gallery img {
-    transition: transform 0.3s;
     z-index: 0;
   }
 
   .gallery img:hover, .gallery img:focus {
-    transform: scale(0.95);
     object-fit: contain;
     animation-name: image-transform;
     animation-duration: 0.3s;
+    animation-fill-mode: forwards;
   }
 
   @keyframes image-transform {
     0% {
       object-fit: cover;
+      transform: scale(0.8);
+    }
+    50% {
+      object-fit: contain;
+      transform: scale(0.65);
     }
     100% {
       object-fit: contain;

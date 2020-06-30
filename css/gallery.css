@@ -206,29 +206,12 @@ header {
     z-index: 0;
   }
 
-  .gallery img:hover {
+  .gallery img:hover, .gallery img:focus {
     object-fit: contain;
   }
 
   .gallery img:focus {
-    animation-name: image-transform;
-    animation-duration: 0.3s;
-    animation-fill-mode: forwards;
-  }
-
-  @keyframes image-transform {
-    0% {
-      object-fit: cover;
-      transform: scale(0.8);
-    }
-    50% {
-      object-fit: contain;
-      transform: scale(0.65);
-    }
-    100% {
-      object-fit: contain;
-      transform: scale(0.95);
-    }
+    outline: #e72d80 solid 1px;
   }
 }
 /*3 columns*/

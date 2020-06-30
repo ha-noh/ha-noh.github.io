@@ -120,20 +120,21 @@ header { //determines icon size
 	.gallery img {
 		z-index: 0;
 	}
-	.gallery img:hover {
+	.gallery img:hover, .gallery img:focus {
 		object-fit: contain;
 		//animation not present for hover due to epilepsy inducing flicker if you mouse over the boundaries of an img
 	}
 	.gallery img:focus {
-		animation-name: image-transform;
-		animation-duration: .3s;
-		animation-fill-mode: forwards;
+		outline: common.$secondary-color solid 1px;
+		// animation-name: image-transform;
+		// animation-duration: .3s;
+		// animation-fill-mode: forwards;
 	}
-	@keyframes image-transform {
-		0% {object-fit: cover; transform: scale(.8);}
-		50% {object-fit: contain; transform: scale(.65) ;}
-		100% {object-fit: contain; transform: scale(.95);}
-	}
+	// @keyframes image-transform {
+	// 	0% {object-fit: cover; transform: scale(.8);}
+	// 	50% {object-fit: contain; transform: scale(.65) ;}
+	// 	100% {object-fit: contain; transform: scale(.95);}
+	// }
 }
 
 /*3 columns*/

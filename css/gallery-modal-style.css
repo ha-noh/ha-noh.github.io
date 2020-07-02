@@ -19,24 +19,25 @@
 .gallery-modal-button {
 	border: none;
 	color: white;
-	background-color: rgba(31,31,36,0); /*transparent background*/
+	background-color: rgba(31,31,36,.9); /*transparent background*/
 	font-size: 40px;
 	text-shadow: 1px 1px 4px white;
 	z-index: 1;
 	height: 60px;
 	width: 45px;
 }
-.gallery-modal-button:hover {
+.gallery-modal-button:hover, .gallery-modal-button:focus {
 	color: #e72d80;
-	background-color: rgba(31,31,36,.75);
 }
 .gallery-modal-index {
 	position: fixed;
 	bottom: 0;
 	left: 50%;
 	transform: translateX(-50%);
+	padding: 5px;
 	font-size: 20px;
 	color: white;
+	background-color: rgba(31,31,36,.7);
 	text-shadow: 1px 1px 4px white;
 	z-index: 1;
 }

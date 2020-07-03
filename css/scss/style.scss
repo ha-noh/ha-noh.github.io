@@ -48,10 +48,11 @@ header {
 /* animated elements & overlays */
 .panel {
 	position: relative;
-	transition: transform 0.1s;
+	// transition: all 0.1s;
 }
-.panel:hover {
+.panel:hover, a:focus img {
 	transform: scale(.97);
+	transition: all 0.1s;
 }
 
 /* one last responsive hail mary for tiny viewports

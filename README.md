@@ -4,6 +4,8 @@ A website to catalog my various personal projects, including artwork, software, 
 ## Testing 
 1) run `python -m http.server 8000` in terminal from site's root directory
 2) open `localhost:8000` in browser
+## Convert src/js for production
+`npx babel -w js/src -d js --presets react-app/prod`
 ## Sass
 1) `sass --watch css/scss:css`
 ## TODO

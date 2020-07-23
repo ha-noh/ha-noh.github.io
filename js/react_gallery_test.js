@@ -7,10 +7,10 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var GalleryHeader = function (_React$Component) {
 	_inherits(GalleryHeader, _React$Component);
 
-	function GalleryHeader() {
+	function GalleryHeader(props) {
 		_classCallCheck(this, GalleryHeader);
 
-		return _possibleConstructorReturn(this, (GalleryHeader.__proto__ || Object.getPrototypeOf(GalleryHeader)).apply(this, arguments));
+		return _possibleConstructorReturn(this, (GalleryHeader.__proto__ || Object.getPrototypeOf(GalleryHeader)).call(this, props));
 	}
 
 	return GalleryHeader;

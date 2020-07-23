@@ -18,7 +18,7 @@ A website to catalog my various personal projects, including artwork, software, 
 7) ~~Add Aria labels to all buttons?~~
 8) Have navbar icons look more organized and not floating in space
 9) Change how image height is determined in the gallery
-10) Create a landing page or page overlay for every panel -  right now some panels just link to external pages without any context
+10) Create a landing page or page overlay for every panel - right now some panels just link to external pages without any context
 11) ~~Remove jquery calls and fontawesome icons from navbar & gallery~~
 ## Browser Compatibility
 - Keyboard navigation in Firefox is weird; it allows you to focus the body DOM element if you tab to the bottom of any given page. Issue is not present in Chrome.

@@ -5,7 +5,7 @@
 const imageGalleryModal = (function() {
 	//gallery is closed by default, and so no valid image index is available
 	let currentImageIndex = -1;
-	let timeoutFunction = null;
+
 	//listen for user clicks on the modal buttons
 	document.querySelector('.modal-close-button').addEventListener('click', () => closeGalleryModal());
 	document.querySelector('.modal-close-button').addEventListener('focus', showFeaturesIfHidden);
@@ -19,6 +19,7 @@ const imageGalleryModal = (function() {
 	document.querySelector('.gallery-modal-image').addEventListener('click', toggleModalFeatures);
 	document.querySelector('.gallery-modal-image').addEventListener('mouseout', showFeaturesIfHidden);
 	
+	document.querySelector('.invisible-button').addEventListener('click', toggleModalFeatures);
 	// not sure if this works with <picture> elements
 	document.querySelector('.gallery-modal-ready').addEventListener('click', () => openGalleryModal(event));
 
@@ -74,10 +75,6 @@ const imageGalleryModal = (function() {
 
 	//opens an image based on the click event target
 	const loadGalleryImage = function(e) {
-		if(timeoutFunction !== null) {
-			clearTimeout(timeoutFunction);
-		}
-
 		document.querySelector('.gallery-modal-image').src = e.target.src;
 
 		//iterate through images to find the current image's index (its position in order)
@@ -91,10 +88,6 @@ const imageGalleryModal = (function() {
 
 	//opens an image based on its index in the gallery image list
 	const openGalleryImage = function() {
-		if(timeoutFunction !== null) {
-			clearTimeout(timeoutFunction);
-		}
-
 		let newImgSrc = galleryImages.item(currentImageIndex).src;
 		document.querySelector('.gallery-modal-image').src = newImgSrc;
 		imageIndexDidUpdate();
@@ -121,11 +114,6 @@ const imageGalleryModal = (function() {
 		document.querySelector('.gallery-modal-index').classList.toggle('modal-features-hide');
 	}
 
-	//toggles modal features after a delay
-	function delayedModalFeaturesToggle() {
-		timeoutFunction = setTimeout(toggleModalFeatures, 2000);
-	}
-
 	function showFeaturesIfHidden() {
 		//no need to check every feature individually since they're always toggled together
 		let feature = document.querySelector('.gallery-modal-index');
@@ -135,30 +123,6 @@ const imageGalleryModal = (function() {
 			return true;
 		}
 		return false;
-	}
-
-	function hideFeaturesIfVisible() {
-		if(timeoutFunction !== null) {
-			clearTimeout(timeoutFunction);
-		}
-		//no need to check every feature individually since they're always toggled together
-		let feature = document.querySelector('.gallery-modal-index');
-		//hide features if they're currently visible
-		if(!feature.classList.contains('modal-features-hide')) {
-			delayedModalFeaturesToggle();
-			return true;
-		}
-		return false;
-	}
-
-	function imageClickBehavior() {
-		toggleModalFeatures(); 
-		hideFeaturesIfVisible();
-	}
-
-	function modalMousemoveBehavior() {
-		if(showFeaturesIfHidden()) delayedModalFeaturesToggle();
-
 	}
 
 	const handleInput = function(keystroke) {

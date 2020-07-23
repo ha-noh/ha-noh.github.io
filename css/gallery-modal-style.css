@@ -66,18 +66,17 @@
 	transform: translate(-50%, -50%);
 	max-width: 80vw;
 	max-height: 80vh;
-	/*width: auto;
-	height: auto;*/
 	transition: all .2s;
 	opacity: 0;
 }
-.image-fx.gallery-modal-image{ 
+.image-fx.gallery-modal-image { 
 	max-width: 100vw;
 	max-height: 100vh;
 	opacity: 1;
 }
-
-/*
-#gallery-modal-image:hover + .gallery-modal-index, .gallery-modal-index:hover{
-	display: inline;
-}*/
+.invisible-button {
+	height: 1px;
+	width: 1px;
+	position: absolute;
+	bottom: 0;
+}

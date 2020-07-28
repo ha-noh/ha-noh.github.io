@@ -96,10 +96,18 @@ header {
   flex-flow: column;
 }
 
+.gallery img {
+  -webkit-box-shadow: 3px 5px 10px -3px #0d0305;
+  -moz-box-shadow: 3px 5px 10px -3px #0d0305;
+  box-shadow: 3px 5px 10px -3px #0d0305;
+}
+
 .gallery-header {
   position: sticky;
   top: 0;
   padding: 10px 0;
+  -webkit-box-shadow: 1px 5px 15px -6px #0d0305;
+  -moz-box-shadow: 1px 5px 15px -6px #0d0305;
   box-shadow: 1px 5px 15px -6px #0d0305;
   background-color: white;
   z-index: 1;
@@ -173,6 +181,8 @@ header {
 .aboutme-body {
   width: 80%;
   margin: 0 auto 30px;
+  -webkit-box-shadow: 3px 5px 10px -3px #0d0305;
+  -moz-box-shadow: 3px 5px 10px -3px #0d0305;
   box-shadow: 3px 5px 10px -3px #0d0305;
   padding: 20px;
 }

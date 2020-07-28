@@ -24,10 +24,17 @@ header { //determines icon size
 	display: flex;
 	flex-flow: column;
 }
+.gallery img {
+	-webkit-box-shadow: 3px 5px 10px -3px $gallery-shadow-color;
+	-moz-box-shadow: 3px 5px 10px -3px $gallery-shadow-color;
+	box-shadow: 3px 5px 10px -3px $gallery-shadow-color;
+}
 .gallery-header {
 	position: sticky;
 	top: 0;
 	padding: 10px 0;
+	-webkit-box-shadow: 1px 5px 15px -6px $gallery-shadow-color;
+	-moz-box-shadow: 1px 5px 15px -6px $gallery-shadow-color;
 	box-shadow: 1px 5px 15px -6px $gallery-shadow-color;
 	background-color: white;
 	z-index: 1; //keeps header above gallery images while scrolling
@@ -93,6 +100,8 @@ header { //determines icon size
 .aboutme-body {
 	width: 80%;
 	margin: 0 auto 30px;
+	-webkit-box-shadow: 3px 5px 10px -3px $gallery-shadow-color;
+	-moz-box-shadow: 3px 5px 10px -3px $gallery-shadow-color;
 	box-shadow: 3px 5px 10px -3px $gallery-shadow-color;
 	padding: 20px;
 }

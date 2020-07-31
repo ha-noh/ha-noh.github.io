@@ -2,14 +2,14 @@
 $(document).ready(function() {
 	$('#nav-placeholder').load('html/navbar.html');
 
-	//if the design panel was clicked to reach the gallery, open the design category by default
+	// if the design panel was clicked to reach the gallery, open the design category by default
 	if(window.sessionStorage.getItem('galleryLanding') == 'design') {
 		openCategory(event,'.design');
 		//clear storage to return to default category on next page load
 		window.sessionStorage.removeItem('galleryLanding');
 	}
 	
-	//open the sketches category by default
+	// open the sketches category by default
 	else {
 		openCategory(event, '.sketches');
 	}
@@ -19,10 +19,10 @@ $(document).ready(function() {
 	document.querySelector('.link-illustrations').addEventListener('click', () => openCategory(event, '.illustrations'));
 	document.querySelector('.link-design').addEventListener('click', () => openCategory(event, '.design'));
 	document.querySelector('.link-photos').addEventListener('click', () => openCategory(event, '.photos'));
+	document.querySelector('.openButton').addEventListener('click', openSidebar);
 
-	//this allows a focused image to be 'clicked' on with the Enter key
+	// Allow a focused image to be 'clicked' on with the Enter key
 	document.addEventListener('keyup', function(e) {
-		//I use an object here for a single keycode for future-proofing
 		let allowedKeys = {
 			13: 'enter'
 		};
@@ -35,25 +35,21 @@ $(document).ready(function() {
 function openCategory(e, categoryName) {
 	let currentCat = document.querySelector('.category-displayed');
 
-	//if there is a category open
+	// If there is a category open, hide it first
 	if(currentCat != null) {
-		// if opening the current category, cancel the operation
+		// If opening the current category, cancel the operation
 		if(currentCat.classList.contains(categoryName.slice(1))) {		
 			console.log(`${categoryName} is already active`);
 			return;
 		}
 
-		// otherwise, hide currently displayed category, 
-		// remove the listener from its local 'open sidebar' button,
-		// and set tabindex for non rendered images to -1
-		document.querySelector(`.category-displayed .openButton`).removeEventListener('click', openSidebar);
-
-		//make currently visible gallery images unfocusable
+		// make currently visible gallery images unfocusable
 		const visibleImages = document.querySelectorAll('category-displayed img');
 		for(const image of visibleImages) {
 			image.tabIndex = -1;
 		}
 
+		// hide current category
 		currentCat.classList.add('category-hidden');
 		currentCat.classList.remove('category-displayed');
 		
@@ -65,14 +61,30 @@ function openCategory(e, categoryName) {
 	newCategory.classList.add('category-displayed');
 	newCategory.classList.remove('category-hidden');
 
+	// set the appropriate category name in header
+	let catName;
+	switch(categoryName) {
+		case '.sketches':
+			catName = 'Sketches & Studies';
+			break;
+		case '.illustrations':
+			catName = 'Illustrations';
+			break;
+		case '.design':
+			catName = 'Social Media Design';
+			break;
+		case '.photos':
+			catName = 'Photo Edits';
+			break;
+	}
+	document.querySelector('.gallery-header span').innerText = catName;
+
 	// make all images in the current open category focusable
 	const images = document.querySelectorAll(`${categoryName} img`);
 	for (const image of images) {
 		image.tabIndex = 0;
 	}
-
-	//add listener to the local 'open sidebar' button
-	document.querySelector(`${categoryName} .openButton`).addEventListener('click', openSidebar);
+	
 }
 
 function openSidebar() {
@@ -83,7 +95,7 @@ function openSidebar() {
 		button.tabIndex = 0;
 	}
 
-	//makes the first tabbable element the newly opened sidebar
+	// makes the first tabbable element the newly opened sidebar
 	document.querySelector('.sidebar button').focus();
 }
 
@@ -96,7 +108,7 @@ function closeSidebar() {
 	}
 }
 
-//helps handle keyup events
+// helps handle keyup events
 function handleInput(event, keystroke) {
 	switch(keystroke) {
 		case 'enter':

@@ -33,9 +33,9 @@ header { //determines icon size
 	position: sticky;
 	top: 0;
 	padding: 10px 0;
-	-webkit-box-shadow: 1px 5px 15px -6px $gallery-shadow-color;
-	-moz-box-shadow: 1px 5px 15px -6px $gallery-shadow-color;
-	box-shadow: 1px 5px 15px -6px $gallery-shadow-color;
+	-webkit-box-shadow: 0 5px 5px -4px $gallery-shadow-color;
+	-moz-box-shadow: 0 5px 5px -4px $gallery-shadow-color;
+	box-shadow: 0 5px 5px -4px $gallery-shadow-color;
 	background-color: white;
 	z-index: 1; //keeps header above gallery images while scrolling
 }

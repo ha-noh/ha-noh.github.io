@@ -106,9 +106,9 @@ header {
   position: sticky;
   top: 0;
   padding: 10px 0;
-  -webkit-box-shadow: 1px 5px 15px -6px #0d0305;
-  -moz-box-shadow: 1px 5px 15px -6px #0d0305;
-  box-shadow: 1px 5px 15px -6px #0d0305;
+  -webkit-box-shadow: 0 5px 5px -4px #0d0305;
+  -moz-box-shadow: 0 5px 5px -4px #0d0305;
+  box-shadow: 0 5px 5px -4px #0d0305;
   background-color: white;
   z-index: 1;
 }

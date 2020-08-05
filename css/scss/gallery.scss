@@ -114,12 +114,13 @@ header { //determines icon size
 		font-size: 55px;
 	}
 	article img {
-		width: 49.5%;
+		height: 45vw;
+		width: 45vw;
 		object-fit: cover;
 	}
 	.gallery {
 		flex-flow: row wrap;
-		justify-content: space-around;
+		justify-content: center;
 	}
 	.aboutme-body {
 		min-width: 547px;
@@ -145,23 +146,26 @@ header { //determines icon size
 	// }
 }
 
-/*3 columns*/
 @media screen and (min-width:900px) {
 	article img {
-		width: 33%;
+		height: 30vw;
+		width: 30vw;
 	}
 }
-
-/*4 columns*/
 @media screen and (min-width:1200px) {
 	.aboutme-body {
 		width: 600px;
 	}
 	article img {
-		width: 24.75%;
+		height: 24vw;
+		width: 24vw;
 	}
 }
 @media screen and (min-width:1500px) {
+	article img {
+		height: 370px;
+		width: 370px;
+	}
 	.gallery {
 		width: 1500px;
 		margin: auto;

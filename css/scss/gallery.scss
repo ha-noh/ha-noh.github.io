@@ -18,7 +18,6 @@ article img {
 header { //determines icon size
 	margin-bottom: 30px;
 }
-
 /*gallery specific classes*/
 .gallery {
 	display: flex;
@@ -144,6 +143,20 @@ header { //determines icon size
 	// 	50% {object-fit: contain; transform: scale(.65) ;}
 	// 	100% {object-fit: contain; transform: scale(.95);}
 	// }
+	.bg-pattern {
+		background-image: url('../images/patterns/crumpled_paper.png');
+		background-repeat: round;
+		// background-attachment: fixed;
+		opacity: 12%;
+		position: absolute;
+		top: 235px;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+	}
 }
 
 /*3 columns*/

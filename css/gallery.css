@@ -223,20 +223,6 @@ header {
   .gallery img:focus {
     outline: #e72d80 solid 1px;
   }
-
-  .bg-pattern {
-    background-image: url("../images/patterns/crumpled_paper.png");
-    background-repeat: round;
-    opacity: 12%;
-    position: absolute;
-    top: 235px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-  }
 }
 /*3 columns*/
 @media screen and (min-width: 900px) {

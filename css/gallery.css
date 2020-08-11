@@ -205,7 +205,7 @@ header {
 
   .gallery {
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: space-evenly;
   }
 
   .aboutme-body {

@@ -18,6 +18,7 @@ article img {
 header { //determines icon size
 	margin-bottom: 30px;
 }
+
 /*gallery specific classes*/
 .gallery {
 	display: flex;
@@ -120,7 +121,7 @@ header { //determines icon size
 	}
 	.gallery {
 		flex-flow: row wrap;
-		justify-content: center;
+		justify-content: space-evenly;
 	}
 	.aboutme-body {
 		min-width: 547px;

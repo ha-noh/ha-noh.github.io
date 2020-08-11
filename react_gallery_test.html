@@ -4,7 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="css/gallery.css">
-	<link rel="stylesheet" href="css/gallery-modal-style.css">
+	<link rel="stylesheet" href="image_gallery_modal/gallery-modal-style.css">
 	<link rel="icon" type="image/png" href="images/icon.png">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:900i|Muli&display=swap" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -14,7 +14,6 @@
 	<title>React gallery test</title>
 </head>
 <body>
-	<!-- set tabindex to -1 because the container shouldn't be focusable in general cases, only when it's first opened to make its buttons immediately accessible -->
 	<section aria-label="modal overlay" class="gallery-modal-container" tabindex="-1">
 		<button aria-label="close modal overlay" class="gallery-modal-button modal-close-button">×</button>
 		<button aria-label="previous image" class="gallery-modal-button modal-prev-button">‹</button>
@@ -45,6 +44,7 @@
 		
 		<article id="react-container"></article>
 	</main>
+	
 	<script src="js/gallery-modal-scripts.js"></script>
 </body>
 </html>

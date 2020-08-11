@@ -39,6 +39,11 @@ function openCategory(e, categoryName) {
 	if(currentCat != null) {
 		// If opening the current category, cancel the operation
 		if(currentCat.classList.contains(categoryName.slice(1))) {		
+			// cross-browser safe method of stopping event propagation to the new click event added below
+			if (!e) var e = window.event;
+			e.cancelBubble = true;
+			if (e.stopPropagation) e.stopPropagation();
+	
 			console.log(`${categoryName} is already active`);
 			return;
 		}
@@ -87,7 +92,7 @@ function openCategory(e, categoryName) {
 	
 }
 
-function openSidebar() {
+function openSidebar(e) {
 	document.querySelector('.sidebar').style.width = '250px';
 
 	const buttons = document.querySelectorAll('.sidebar button');
@@ -97,6 +102,15 @@ function openSidebar() {
 
 	// makes the first tabbable element the newly opened sidebar
 	document.querySelector('.sidebar button').focus();
+
+
+	// cross-browser safe method of stopping event propagation to the new click event added below
+	if (!e) var e = window.event;
+	e.cancelBubble = true;
+	if (e.stopPropagation) e.stopPropagation();
+
+	// close sidebar if a click occurs outside of the sidebar's bounds
+	document.querySelector('html').addEventListener('click', closeIfOutOfBounds);
 }
 
 function closeSidebar() {
@@ -106,6 +120,8 @@ function closeSidebar() {
 	for(const button of buttons) {
 		button.tabIndex = -1;
 	}
+
+	document.querySelector('html').removeEventListener('click', closeIfOutOfBounds);
 }
 
 // helps handle keyup events
@@ -114,4 +130,13 @@ function handleInput(event, keystroke) {
 		case 'enter':
 			imageGalleryModal.openGalleryModal(event);
 	}
+}
+
+/* Checks if the event target is the .sidebar div.
+ * (1) If the target is a sidebar button, the sidebar will behave as normal without triggering this function's related event.
+ * (2) If the target is anything else besides these 2 cases, the sidebar will close.
+ */
+function closeIfOutOfBounds(e) {
+	e.target.classList.contains('sidebar') ? false : closeSidebar();
+	// console.log(e.target)
 }

@@ -69,6 +69,10 @@ button {
   color: #97fae4;
 }
 
+button {
+  cursor: pointer;
+}
+
 h1 {
   font-size: 55px;
   margin-bottom: 0;

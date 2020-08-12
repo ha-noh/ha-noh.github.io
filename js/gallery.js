@@ -100,8 +100,8 @@ function openSidebar(e) {
 		button.tabIndex = 0;
 	}
 
-	// makes the first tabbable element the newly opened sidebar
-	document.querySelector('.sidebar button').focus();
+	// focus the (now visible) sidebar
+	document.querySelector('.sidebar').focus();
 
 
 	// cross-browser safe method of stopping event propagation to the new click event added below

@@ -38,6 +38,7 @@ a, a:visited {
 
 button {
   border: none;
+  cursor: pointer;
 }
 
 .moon, .sun, .inline-icon {
@@ -67,10 +68,6 @@ button {
 /* navbar icons change color on hover */
 .sun:hover, .moon:hover {
   color: #97fae4;
-}
-
-button {
-  cursor: pointer;
 }
 
 h1 {

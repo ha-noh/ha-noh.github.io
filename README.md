@@ -1,13 +1,6 @@
 #ha-noh.github.io
 A website to catalog my various personal projects, including artwork, software, and music.
 
-## Testing 
-1) run `python -m http.server 8000` in terminal from site's root directory
-2) open `localhost:8000` in browser
-## Convert src/js for production
-`npx babel -w js/src -d js --presets react-app/prod`
-## Sass
-1) `sass --watch css/scss:css`
 ## TODO
 1) ~~Have home page panels redirect to the appropriate gallery category~~ 
 2) ~~Add dark borders to panels & try out background images~~
@@ -17,9 +10,10 @@ A website to catalog my various personal projects, including artwork, software, 
 6) ~~Move down taborder of non-menu items when side navigation bar is open~~
 7) ~~Add Aria labels to all buttons?~~
 8) Have navbar icons look more organized and not floating in space
-9) Change how image height is determined in the gallery
+9) ~~Change how image height is determined in the gallery~~
 10) Create a landing page or page overlay for every panel - right now some panels just link to external pages without any context
 11) ~~Remove jquery calls and fontawesome icons from navbar & gallery~~
-12) Move image gallery modal files to separate directory, watch for changes to update respective github repository
+12) ~~Move image gallery modal files to separate directory, watch for changes to update respective github repository~~
+13) Add some kind of user interactable element - simplest suggestion would be a guestbook
 ## Browser Compatibility
 - Keyboard navigation in Firefox is weird; it allows you to focus the body DOM element if you tab to the bottom of any given page. Issue is not present in Chrome.

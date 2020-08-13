@@ -169,8 +169,13 @@ header {
   white-space: pre;
 }
 
+.sidebar:focus {
+  outline: #e72d80 solid 1px;
+}
+
 .sidebar button:hover, .sidebar button:focus {
   background-color: #3b1f2b;
+  outline: #e72d80 solid 1px;
 }
 
 .sidebar .sidebar-close-button {

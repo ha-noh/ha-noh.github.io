@@ -88,8 +88,12 @@ header { //determines icon size
 	text-align: left;
 	white-space: pre;
 }
+.sidebar:focus {
+	outline: common.$secondary-color solid 1px;
+}
 .sidebar button:hover, .sidebar button:focus {
 	background-color: #3b1f2b;
+	outline: common.$secondary-color solid 1px;
 }
 .sidebar .sidebar-close-button {
 	font-size: 45px;

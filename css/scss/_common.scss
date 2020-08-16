@@ -73,10 +73,15 @@ button {
 .moon {
 	@extend %icomoon;
 	border: none;
+}
+.hidden-button {
 	display: none;
+}
+.visible-button {
+	display: inline;
 }
 /* navbar icons change color on hover */
 .sun:hover, .moon:hover {
-	color: #97fae4;
+	color: $primary-color;
 }
 

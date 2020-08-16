@@ -9,30 +9,33 @@
 	}
 
 	function toggleNightmode() {
-		document.querySelector('html').style.backgroundColor = '#1d1e1f';
-		document.querySelector('.moon').classList.toggle('visible-button');
+		document.querySelector('html').classList.toggle('white-bg');
 		document.querySelector('.moon').classList.toggle('hidden-button');
 		document.querySelector('.sun').classList.toggle('hidden-button');
-		document.querySelector('.sun').classList.toggle('visible-button');
 		window.sessionStorage.setItem('lightmode','false');
 
 		//if this is the gallery page, also change the category header bg color to match
 		let galleryHeader = document.querySelector('.gallery-header'); 
-		if(galleryHeader) galleryHeader.style.backgroundColor = '#1d1e1f';
+		if(galleryHeader) {
+			galleryHeader.classList.toggle('dark-bg');	
+			galleryHeader.classList.toggle('white-bg');	
+		} 
 	}
 
 	function toggleLightmode() {
-		document.querySelector('html').style.backgroundColor = 'white';
-		document.querySelector('.sun').classList.toggle('visible-button');
+		document.querySelector('html').classList.toggle('white-bg');
 		document.querySelector('.sun').classList.toggle('hidden-button');
 		document.querySelector('.moon').classList.toggle('hidden-button');
-		document.querySelector('.moon').classList.toggle('visible-button');
 		window.sessionStorage.setItem('lightmode','true');
 
 		let galleryHeader = document.querySelector('.gallery-header'); 
-		if(galleryHeader) galleryHeader.style.backgroundColor = 'white';
+		if(galleryHeader) {
+			galleryHeader.classList.toggle('white-bg');
+			galleryHeader.classList.toggle('dark-bg');
+		} 
+
 	}
 </script>
 
 <button class="moon hidden-button" aria-label="toggle nightmode">&#xe901;</button>
-<button class="sun visible-button" aria-label="toggle lightmode">&#xe900;</button>
+<button class="sun" aria-label="toggle lightmode">&#xe900;</button>

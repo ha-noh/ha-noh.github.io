@@ -37,7 +37,6 @@ header { //determines icon size
 	-webkit-box-shadow: 0 5px 5px -4px $gallery-shadow-color;
 	-moz-box-shadow: 0 5px 5px -4px $gallery-shadow-color;
 	box-shadow: 0 5px 5px -4px $gallery-shadow-color;
-	background-color: common.$background-color;
 	z-index: 1; //keeps header above gallery images while scrolling
 }
 .category-displayed {

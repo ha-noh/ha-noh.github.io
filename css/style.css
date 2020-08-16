@@ -72,13 +72,17 @@ button {
   display: none;
 }
 
-.visible-button {
-  display: inline;
-}
-
 /* navbar icons change color on hover */
 .sun:hover, .moon:hover {
   color: #97fae4;
+}
+
+.dark-bg {
+  background-color: #1d1e1f;
+}
+
+.white-bg {
+  background-color: white;
 }
 
 h1 {

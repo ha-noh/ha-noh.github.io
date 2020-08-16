@@ -3,8 +3,8 @@
 	document.querySelector('.sun').addEventListener('click', toggleLightmode);
 	document.querySelector('.moon').addEventListener('click', toggleNightmode);
 
-	if(window.sessionStorage.getItem('nightmode') == 'true'){
-		toggleNightmode();
+	if(window.sessionStorage.getItem('lightmode') == 'true'){
+		toggleLightmode();
 		//doesn't need to wait for DOM to be ready since the call to this file already does
 	}
 
@@ -12,29 +12,23 @@
 		document.querySelector('html').style.backgroundColor = '#1d1e1f';
 		document.querySelector('.sun').style.display = 'inline';
 		document.querySelector('.moon').style.display = 'none';
-		window.sessionStorage.setItem('nightmode','true');
+		window.sessionStorage.setItem('lightmode','false');
 
 		//if this is the gallery page, also change the category header bg color to match
-		let galleryHeaders = document.querySelectorAll('.gallery-header'); 
-		if(galleryHeaders.length > 0){
-			for(const header of galleryHeaders) { 
-				header.style.backgroundColor = '#1d1e1f';
-			}
-		}
+		let galleryHeader = document.querySelector('.gallery-header'); 
+		galleryHeader.style.backgroundColor = '#1d1e1f';
+
 	}
 
 	function toggleLightmode(){
 		document.querySelector('html').style.backgroundColor = 'white';
 		document.querySelector('.sun').style.display ='none';
 		document.querySelector('.moon').style.display = 'inline';
-		window.sessionStorage.setItem('nightmode','false');
+		window.sessionStorage.setItem('lightmode','true');
 
-		let galleryHeaders = document.querySelectorAll('.gallery-header'); 
-		if(galleryHeaders.length > 0){
-			for(const header of galleryHeaders) {
-				header.style.backgroundColor = 'white';
-			}
-		}
+		let galleryHeader = document.querySelector('.gallery-header'); 
+		galleryHeader.style.backgroundColor = 'white';
+
 	}
 </script>
 

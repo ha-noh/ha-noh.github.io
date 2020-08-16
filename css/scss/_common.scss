@@ -1,5 +1,6 @@
 $body-font: 'Muli', sans-serif;
 $header-font: 'Montserrat', sans-serif;
+$background-color: #1d1e1f;
 //shades of aqua
 $primary-color: #97fae4;
 $primary-color-shadow: #34b89a;
@@ -39,6 +40,9 @@ header {
 		color: $primary-color-shadow;
 	}
 }
+html {
+	background-color: $background-color;
+}
 a, a:visited {
 	text-decoration: none;
 	color: $secondary-color;
@@ -54,7 +58,7 @@ button {
 	font-size: 22px;
 	padding: 10px 20px;
 	transition:.2s;
-	background-color:inherit;
+	background-color: inherit;
 }
 .inline-icon {
 	@extend %icomoon;
@@ -65,11 +69,11 @@ button {
 .sun {
 	@extend %icomoon;
 	border: none;
-	display:none;
 }
 .moon {
 	@extend %icomoon;
 	border: none;
+	display: none;
 }
 /* navbar icons change color on hover */
 .sun:hover, .moon:hover {

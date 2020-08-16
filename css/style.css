@@ -31,6 +31,10 @@ header a:hover {
   color: #34b89a;
 }
 
+html {
+  background-color: #1d1e1f;
+}
+
 a, a:visited {
   text-decoration: none;
   color: #e72d80;
@@ -58,11 +62,11 @@ button {
 
 .sun {
   border: none;
-  display: none;
 }
 
 .moon {
   border: none;
+  display: none;
 }
 
 /* navbar icons change color on hover */

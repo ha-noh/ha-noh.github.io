@@ -82,7 +82,7 @@ function openCategory(e, categoryName) {
 			catName = 'Photo Edits';
 			break;
 	}
-	document.querySelector('.gallery-header span').innerText = catName;
+	document.querySelector('.gallery-header a').innerText = catName;
 
 	// make all images in the current open category focusable
 	const images = document.querySelectorAll(`${categoryName} img`);

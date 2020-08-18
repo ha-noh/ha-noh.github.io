@@ -15,5 +15,6 @@ A website to catalog my various personal projects, including artwork, software, 
 11) ~~Remove jquery calls and fontawesome icons from navbar & gallery~~
 12) ~~Move image gallery modal files to separate directory, watch for changes to update respective github repository~~
 13) Add some kind of user interactable element - simplest suggestion would be a guestbook
+14) ~~Add "return to top of page" to gallery header~~
 ## Browser Compatibility
 - Keyboard navigation in Firefox is weird; it allows you to focus the body DOM element if you tab to the bottom of any given page. Issue is not present in Chrome.

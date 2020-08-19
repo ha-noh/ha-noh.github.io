@@ -1,40 +1,37 @@
 <!-- navbar html is localized to this file for convenience -->
 <script>
-	document.querySelector('.sun').addEventListener('click', toggleLightmode);
-	document.querySelector('.moon').addEventListener('click', toggleNightmode);
+	const lightmodeScripts = (function(){
+		document.querySelector('.sun').addEventListener('click', toggleLightmode);
+		document.querySelector('.moon').addEventListener('click', toggleNightmode);
 
-	if(window.sessionStorage.getItem('lightmode') == 'true') {
-		toggleLightmode();
-		//doesn't need to wait for DOM to be ready since the call to this file already does
-	}
+		if(window.sessionStorage.getItem('lightmode') == 'true') {
+			toggleLightmode();
+			//doesn't need to wait for DOM to be ready since the call to this file already does
+		}
 
-	function toggleNightmode() {
-		document.querySelector('html').classList.toggle('white-bg');
-		document.querySelector('.moon').classList.toggle('hidden-button');
-		document.querySelector('.sun').classList.toggle('hidden-button');
-		window.sessionStorage.setItem('lightmode','false');
+		function toggleNightmode() {
+			modeToggleHelper();
+			window.sessionStorage.setItem('lightmode','false');
+		}
 
-		//if this is the gallery page, also change the category header bg color to match
-		let galleryHeader = document.querySelector('.gallery-header'); 
-		if(galleryHeader) {
-			galleryHeader.classList.toggle('dark-bg');	
-			galleryHeader.classList.toggle('white-bg');	
-		} 
-	}
+		function toggleLightmode() {
+			modeToggleHelper();
+			window.sessionStorage.setItem('lightmode','true');
+		}
 
-	function toggleLightmode() {
-		document.querySelector('html').classList.toggle('white-bg');
-		document.querySelector('.sun').classList.toggle('hidden-button');
-		document.querySelector('.moon').classList.toggle('hidden-button');
-		window.sessionStorage.setItem('lightmode','true');
+		function modeToggleHelper() {
+			document.querySelector('html').classList.toggle('white-bg');
+			document.querySelector('.sun').classList.toggle('hidden-button');
+			document.querySelector('.moon').classList.toggle('hidden-button');
 
-		let galleryHeader = document.querySelector('.gallery-header'); 
-		if(galleryHeader) {
-			galleryHeader.classList.toggle('white-bg');
-			galleryHeader.classList.toggle('dark-bg');
-		} 
-
-	}
+			//if on the gallery page, change the category header bg color to match
+			let galleryHeader = document.querySelector('.gallery-header'); 
+			if(galleryHeader) {
+				galleryHeader.classList.toggle('white-bg');
+				galleryHeader.classList.toggle('dark-bg');
+			} 
+		}
+	}());
 </script>
 
 <button class="moon hidden-button" aria-label="toggle nightmode">&#xe901;</button>

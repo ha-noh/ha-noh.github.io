@@ -1,5 +1,5 @@
 const galleryScripts = (function(){
-	// load navbar and checks which link was clicked to reach this page
+	// initialize event listeners and default page content
 	$(document).ready(function() {
 		$('#nav-placeholder').load('html/navbar.html');
 

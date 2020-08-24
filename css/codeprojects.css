@@ -1,0 +1,88 @@
+@font-face {
+  font-family: icomoon;
+  src: url("../fonts/icomoon.woff");
+}
+* {
+  font-family: "Muli", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: #97fae4;
+}
+
+h2 {
+  color: #e72d80;
+}
+
+/* determines icon size */
+header {
+  text-align: center;
+  font-size: 15px;
+  transition: 0.2s;
+}
+header a, header a:visited {
+  text-decoration: none;
+  color: #97fae4;
+  font-family: "Montserrat", sans-serif;
+}
+header a:hover {
+  color: #34b89a;
+}
+
+html {
+  background-color: #1d1e1f;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: #e72d80;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.moon, .sun, .inline-icon {
+  color: #34b89a;
+  font-family: icomoon;
+  font-size: 22px;
+  padding: 10px 20px;
+  transition: 0.2s;
+  background-color: inherit;
+}
+
+.inline-icon {
+  color: #e72d80;
+  padding: 0 5px;
+  font-size: inherit;
+}
+
+.sun {
+  border: none;
+}
+
+.moon {
+  border: none;
+}
+
+.hidden-button {
+  display: none;
+}
+
+/* navbar icons change color on hover */
+.sun:hover, .moon:hover {
+  color: #97fae4;
+}
+
+.dark-bg {
+  background-color: #1d1e1f;
+}
+
+.white-bg {
+  background-color: white;
+}
+
+/*# sourceMappingURL=codeprojects.css.map */

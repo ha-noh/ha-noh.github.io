@@ -35,11 +35,31 @@
     -webkit-box-shadow: 2px 2px 4px 2px #17171C;
     box-shadow: 2px 2px 4px 2px #17171C;
 }
-.gallery-modal-button: focus, .gallery-modal-button: hover {
-
+.gallery-modal-button:focus, .gallery-modal-button:hover {
+	animation-name: buttonFocus;
+	animation-duration: .15s;
+	animation-timing-function: ease-out;
+	animation-fill-mode: forwards;
 }
-@keyframes button-hover {
-	
+@keyframes buttonFocus {
+	from {
+		height: 40px;
+		width: 40px;
+		-moz-border-radius: 20px;
+		-webkit-border-radius: 20px;
+		border-radius: 20px;
+		line-height: 25px;
+		font-size: 25px;
+	}
+	to {
+		height: 44px;
+		width: 44px;
+		-moz-border-radius: 22px;
+    	-webkit-border-radius: 22px;
+    	border-radius: 22px;
+    	line-height: 27px;
+		font-size: 27px;
+	}
 }
 .gallery-modal-index {
 	z-index: 1;

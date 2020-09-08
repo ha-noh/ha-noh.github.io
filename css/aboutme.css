@@ -85,4 +85,50 @@ button {
   background-color: white;
 }
 
-/*# sourceMappingURL=codeprojects.css.map */
+h1 {
+  margin-bottom: 4px;
+}
+
+h2 {
+  text-align: center;
+}
+
+h3, p {
+  color: #e72d80;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+.aboutme-body {
+  width: 80%;
+  margin: 0 auto 30px;
+  -webkit-box-shadow: 3px 5px 10px -3px #0d0305;
+  -moz-box-shadow: 3px 5px 10px -3px #0d0305;
+  box-shadow: 3px 5px 10px -3px #0d0305;
+  padding: 20px;
+}
+
+.profile {
+  width: 100%;
+}
+
+/*====== Full layout ======*/
+@media screen and (min-width: 700px) {
+  h1 {
+    font-size: 55px;
+  }
+
+  .aboutme-body {
+    min-width: 547px;
+    max-width: 600px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .aboutme-body {
+    width: 600px;
+  }
+}
+
+/*# sourceMappingURL=aboutme.css.map */

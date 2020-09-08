@@ -101,19 +101,6 @@ header { //determines icon size
 	padding: 0 10px 0 0;
 }
 
-/*about me specific classes*/
-.aboutme-body {
-	width: 80%;
-	margin: 0 auto 30px;
-	-webkit-box-shadow: 3px 5px 10px -3px $gallery-shadow-color;
-	-moz-box-shadow: 3px 5px 10px -3px $gallery-shadow-color;
-	box-shadow: 3px 5px 10px -3px $gallery-shadow-color;
-	padding: 20px;
-}
-.profile {
-	width: 100%;
-}
-
 /*====== Full layout ======*/
 @media screen and (min-width:700px) {
 	h1 {
@@ -127,10 +114,6 @@ header { //determines icon size
 	.gallery {
 		flex-flow: row wrap;
 		justify-content: space-evenly;
-	}
-	.aboutme-body {
-		min-width: 547px;
-		max-width: 600px;
 	}
 	.gallery img {
 		z-index: 0;
@@ -159,9 +142,6 @@ header { //determines icon size
 	}
 }
 @media screen and (min-width:1200px) {
-	.aboutme-body {
-		width: 600px;
-	}
 	article img {
 		height: 24vw;
 		width: 24vw;

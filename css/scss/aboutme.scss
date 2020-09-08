@@ -1,0 +1,45 @@
+@use 'common';
+$gallery-shadow-color: #0d0305;
+$sidebar-color: #1f1f24;
+
+h1 {
+	margin-bottom: 4px;
+}
+h2 {
+	text-align: center;
+}
+h3, p { //about me body text
+	color: common.$secondary-color;
+}
+header { //determines icon size
+	margin-bottom: 30px;
+}
+
+.aboutme-body {
+	width: 80%;
+	margin: 0 auto 30px;
+	-webkit-box-shadow: 3px 5px 10px -3px $gallery-shadow-color;
+	-moz-box-shadow: 3px 5px 10px -3px $gallery-shadow-color;
+	box-shadow: 3px 5px 10px -3px $gallery-shadow-color;
+	padding: 20px;
+}
+.profile {
+	width: 100%;
+}
+
+/*====== Full layout ======*/
+@media screen and (min-width:700px) {
+	h1 {
+		font-size: 55px;
+	}
+	.aboutme-body {
+		min-width: 547px;
+		max-width: 600px;
+	}
+}
+@media screen and (min-width:1200px) {
+	.aboutme-body {
+		width: 600px;
+	}
+}
+

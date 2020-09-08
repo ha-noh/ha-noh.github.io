@@ -3,7 +3,7 @@
   src: url("../fonts/icomoon.woff");
 }
 * {
-  font-family: "Muli", sans-serif;
+  font-family: "Karla", sans-serif;
 }
 
 h1 {
@@ -199,20 +199,6 @@ header {
   padding: 0 10px 0 0;
 }
 
-/*about me specific classes*/
-.aboutme-body {
-  width: 80%;
-  margin: 0 auto 30px;
-  -webkit-box-shadow: 3px 5px 10px -3px #0d0305;
-  -moz-box-shadow: 3px 5px 10px -3px #0d0305;
-  box-shadow: 3px 5px 10px -3px #0d0305;
-  padding: 20px;
-}
-
-.profile {
-  width: 100%;
-}
-
 /*====== Full layout ======*/
 @media screen and (min-width: 700px) {
   h1 {
@@ -228,11 +214,6 @@ header {
   .gallery {
     flex-flow: row wrap;
     justify-content: space-evenly;
-  }
-
-  .aboutme-body {
-    min-width: 547px;
-    max-width: 600px;
   }
 
   .gallery img {
@@ -254,10 +235,6 @@ header {
   }
 }
 @media screen and (min-width: 1200px) {
-  .aboutme-body {
-    width: 600px;
-  }
-
   article img {
     height: 24vw;
     width: 24vw;

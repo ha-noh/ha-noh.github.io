@@ -227,6 +227,19 @@ header {
   .panel:hover img, a:focus img {
     filter: blur(3px);
   }
+
+  @keyframes topleft {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes midleft {}
+  @keyframes topright {}
+  @keyframes botleft {}
+  @keyframes botright {}
 }
 /* add margins when viewport is larger than max resolution images */
 @media screen and (min-width: 1200px) {

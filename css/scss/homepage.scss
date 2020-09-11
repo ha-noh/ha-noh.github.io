@@ -85,6 +85,12 @@ header {
 	.panel-topleft {
 		order:1;
 	}
+	// .panel img {
+	// 	animation-name: topleft;
+	// 	animation-duration: 1s;
+	// 	animation-timing-function: ease-out;
+	// 	animation-fill-mode: forwards;
+	// }
 	.panel-midleft {
 		order:2;
 		margin-top: 5px;
@@ -125,6 +131,32 @@ header {
 	}
 	.panel:hover img, a:focus img {
 		filter: blur(3px);
+	}
+
+	@keyframes topleft {
+		from {
+			opacity: 0;
+		}
+
+		to {
+			opacity: 1;
+		}
+	}
+
+	@keyframes midleft {
+
+	}
+
+	@keyframes topright {
+
+	}
+
+	@keyframes botleft {
+
+	}
+
+	@keyframes botright {
+
 	}
 }
 

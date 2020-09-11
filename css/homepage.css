@@ -96,7 +96,7 @@ h2 {
   left: 0;
   width: 100%;
   font-family: "Montserrat", sans-serif;
-  font-size: 50px;
+  font-size: 40px;
   text-shadow: -3px 0 #ac206e;
 }
 
@@ -105,20 +105,8 @@ header {
 }
 
 /* ============== Default, mobile layout ============== */
-.container-main {
-  display: flex;
-  flex-flow: row wrap;
-}
-
-.container-main > * {
-  flex: 1 100%;
-}
-
-.panel-topright {
-  margin-bottom: 5px;
-}
-
-.container-bot > * {
+.panel {
+  position: relative;
   margin-bottom: 5px;
 }
 
@@ -137,14 +125,13 @@ header {
   text-align: center;
 }
 
-/* animated elements & overlays */
-.panel {
-  position: relative;
-}
-
 .panel:hover, a:focus img {
   transform: scale(0.97);
   transition: all 0.1s;
+}
+
+.panel a:focus {
+  outline-color: #e72d80;
 }
 
 /* one last responsive hail mary for tiny viewports
@@ -159,52 +146,63 @@ header {
     font-size: 2em;
   }
 }
-/* ============== Full panel display layout ============== */
-/* if breakpoint is changed, the media rule in <picture> tags should also be adjusted */
-@media screen and (min-width: 650px) {
+/* ============== Full panel display layout ============== 
+ * If breakpoint is changed, the media rule in <picture> tags should also be adjusted
+ * The <picture> breakpoint can't be equal to min-width, or else the panel arrangement breaks at that exact value;
+ * as a workaround there is a couple pixel difference between the <picture> bp and the media query bp.
+ */
+@media screen and (min-width: 655px) {
   header {
     font-size: 18px;
   }
 
-  /* set up grid layout */
-  .container-topleft {
-    flex-flow: column;
-    margin-right: 10px;
+  .page {
+    position: relative;
+    min-width: 90vw;
+    min-height: 110vw;
   }
 
-  .container-top > * {
-    flex: 1 calc(50% - 5px);
+  .panel img {
+    object-fit: contain;
   }
 
   .panel-topleft {
-    order: 1;
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: 44.75%;
+  }
+
+  .panel-topright {
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 45.8%;
   }
 
   .panel-midleft {
-    order: 2;
-    margin-top: 5px;
-  }
-
-  .container-bot {
-    margin-top: 5px;
+    position: absolute;
+    top: 24.25%;
+    left: -20px;
+    width: 44.75%;
   }
 
   .panel-botleft {
-    flex: 1 calc(60% - 5px);
+    position: absolute;
+    top: 59%;
+    left: -20px;
+    width: 54.25%;
   }
 
   .panel-botright {
-    flex: 1 calc(40% - 5px);
-    margin-left: 10px;
-  }
-
-  .panel-topright img {
-    height: 99.5%;
+    position: absolute;
+    top: 59%;
+    right: -10px;
+    width: 36.25%;
   }
 
   .page {
     box-shadow: 5px 5px 15px -8px #0d0305;
-    padding: 20px;
     margin-bottom: 30px;
   }
 
@@ -218,7 +216,7 @@ header {
     text-align: center;
   }
 
-  /* trigger css animations only in wide viewports */
+  /* these css animations only occur in wide viewports */
   .panel:hover .overlay, a:focus .overlay {
     width: 100%;
     left: 0;
@@ -241,16 +239,112 @@ header {
   @keyframes botleft {}
   @keyframes botright {}
 }
-/* add margins when viewport is larger than max resolution images */
+@media screen and (min-width: 800px) {
+  .panel-topleft {
+    width: 45%;
+  }
+
+  .panel-topright {
+    width: 46%;
+  }
+
+  .panel-midleft {
+    width: 45%;
+  }
+
+  .panel-botleft {
+    top: 60%;
+    width: 55%;
+  }
+
+  .panel-botright {
+    top: 60%;
+    width: 37%;
+  }
+}
+@media screen and (min-width: 900px) {
+  .panel-topleft {
+    width: 46%;
+  }
+
+  .panel-topright {
+    width: 46.75%;
+  }
+
+  .panel-midleft {
+    width: 46%;
+  }
+
+  .panel-botleft {
+    top: 60.5%;
+    width: 56%;
+  }
+
+  .panel-botright {
+    top: 60.5%;
+    width: 37.25%;
+  }
+}
+@media screen and (min-width: 1050px) {
+  .panel-topleft {
+    width: 46.5%;
+  }
+
+  .panel-topright {
+    width: 47.15%;
+  }
+
+  .panel-midleft {
+    top: 25%;
+    width: 46.5%;
+  }
+
+  .panel-botleft {
+    top: 60.75%;
+    width: 56.25%;
+  }
+
+  .panel-botright {
+    top: 60.75%;
+    width: 37.5%;
+  }
+}
+/* cap width and add margins */
 @media screen and (min-width: 1200px) {
-  .container-main {
-    width: 1200px;
+  h2 {
+    font-size: 50px;
   }
 
   .page {
+    min-width: 1200px;
+    min-height: 1350px;
     width: 1200px;
+    height: 1350px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .panel-topleft {
+    width: 46.8%;
+  }
+
+  .panel-topright {
+    width: 47.5%;
+  }
+
+  .panel-midleft {
+    top: 25.1%;
+    width: 46.8%;
+  }
+
+  .panel-botleft {
+    top: 61%;
+    width: 56.5%;
+  }
+
+  .panel-botright {
+    top: 61%;
+    width: 37.75%;
   }
 }
 

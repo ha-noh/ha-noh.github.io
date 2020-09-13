@@ -97,7 +97,7 @@ header {
 	.page {
 		position: relative;
 		min-width: 90vw;
-		min-height: 110vw;
+		min-height: 108vw;
 	}
 	.panel img {
 		object-fit: contain;
@@ -110,7 +110,6 @@ header {
 		animation-name: top-mid-left;
 		animation-duration: .5s;
 		animation-timing-function: ease-out;
-		animation-fill-mode: forwards;
 	}
 	.panel-topright {
 		position: absolute;
@@ -120,7 +119,6 @@ header {
 		animation-name: top-right;
 		animation-duration: .75s;
 		animation-timing-function: ease-out;
-		animation-fill-mode: forwards;
 	}
 	.panel-midleft {
 		position: absolute;
@@ -130,11 +128,10 @@ header {
 		animation-name: top-mid-left;
 		animation-duration: .75s;
 		animation-timing-function: ease-out;
-		animation-fill-mode: forwards;
 	}
 	.panel-botleft {
 		position: absolute;
-		top: 58.5%;
+		bottom: 20px;
 		left: -20px;
 		width: 54.25%;
 		animation-name: bot-left;
@@ -143,13 +140,12 @@ header {
 	}
 	.panel-botright {
 		position: absolute;
-		top: 58.5%;
+		bottom: 20px;
 		right: -10px;
 		width: 36.25%;
 		animation-name: bot-right;
 		animation-duration: .5s;
-		animation-timing-function: ease-out;
-		animation-fill-mode: forwards;
+		animation-timing-function: ease-out;	
 	}
 	.page {
 		box-shadow: 5px 5px 15px -8px #0d0305;
@@ -198,13 +194,13 @@ header {
 	@keyframes bot-left {
 		from {
 			opacity: 0;
-			top: 70%;
+			bottom: -50px;
 		}
 		to {
 			opacity: 1;
 			//the ending "top:" value changes based on viewport, 
 			//so this animation uses the max value and lets the element self-correct after the animation ends
-			top: 61%;
+			bottom: 20px;
 		}
 	}
 	@keyframes bot-right {
@@ -229,11 +225,9 @@ header {
 		width: 45%;
 	}
 	.panel-botleft {
-		top: 59%;
 		width: 55%;
 	}
 	.panel-botright {
-		top: 59%;
 		width: 36.65%;
 	}
 }
@@ -249,11 +243,9 @@ header {
 		width: 45.75%;
 	}
 	.panel-botleft {
-		top: 59.5%;
 		width: 55.5%;
 	}
 	.panel-botright {
-		top: 59.5%;
 		width: 37%;
 	}
 }
@@ -269,11 +261,9 @@ header {
 		width: 46.5%;
 	}
 	.panel-botleft {
-		top: 60%;
 		width: 56.25%;
 	}
 	.panel-botright {
-		top: 60%;
 		width: 37.5%;
 	}
 }
@@ -301,14 +291,11 @@ header {
 		width: 46.8%;
 	}
 	.panel-botleft {
-		top: 61%;
 		width: 56.5%;
 	}
 	.panel-botright {
-		top: 61%;
 		width: 37.75%;
 	}
-
 }
 //some love for 4K monitors
 @media screen and (min-width:2700px) {

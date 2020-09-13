@@ -171,13 +171,21 @@ header {
     top: 0;
     left: -20px;
     width: 44.75%;
+    animation-name: left-to-right;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
   }
 
   .panel-topright {
     position: absolute;
     top: 0;
     right: -10px;
-    width: 45.8%;
+    width: 45.65%;
+    animation-name: top-right;
+    animation-duration: 0.75s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
   }
 
   .panel-midleft {
@@ -185,20 +193,31 @@ header {
     top: 24.25%;
     left: -20px;
     width: 44.75%;
+    animation-name: left-to-right;
+    animation-duration: 0.75s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
   }
 
   .panel-botleft {
     position: absolute;
-    top: 59%;
+    top: 58.5%;
     left: -20px;
     width: 54.25%;
+    animation-name: bot-left;
+    animation-duration: 0.75s;
+    animation-timing-function: ease-out;
   }
 
   .panel-botright {
     position: absolute;
-    top: 59%;
+    top: 58.5%;
     right: -10px;
     width: 36.25%;
+    animation-name: bot-right;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
   }
 
   .page {
@@ -226,26 +245,54 @@ header {
     filter: blur(3px);
   }
 
-  @keyframes topleft {
+  @keyframes left-to-right {
     from {
       opacity: 0;
+      left: -100px;
     }
     to {
       opacity: 1;
+      left: -20px;
     }
   }
-  @keyframes midleft {}
-  @keyframes topright {}
-  @keyframes botleft {}
-  @keyframes botright {}
+  @keyframes top-right {
+    from {
+      opacity: 0;
+      top: -50px;
+    }
+    to {
+      opacity: 1;
+      top: 0;
+    }
+  }
+  @keyframes bot-left {
+    from {
+      opacity: 0;
+      top: 100%;
+    }
+    to {
+      opacity: 1;
+      top: 61%;
+    }
+  }
+  @keyframes bot-right {
+    from {
+      opacity: 0;
+      right: -100px;
+    }
+    to {
+      opacity: 1;
+      right: -10px;
+    }
+  }
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 750px) {
   .panel-topleft {
     width: 45%;
   }
 
   .panel-topright {
-    width: 46%;
+    width: 46.25%;
   }
 
   .panel-midleft {
@@ -253,36 +300,37 @@ header {
   }
 
   .panel-botleft {
-    top: 60%;
+    top: 59%;
     width: 55%;
   }
 
   .panel-botright {
-    top: 60%;
-    width: 37%;
+    top: 59%;
+    width: 36.65%;
   }
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 830px) {
   .panel-topleft {
-    width: 46%;
+    width: 45.75%;
   }
 
   .panel-topright {
-    width: 46.75%;
+    width: 47%;
   }
 
   .panel-midleft {
-    width: 46%;
+    top: 25%;
+    width: 45.75%;
   }
 
   .panel-botleft {
-    top: 60.5%;
-    width: 56%;
+    top: 59.5%;
+    width: 55.5%;
   }
 
   .panel-botright {
-    top: 60.5%;
-    width: 37.25%;
+    top: 59.5%;
+    width: 37%;
   }
 }
 @media screen and (min-width: 1050px) {
@@ -291,7 +339,7 @@ header {
   }
 
   .panel-topright {
-    width: 47.15%;
+    width: 47.1%;
   }
 
   .panel-midleft {
@@ -300,12 +348,12 @@ header {
   }
 
   .panel-botleft {
-    top: 60.75%;
+    top: 60%;
     width: 56.25%;
   }
 
   .panel-botright {
-    top: 60.75%;
+    top: 60%;
     width: 37.5%;
   }
 }

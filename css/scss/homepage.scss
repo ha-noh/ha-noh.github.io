@@ -77,30 +77,49 @@ header {
 		top: 0;
 		left: -20px;
 		width: 44.75%;
+		animation-name: left-to-right;
+		animation-duration: .5s;
+		animation-timing-function: ease-out;
+		animation-fill-mode: forwards;
 	}
 	.panel-topright {
 		position: absolute;
 		top: 0;
 		right: -10px;
-		width: 45.8%;
+		width: 45.65%;
+		animation-name: top-right;
+		animation-duration: .75s;
+		animation-timing-function: ease-out;
+		animation-fill-mode: forwards;
 	}
 	.panel-midleft {
 		position: absolute;
 		top: 24.25%;
 		left: -20px;
 		width: 44.75%;
+		animation-name: left-to-right;
+		animation-duration: .75s;
+		animation-timing-function: ease-out;
+		animation-fill-mode: forwards;
 	}
 	.panel-botleft {
 		position: absolute;
-		top: 59%;
+		top: 58.5%;
 		left: -20px;
 		width: 54.25%;
+		animation-name: bot-left;
+		animation-duration: .75s;
+		animation-timing-function: ease-out;
 	}
 	.panel-botright {
 		position: absolute;
-		top: 59%;
+		top: 58.5%;
 		right: -10px;
 		width: 36.25%;
+		animation-name: bot-right;
+		animation-duration: .5s;
+		animation-timing-function: ease-out;
+		animation-fill-mode: forwards;
 	}
 	.page {
 		box-shadow: 5px 5px 15px -8px #0d0305;
@@ -126,75 +145,89 @@ header {
 		filter: blur(3px);
 	}
 
-	// .panel img {
-	// 	animation-name: topleft;
-	// 	animation-duration: 1s;
-	// 	animation-timing-function: ease-out;
-	// 	animation-fill-mode: forwards;
-	// }
-
-	@keyframes topleft {
+	@keyframes left-to-right {
 		from {
 			opacity: 0;
+			left: -100px;
 		}
-
 		to {
 			opacity: 1;
+			left: -20px;
 		}
 	}
 
-	@keyframes midleft {
-
+	@keyframes top-right {
+		from {
+			opacity: 0;
+			top: -50px;
+		}
+		to {
+			opacity: 1;
+			top: 0;
+		}
 	}
 
-	@keyframes topright {
-
+	@keyframes bot-left {
+		from {
+			opacity: 0;
+			top: 100%;
+		}
+		to {
+			opacity: 1;
+			//the ending "top:" value changes based on viewport, 
+			//so this animation uses the max value and lets the element self-correct after the animation ends
+			top: 61%;
+		}
 	}
 
-	@keyframes botleft {
-
-	}
-
-	@keyframes botright {
-
+	@keyframes bot-right {
+		from {
+			opacity: 0;
+			right: -100px;
+		}
+		to {
+			opacity: 1;
+			right: -10px;
+		}
 	}
 }
-@media screen and (min-width:800px) {
+@media screen and (min-width:750px) {
 	.panel-topleft {
 		width: 45%;
 	}
 	.panel-topright {
-		width: 46%;
+		width: 46.25%;
 	}
 	.panel-midleft {
 		width: 45%;
 	}
 	.panel-botleft {
-		top: 60%;
+		top: 59%;
 		width: 55%;
 	}
 	.panel-botright {
-		top: 60%;
-		width: 37%;
+		top: 59%;
+		width: 36.65%;
 	}
 }
-@media screen and (min-width:900px) {
+@media screen and (min-width:830px) {
 	.panel-topleft {
-		width: 46%;
+		width: 45.75%;
 	}
 	.panel-topright {
-		width: 46.75%;
+		width: 47%;
 	}
 	.panel-midleft {
-		width: 46%;
+		top: 25%;
+		width: 45.75%;
 	}
 	.panel-botleft {
-		top: 60.5%;
-		width: 56%;
+		top: 59.5%;
+		width: 55.5%;
 	}
 	.panel-botright {
-		top: 60.5%;
-		width: 37.25%;
+		top: 59.5%;
+		width: 37%;
 	}
 }
 @media screen and (min-width:1050px) {
@@ -202,18 +235,18 @@ header {
 		width: 46.5%;
 	}
 	.panel-topright {
-		width: 47.15%;
+		width: 47.1%;
 	}
 	.panel-midleft {
 		top: 25%;
 		width: 46.5%;
 	}
 	.panel-botleft {
-		top: 60.75%;
+		top: 60%;
 		width: 56.25%;
 	}
 	.panel-botright {
-		top: 60.75%;
+		top: 60%;
 		width: 37.5%;
 	}
 }

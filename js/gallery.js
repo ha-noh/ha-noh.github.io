@@ -20,7 +20,7 @@ const galleryScripts = (function(){
 		document.querySelector('.link-illustrations').addEventListener('click', () => openCategory(event, '.illustrations'));
 		document.querySelector('.link-design').addEventListener('click', () => openCategory(event, '.design'));
 		document.querySelector('.link-photos').addEventListener('click', () => openCategory(event, '.photos'));
-		document.querySelector('.openButton').addEventListener('click', openSidebar);
+		document.querySelector('.open-button').addEventListener('click', openSidebar);
 
 		// Allow a focused image to be 'clicked' on with the Enter key
 		document.addEventListener('keyup', function(e) {

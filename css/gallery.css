@@ -146,7 +146,7 @@ header {
 }
 
 /*sidebar navigation*/
-.openButton {
+.open-button {
   color: #e72d80;
   border: none;
   background-color: inherit;
@@ -154,7 +154,7 @@ header {
   font-size: 22px;
 }
 
-.openButton:hover {
+.open-button:hover {
   color: #b31d51;
 }
 

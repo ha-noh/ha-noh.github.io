@@ -134,6 +134,38 @@ header {
   outline-color: #e72d80;
 }
 
+.panel-topleft, .panel-topright, .panel-botright {
+  animation-name: left-to-right;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+}
+
+.panel-midleft, .panel-botleft {
+  animation-name: right-to-left;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes left-to-right {
+  from {
+    opacity: 0;
+    left: -50px;
+  }
+  to {
+    opacity: 1;
+    left: 0;
+  }
+}
+@keyframes right-to-left {
+  from {
+    opacity: 0;
+    right: -50px;
+  }
+  to {
+    opacity: 1;
+    right: 0;
+  }
+}
 /* one last responsive hail mary for tiny viewports
  * layout breaks around 300px width
  */
@@ -171,7 +203,7 @@ header {
     top: 0;
     left: -20px;
     width: 44.75%;
-    animation-name: left-to-right;
+    animation-name: top-mid-left;
     animation-duration: 0.5s;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
@@ -193,7 +225,7 @@ header {
     top: 24.25%;
     left: -20px;
     width: 44.75%;
-    animation-name: left-to-right;
+    animation-name: top-mid-left;
     animation-duration: 0.75s;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
@@ -245,7 +277,7 @@ header {
     filter: blur(3px);
   }
 
-  @keyframes left-to-right {
+  @keyframes top-mid-left {
     from {
       opacity: 0;
       left: -100px;
@@ -268,7 +300,7 @@ header {
   @keyframes bot-left {
     from {
       opacity: 0;
-      top: 100%;
+      top: 70%;
     }
     to {
       opacity: 1;

@@ -112,9 +112,10 @@ header {
 
 .panel img {
   width: 100%;
-  /* height: 100%; messes with .aboutme-overlay */
-  border: 3px solid #121212;
-  border-radius: 2.5px 3px 1.75px;
+  background-color: #121212;
+  border: 2.75px solid #121212;
+  -webkit-border-radius: 2.5px;
+  border-radius: 2.5px;
 }
 
 .overlay {

@@ -23,3 +23,12 @@ a.blurb {
 	display: block;
 	text-align: center;
 }
+
+@media screen and (min-width:1100px) {
+	.card, .blurb{
+		width: 650px;
+	}
+	a.blurb {
+		width: 500px;
+	}
+}

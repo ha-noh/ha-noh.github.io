@@ -84,4 +84,29 @@ button {
   background-color: white;
 }
 
+p {
+  color: #ac206e;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+.card, .blurb {
+  width: 80vw;
+  padding: 20px;
+  margin: 0 auto 15px;
+  -webkit-box-shadow: 3px 5px 10px -3px #0d0305;
+  -moz-box-shadow: 3px 5px 10px -3px #0d0305;
+  box-shadow: 3px 5px 10px -3px #0d0305;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+a.blurb {
+  width: 50vw;
+  display: block;
+  text-align: center;
+}
+
 /*# sourceMappingURL=codeprojects.css.map */

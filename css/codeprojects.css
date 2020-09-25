@@ -109,6 +109,10 @@ a.blurb {
   text-align: center;
 }
 
+.card h2 {
+  text-align: center;
+}
+
 @media screen and (min-width: 1100px) {
   .card, .blurb {
     width: 650px;

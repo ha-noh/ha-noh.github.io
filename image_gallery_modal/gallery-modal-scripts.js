@@ -1,37 +1,14 @@
-/* Include this file at the bottom of your webpage, AFTER the elements you wish the modal to run on, so it runs only after the DOM elements have loaded 
- * ex: <script src="yourfolder/gallery-modal-scripts.js"></script>
+/* TODO: 
+ * (1) Have a function to add/remove the gallery-modal-ready listener
+ * (2) Find a more efficient solution for determining the gallery index number (faster than linear runtime)
+ *
+ * HOW TO USE: 
+ * Include this file at the bottom of your webpage, so it runs only after the DOM has loaded 
+ * Ex: <script src="yourfolder/gallery-modal-scripts.js"></script>
  */
 const imageGalleryModal = (function() {
 	//gallery is closed by default, and so no valid image index is available
 	let currentImageIndex = -1;
-
-	//listen for user clicks on the modal buttons
-	document.querySelector('.modal-close-button').addEventListener('click', () => closeGalleryModal());
-	document.querySelector('.modal-close-button').addEventListener('focus', showFeaturesIfHidden);
-
-	document.querySelector('.modal-prev-button').addEventListener('click', () => prevGalleryImage());
-	document.querySelector('.modal-prev-button').addEventListener('focus', showFeaturesIfHidden);
-
-	document.querySelector('.modal-next-button').addEventListener('click', () => nextGalleryImage());
-	document.querySelector('.modal-next-button').addEventListener('focus', showFeaturesIfHidden);
-
-	document.querySelector('.gallery-modal-image').addEventListener('click', toggleModalFeatures);
-	document.querySelector('.gallery-modal-image').addEventListener('mouseout', showFeaturesIfHidden);
-	
-	document.querySelector('.invisible-button').addEventListener('click', toggleModalFeatures);
-	// not sure if this works with <picture> elements
-	document.querySelector('.gallery-modal-ready').addEventListener('click', () => openGalleryModal(event));
-
-	// event listener; lets arrows keys handle gallery navigation and esc close the modal
-	document.addEventListener('keyup', function(e) {
-	    let allowedKeys = {
-	        37: 'left',
-	        39: 'right',
-	        27: 'esc'
-	    };
-
-	    handleInput(allowedKeys[e.keyCode]);
-	});
 
 	/* IMPORTANT:
 	 * Move this variable down to local function scopes if your webpage dynamically
@@ -80,8 +57,8 @@ const imageGalleryModal = (function() {
 		for(let x = 0; x < galleryImages.length; x++) {
 			if(galleryImages.item(x).src == e.target.src) currentImageIndex = x;
 		}
+		
 		imageIndexDidUpdate();
-
 		showFeaturesIfHidden();
 	};
 
@@ -89,13 +66,21 @@ const imageGalleryModal = (function() {
 	const openGalleryImage = function() {
 		let newImgSrc = galleryImages.item(currentImageIndex).src;
 		document.querySelector('.gallery-modal-image').src = newImgSrc;
+		
 		imageIndexDidUpdate();
-
 		showFeaturesIfHidden();
 	}
 
+	const AddGalleryListener = function() {
+		console.log('xD');
+	}
+
+	const RemoveGalleryListener = function() {
+
+	}
 
 	//------Helper Functions------
+
 	function toggleGalleryImageFx() {
 		document.querySelector('.gallery-modal-image').classList.toggle('image-fx');
 	}
@@ -148,10 +133,41 @@ const imageGalleryModal = (function() {
 		document.querySelector('.gallery-modal-index').innerText = imageIndexString;
 	};
 
+	//------ Initialize listeners on buttons and gallery ------
+	document.querySelector('.modal-close-button').addEventListener('click', closeGalleryModal);
+	document.querySelector('.modal-close-button').addEventListener('focus', showFeaturesIfHidden);
+
+	document.querySelector('.modal-prev-button').addEventListener('click', prevGalleryImage);
+	document.querySelector('.modal-prev-button').addEventListener('focus', showFeaturesIfHidden);
+
+	document.querySelector('.modal-next-button').addEventListener('click', nextGalleryImage);
+	document.querySelector('.modal-next-button').addEventListener('focus', showFeaturesIfHidden);
+
+	document.querySelector('.gallery-modal-image').addEventListener('click', toggleModalFeatures);
+	document.querySelector('.gallery-modal-image').addEventListener('mouseout', showFeaturesIfHidden);
+	
+	document.querySelector('.invisible-button').addEventListener('click', toggleModalFeatures);
+	// not sure if this works with <picture> elements
+	document.querySelector('.gallery-modal-ready').addEventListener('click', openGalleryModal);
+
+	// event listener; lets arrows keys handle gallery navigation and esc close the modal
+	document.addEventListener('keyup', function(e) {
+	    let allowedKeys = {
+	        37: 'left',
+	        39: 'right',
+	        27: 'esc'
+	    };
+
+	    handleInput(allowedKeys[e.keyCode]);
+	});
+
 	return {
-		openGalleryModal: openGalleryModal,
-		closeGalleryModal: closeGalleryModal,
-		prevGalleryImage: prevGalleryImage,
-		nextGalleryImage: nextGalleryImage
+		open: openGalleryModal,
+		close: closeGalleryModal,
+		prevImage: prevGalleryImage,
+		nextImage: nextGalleryImage,
+		readyGallery: AddGalleryListener,
+		unreadyGallery: RemoveGalleryListener
 	}
 }());
+

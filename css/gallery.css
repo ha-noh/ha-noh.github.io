@@ -105,7 +105,6 @@ header {
   margin-bottom: 30px;
 }
 
-/*gallery specific classes*/
 .gallery {
   display: flex;
   flex-flow: column;
@@ -126,6 +125,12 @@ header {
   -moz-box-shadow: 0 5px 5px -4px #0d0305;
   box-shadow: 0 5px 5px -4px #0d0305;
   z-index: 1;
+}
+
+.gallery-header table {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .category-displayed {

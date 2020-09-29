@@ -68,29 +68,29 @@ const galleryScripts = (function(){
 		newCategory.classList.remove('category-hidden');
 
 		// set the appropriate category name in header
-		let catName;
-		switch(categoryName) {
-			case '.sketches':
-				catName = 'Sketches & Studies';
-				break;
-			case '.illustrations':
-				catName = 'Illustrations';
-				break;
-			case '.design':
-				catName = 'Social Media Design';
-				break;
-			case '.photos':
-				catName = 'Photo Edits';
-				break;
-		}
+		let catName = convertClassToHeading(categoryName);
+
 		document.querySelector('.gallery-header a').innerText = catName;
 
 		// make all images in the current open category focusable
 		const images = document.querySelectorAll(`${categoryName} img`);
 		for (const image of images) {
 			image.tabIndex = 0;
-		}
-		
+		}	
+	}
+
+	// gets the appropriate display heading for a given gallery class
+	function convertClassToHeading (categoryName) {
+			switch(categoryName) {
+				case '.sketches':
+					return 'Sketches & Studies';
+				case '.illustrations':
+					return 'Illustrations';
+				case '.design':
+					return 'Social Media Design';
+				case '.photos':
+					return 'Photo Edits';
+			}
 	}
 
 	function openSidebar(e) {

@@ -19,7 +19,6 @@ header { //determines icon size
 	margin-bottom: 30px;
 }
 
-/*gallery specific classes*/
 .gallery {
 	display: flex;
 	flex-flow: column;
@@ -38,6 +37,11 @@ header { //determines icon size
 	-moz-box-shadow: 0 5px 5px -4px $gallery-shadow-color;
 	box-shadow: 0 5px 5px -4px $gallery-shadow-color;
 	z-index: 1; //keeps header above gallery images while scrolling
+}
+.gallery-header table {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
 }
 .category-displayed {
 	display: block;

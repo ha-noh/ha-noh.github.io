@@ -72,11 +72,11 @@ const imageGalleryModal = (function() {
 	}
 
 	const AddGalleryListener = function() {
-		console.log('xD');
+		
 	}
 
 	const RemoveGalleryListener = function() {
-
+		removeEventListener('click', openGalleryModal);
 	}
 
 	//------Helper Functions------

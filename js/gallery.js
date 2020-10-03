@@ -129,7 +129,7 @@ const galleryScripts = (function(){
 	function handleInput(event, keystroke) {
 		switch(keystroke) {
 			case 'enter':
-				imageGalleryModal.openGalleryModal(event);
+				imageGalleryModal.open(event);
 		}
 	}
 

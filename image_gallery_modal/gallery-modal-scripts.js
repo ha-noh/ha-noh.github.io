@@ -72,12 +72,14 @@ const imageGalleryModal = (function() {
 	}
 
 	const AddGalleryListener = function() {
-		
+		// not sure if this works with <picture> elements
+		document.querySelector('.gallery-modal-ready').addEventListener('click', openGalleryModal);
 	}
 
 	const RemoveGalleryListener = function() {
-		removeEventListener('click', openGalleryModal);
+		document.querySelector('gallery-modal-ready').removeEventListener('click', openGalleryModal);
 	}
+
 
 	//------Helper Functions------
 
@@ -134,6 +136,7 @@ const imageGalleryModal = (function() {
 	};
 
 	//------ Initialize listeners on buttons and gallery ------
+	//modal buttons
 	document.querySelector('.modal-close-button').addEventListener('click', closeGalleryModal);
 	document.querySelector('.modal-close-button').addEventListener('focus', showFeaturesIfHidden);
 
@@ -147,8 +150,9 @@ const imageGalleryModal = (function() {
 	document.querySelector('.gallery-modal-image').addEventListener('mouseout', showFeaturesIfHidden);
 	
 	document.querySelector('.invisible-button').addEventListener('click', toggleModalFeatures);
-	// not sure if this works with <picture> elements
-	document.querySelector('.gallery-modal-ready').addEventListener('click', openGalleryModal);
+
+	//listen for clicks on gallery elements
+	AddGalleryListener();
 
 	// event listener; lets arrows keys handle gallery navigation and esc close the modal
 	document.addEventListener('keyup', function(e) {

@@ -1,22 +1,24 @@
 /* TODO: 
- * (1) Have a function to add/remove the gallery-modal-ready listener
- * (2) Find a more efficient solution for determining the gallery index number (faster than linear runtime)
+ * (1) Find a more efficient solution for determining the gallery index number (faster than linear runtime)
  *
  * HOW TO USE: 
  * Include this file at the bottom of your webpage, so it runs only after the DOM has loaded 
  * Ex: <script src="yourfolder/gallery-modal-scripts.js"></script>
  */
 const imageGalleryModal = (function() {
-	//gallery is closed by default, and so no valid image index is available
+	//gallery is closed by default, therefore the index is set to a negative value
 	let currentImageIndex = -1;
 
 	/* IMPORTANT:
-	 * Move this variable down to local function scopes if your webpage dynamically
-	 * adds or removes images from the DOM.
+	 * If your webpage dynamically removes or adds images to the DOM,
+	 * you will need to use imageGalleryModal.unreadyGallery() before the DOM change,
+	 * and imageGalleryModal.readyGallery() after the change is done.
 	 */
-	const galleryImages = document.querySelectorAll('.gallery-modal-ready img');
+	let galleryImages = document.querySelectorAll('.gallery-modal-ready img');
+
 
 	//------Exported Functions------
+
 	const openGalleryModal = function(e) {
 		//end operation if click event target is not an image
 		if(e.target.nodeName !== 'IMG') return;
@@ -71,13 +73,25 @@ const imageGalleryModal = (function() {
 		showFeaturesIfHidden();
 	}
 
-	const AddGalleryListener = function() {
-		// not sure if this works with <picture> elements
-		document.querySelector('.gallery-modal-ready').addEventListener('click', openGalleryModal);
+	const readyGalleryListener = function() {
+		try {
+			// not sure if this listener works with <picture> elements
+			document.querySelector('.gallery-modal-ready').addEventListener('click', openGalleryModal);
+		} 
+		catch(error) {
+			console.error(error);
+			return false;
+		}
+
+		//update the list of gallery images
+		galleryImages = document.querySelectorAll('.gallery-modal-ready img');
+		return true;
 	}
 
-	const RemoveGalleryListener = function() {
-		document.querySelector('gallery-modal-ready').removeEventListener('click', openGalleryModal);
+	const unreadyGalleryListener = function() {
+		document.querySelector('.gallery-modal-ready').removeEventListener('click', openGalleryModal);
+		galleryImages = null;
+		return true;
 	}
 
 
@@ -135,7 +149,9 @@ const imageGalleryModal = (function() {
 		document.querySelector('.gallery-modal-index').innerText = imageIndexString;
 	};
 
+
 	//------ Initialize listeners on buttons and gallery ------
+
 	//modal buttons
 	document.querySelector('.modal-close-button').addEventListener('click', closeGalleryModal);
 	document.querySelector('.modal-close-button').addEventListener('focus', showFeaturesIfHidden);
@@ -152,7 +168,7 @@ const imageGalleryModal = (function() {
 	document.querySelector('.invisible-button').addEventListener('click', toggleModalFeatures);
 
 	//listen for clicks on gallery elements
-	AddGalleryListener();
+	readyGalleryListener();
 
 	// event listener; lets arrows keys handle gallery navigation and esc close the modal
 	document.addEventListener('keyup', function(e) {
@@ -170,8 +186,8 @@ const imageGalleryModal = (function() {
 		close: closeGalleryModal,
 		prevImage: prevGalleryImage,
 		nextImage: nextGalleryImage,
-		readyGallery: AddGalleryListener,
-		unreadyGallery: RemoveGalleryListener
+		readyGallery: readyGalleryListener,
+		unreadyGallery: unreadyGalleryListener
 	}
 }());
 

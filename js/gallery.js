@@ -111,9 +111,7 @@ const galleryScripts = (function(){
 			button.tabIndex = 0;
 		}
 
-		// focus the (now visible) sidebar
 		document.querySelector('.sidebar').focus();
-
 
 		// stopping event propagation prevents soft locking the sidebar
 		if (!e) var e = window.event;

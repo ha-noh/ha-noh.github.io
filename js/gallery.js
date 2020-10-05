@@ -45,14 +45,17 @@ const galleryScripts = (function(){
 
 		// set the appropriate category name in header
 		let catName = convertClassToHeading(categoryName);
-
 		document.querySelector('.gallery-header a').innerText = catName;
 
 		// make all images in the current open category focusable
 		const images = document.querySelectorAll(`${categoryName} img`);
 		for (const image of images) {
 			image.tabIndex = 0;
-		}	
+		}
+
+		// makes the category modal-ready
+		document.querySelector(categoryName).classList.add('gallery-modal-ready');
+		imageGalleryModal.readyGallery();
 	}
 
 	function hideCurrentCat(e, currentCat, pendingCat) {
@@ -65,6 +68,7 @@ const galleryScripts = (function(){
 			if (e.stopPropagation) e.stopPropagation();
 	
 			console.log(`${pendingCat} is already active`);
+			closeSidebar();
 			return;
 		}
 
@@ -78,6 +82,10 @@ const galleryScripts = (function(){
 		currentCat.classList.add('category-hidden');
 		currentCat.classList.remove('category-displayed');
 		
+		// mutual exclusion to prevent modal behavior while the the displayed category is changing
+		imageGalleryModal.unreadyGallery();
+		currentCat.classList.remove('gallery-modal-ready');
+
 		closeSidebar();
 	}
 

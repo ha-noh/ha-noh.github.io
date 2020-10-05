@@ -27,40 +27,16 @@ const galleryScripts = (function(){
 			let allowedKeys = {
 				13: 'enter'
 			};
-
 			handleInput(e, allowedKeys[e.keyCode]);
 		});
 	});
 
-	// opens category based on the category name passed into it, currently the event parameter is unused.
+	// opens category based on the category name passed into it
 	function openCategory(e, categoryName) {
 		let currentCat = document.querySelector('.category-displayed');
 
 		// If there is a category open, hide it first
-		if(currentCat != null) {
-			// If opening the current category, cancel the operation
-			if(currentCat.classList.contains(categoryName.slice(1))) {		
-				// cross-browser safe method of stopping event propagation to the new click event added below
-				if (!e) var e = window.event;
-				e.cancelBubble = true;
-				if (e.stopPropagation) e.stopPropagation();
-		
-				console.log(`${categoryName} is already active`);
-				return;
-			}
-
-			// make currently visible gallery images unfocusable
-			const visibleImages = document.querySelectorAll('category-displayed img');
-			for(const image of visibleImages) {
-				image.tabIndex = -1;
-			}
-
-			// hide current category
-			currentCat.classList.add('category-hidden');
-			currentCat.classList.remove('category-displayed');
-			
-			closeSidebar();
-		}
+		if(currentCat != null) hideCurrentCat(e, currentCat, categoryName);
 
 		// open a new category and adjust its classList
 		let newCategory = document.querySelector(categoryName);
@@ -77,6 +53,32 @@ const galleryScripts = (function(){
 		for (const image of images) {
 			image.tabIndex = 0;
 		}	
+	}
+
+	function hideCurrentCat(e, currentCat, pendingCat) {
+		// If opening the current category, cancel the operation
+		if(currentCat.classList.contains(pendingCat.slice(1))) {		
+			// cross-browser safe method of stopping event propagation
+			// this prevents the click event from bubbling up to the closeIfOutOfBounds listener
+			if (!e) var e = window.event;
+			e.cancelBubble = true;
+			if (e.stopPropagation) e.stopPropagation();
+	
+			console.log(`${pendingCat} is already active`);
+			return;
+		}
+
+		// make currently visible gallery images unfocusable
+		const visibleImages = document.querySelectorAll('category-displayed img');
+		for(const image of visibleImages) {
+			image.tabIndex = -1;
+		}
+
+		// hide current category
+		currentCat.classList.add('category-hidden');
+		currentCat.classList.remove('category-displayed');
+		
+		closeSidebar();
 	}
 
 	// gets the appropriate display heading for a given gallery class
@@ -105,7 +107,7 @@ const galleryScripts = (function(){
 		document.querySelector('.sidebar').focus();
 
 
-		// cross-browser safe method of stopping event propagation to the new click event added below
+		// stopping event propagation prevents soft locking the sidebar
 		if (!e) var e = window.event;
 		e.cancelBubble = true;
 		if (e.stopPropagation) e.stopPropagation();
@@ -125,7 +127,7 @@ const galleryScripts = (function(){
 		document.querySelector('html').removeEventListener('click', closeIfOutOfBounds);
 	}
 
-	// helps handle keyup events
+	// handles keyup events
 	function handleInput(event, keystroke) {
 		switch(keystroke) {
 			case 'enter':
@@ -139,6 +141,5 @@ const galleryScripts = (function(){
 	 */
 	function closeIfOutOfBounds(e) {
 		e.target.classList.contains('sidebar') ? false : closeSidebar();
-		// console.log(e.target)
 	}
 }());

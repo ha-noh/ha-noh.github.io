@@ -18,6 +18,7 @@ A website to catalog my various personal projects, including artwork, software, 
 14) ~~Add "return to top of page" to gallery header~~
 15) Add sidebar to all pages or a "return to top" link instead
 16) Add high resolution (1440p, 4K) media queries for all pages since they are currently styled for 1080p screens 
+17) Animation for aboutme page and details
 
 ## Browser Compatibility
 - Keyboard navigation in Firefox is weird; it allows you to focus the body DOM element if you tab to the bottom of any given page. Issue is not present in Chrome.

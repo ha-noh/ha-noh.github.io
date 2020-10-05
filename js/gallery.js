@@ -104,14 +104,14 @@ const galleryScripts = (function(){
 	}
 
 	function openSidebar(e) {
-		document.querySelector('.sidebar').style.width = '250px';
+		document.querySelector('.sidebar').style.left = '0';
 
 		const buttons = document.querySelectorAll('.sidebar button');
 		for(const button of buttons) {
 			button.tabIndex = 0;
 		}
 
-		document.querySelector('.sidebar').focus();
+		// document.querySelector('.sidebar').focus();
 
 		// stopping event propagation prevents soft locking the sidebar
 		if (!e) var e = window.event;
@@ -123,7 +123,7 @@ const galleryScripts = (function(){
 	}
 
 	function closeSidebar() {
-		document.querySelector('.sidebar').style.width = '0';
+		document.querySelector('.sidebar').style.left = '-250px';
 
 		const buttons = document.querySelectorAll('.sidebar button');
 		for(const button of buttons) {

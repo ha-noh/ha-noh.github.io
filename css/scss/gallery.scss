@@ -1,6 +1,7 @@
 @use 'common';
 $gallery-shadow-color: #0d0305;
 $sidebar-color: #1f1f24;
+$sidebar-border-color: #030305;
 
 h1 {
 	margin-bottom: 4px;
@@ -71,20 +72,21 @@ header { //determines icon size
 .sidebar {
 	display: flex;
 	height: 100%;
-	width: 0; //changes with js
+	width: 250px; //changes with js
 	position: fixed;
 	z-index: 2; //keeps sidebar above gallery header
 	top: 0;
-	left: 0;
+	left: -250px;
 	background-color: $sidebar-color;
 	overflow-x: hidden; //disable horizontal scroll
 	transition: 0.4s;
-	opacity: .97;
 	flex-flow: column;
+	-webkit-box-shadow: 5px 0 10px -3px $gallery-shadow-color;
+	-moz-box-shadow: 5px 0 10px -3px $gallery-shadow-color;
 	box-shadow: 5px 0 10px -3px $gallery-shadow-color;
 }
 .sidebar button {
-	padding: 20px 5px 20px;
+	padding: 20px 10px 20px;
 	border: none;
 	font-size: 23px;
 	color: #e72d80;
@@ -93,7 +95,7 @@ header { //determines icon size
 	white-space: pre;
 }
 .sidebar:focus {
-	outline: common.$secondary-color solid 1px;
+	// outline: common.$secondary-color solid 1px;
 }
 .sidebar button:hover, .sidebar button:focus {
 	background-color: #3b1f2b;

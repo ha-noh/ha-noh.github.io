@@ -14,7 +14,12 @@ h3, .profile { //about me body text
 header { 
 	margin-bottom: 30px;
 }
-
+details > summary {
+	cursor: pointer;
+	list-style: none;
+	text-align: center;
+	font-style: italic;
+}
 .aboutme-body {
 	width: 80%;
 	margin: 0 auto 30px;
@@ -22,11 +27,23 @@ header {
 	-moz-box-shadow: 3px 5px 10px -3px $gallery-shadow-color;
 	box-shadow: 3px 5px 10px -3px $gallery-shadow-color;
 	padding: 20px;
+	animation-name: card-transition;
+	animation-duration: .3s;
+	animation-timing-function: ease-out;
 }
 .profile {
 	width: 100%;
 }
-
+@keyframes card-transition {
+	from {
+		opacity: 0;
+		transform: scale(.8);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
 /*====== Full layout ======*/
 @media screen and (min-width:700px) {
 	h1 {

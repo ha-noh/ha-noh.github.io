@@ -16,9 +16,17 @@ header {
 }
 details > summary {
 	cursor: pointer;
-	list-style: none;
+	display: block;
 	text-align: center;
 	font-style: italic;
+}
+details > p {
+	padding: 10px;
+	-webkit-box-shadow: 3px 5px 10px -3px $gallery-shadow-color;
+	-moz-box-shadow: 3px 5px 10px -3px $gallery-shadow-color;
+	box-shadow: 3px 5px 10px -3px $gallery-shadow-color;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
 }
 .aboutme-body {
 	width: 80%;

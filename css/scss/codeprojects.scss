@@ -1,8 +1,5 @@
 @use 'common';
 
-p {
-	color: common.$secondary-color-shadow;
-}
 header { 
 	margin-bottom: 30px;
 }
@@ -11,11 +8,13 @@ header {
 	width: 80vw;
 	padding: 20px;
 	margin: 0 auto 15px;
+	color: common.$secondary-color-shadow;
 	-webkit-box-shadow: 3px 5px 10px -3px common.$gallery-shadow-color;
 	-moz-box-shadow: 3px 5px 10px -3px common.$gallery-shadow-color;
 	box-shadow: 3px 5px 10px -3px common.$gallery-shadow-color;
-	-webkit-border-radius: 10px;
-	border-radius: 10px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+
 }
 a.blurb {
 	width: 50vw;
@@ -23,6 +22,7 @@ a.blurb {
 	text-align: center;
 }
 .card {
+	border-left: 5px solid common.$secondary-color-shadow;
 	animation-name: slide-in;
 	animation-duration: .5s;
 	animation-timing-function: ease-out;

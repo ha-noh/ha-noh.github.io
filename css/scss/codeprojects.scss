@@ -1,5 +1,4 @@
 @use 'common';
-$gallery-shadow-color: #0d0305;
 
 p {
 	color: common.$secondary-color-shadow;
@@ -12,9 +11,9 @@ header {
 	width: 80vw;
 	padding: 20px;
 	margin: 0 auto 15px;
-	-webkit-box-shadow: 3px 5px 10px -3px $gallery-shadow-color;
-	-moz-box-shadow: 3px 5px 10px -3px $gallery-shadow-color;
-	box-shadow: 3px 5px 10px -3px $gallery-shadow-color;
+	-webkit-box-shadow: 3px 5px 10px -3px common.$gallery-shadow-color;
+	-moz-box-shadow: 3px 5px 10px -3px common.$gallery-shadow-color;
+	box-shadow: 3px 5px 10px -3px common.$gallery-shadow-color;
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
 }

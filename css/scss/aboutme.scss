@@ -1,6 +1,4 @@
 @use 'common';
-$gallery-shadow-color: #0d0305;
-$sidebar-color: #1f1f24;
 
 h1 {
 	margin-bottom: 4px;
@@ -22,18 +20,20 @@ details > summary {
 }
 details > p {
 	padding: 10px;
-	-webkit-box-shadow: 3px 5px 10px -3px $gallery-shadow-color;
-	-moz-box-shadow: 3px 5px 10px -3px $gallery-shadow-color;
-	box-shadow: 3px 5px 10px -3px $gallery-shadow-color;
-	-webkit-border-radius: 10px;
-	border-radius: 10px;
+	-webkit-box-shadow: 3px 5px 10px -3px common.$gallery-shadow-color;
+	-moz-box-shadow: 3px 5px 10px -3px common.$gallery-shadow-color;
+	box-shadow: 1px 1px 2px common.$gallery-shadow-color;
+	border-left: 5px solid common.$secondary-color-shadow;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+
 }
 .aboutme-body {
 	width: 80%;
 	margin: 0 auto 30px;
-	-webkit-box-shadow: 3px 5px 10px -3px $gallery-shadow-color;
-	-moz-box-shadow: 3px 5px 10px -3px $gallery-shadow-color;
-	box-shadow: 3px 5px 10px -3px $gallery-shadow-color;
+	-webkit-box-shadow: 3px 5px 10px -3px common.$gallery-shadow-color;
+	-moz-box-shadow: 3px 5px 10px -3px common.$gallery-shadow-color;
+	box-shadow: 3px 5px 10px -3px common.$gallery-shadow-color;
 	padding: 20px;
 	animation-name: card-transition;
 	animation-duration: .3s;

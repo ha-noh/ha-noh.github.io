@@ -111,9 +111,10 @@ details > p {
   padding: 10px;
   -webkit-box-shadow: 3px 5px 10px -3px #0d0305;
   -moz-box-shadow: 3px 5px 10px -3px #0d0305;
-  box-shadow: 3px 5px 10px -3px #0d0305;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
+  box-shadow: 1px 1px 2px #0d0305;
+  border-left: 5px solid #ac206e;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
 }
 
 .aboutme-body {

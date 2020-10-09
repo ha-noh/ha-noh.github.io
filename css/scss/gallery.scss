@@ -1,5 +1,4 @@
 @use 'common';
-$gallery-shadow-color: #0d0305;
 $sidebar-color: #1f1f24;
 $sidebar-border-color: #030305;
 
@@ -25,18 +24,18 @@ header { //determines icon size
 	flex-flow: column;
 }
 .gallery img {
-	-webkit-box-shadow: 3px 5px 10px -3px $gallery-shadow-color;
-	-moz-box-shadow: 3px 5px 10px -3px $gallery-shadow-color;
-	box-shadow: 3px 5px 10px -3px $gallery-shadow-color;
+	-webkit-box-shadow: 3px 5px 10px -3px common.$gallery-shadow-color;
+	-moz-box-shadow: 3px 5px 10px -3px common.$gallery-shadow-color;
+	box-shadow: 3px 5px 10px -3px common.$gallery-shadow-color;
 	cursor: pointer;
 }
 .gallery-header {
 	position: sticky;
 	top: 0;
 	padding: 10px 0;
-	-webkit-box-shadow: 0 5px 5px -4px $gallery-shadow-color;
-	-moz-box-shadow: 0 5px 5px -4px $gallery-shadow-color;
-	box-shadow: 0 5px 5px -4px $gallery-shadow-color;
+	-webkit-box-shadow: 0 5px 5px -4px common.$gallery-shadow-color;
+	-moz-box-shadow: 0 5px 5px -4px common.$gallery-shadow-color;
+	box-shadow: 0 5px 5px -4px common.$gallery-shadow-color;
 	z-index: 1; //keeps header above gallery images while scrolling
 }
 .gallery-header table {
@@ -81,9 +80,9 @@ header { //determines icon size
 	overflow-x: hidden; //disable horizontal scroll
 	transition: 0.4s;
 	flex-flow: column;
-	-webkit-box-shadow: 5px 0 10px -3px $gallery-shadow-color;
-	-moz-box-shadow: 5px 0 10px -3px $gallery-shadow-color;
-	box-shadow: 5px 0 10px -3px $gallery-shadow-color;
+	-webkit-box-shadow: 5px 0 10px -3px common.$gallery-shadow-color;
+	-moz-box-shadow: 5px 0 10px -3px common.$gallery-shadow-color;
+	box-shadow: 5px 0 10px -3px common.$gallery-shadow-color;
 }
 .sidebar button {
 	padding: 20px 10px 20px;

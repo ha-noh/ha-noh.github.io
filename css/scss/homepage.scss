@@ -101,6 +101,7 @@ header {
 		position: relative;
 		min-width: 90vw;
 		min-height: 108vw;
+		background-color: common.$content-bg-color;
 	}
 	.panel img {
 		object-fit: contain;
@@ -112,7 +113,6 @@ header {
 		width: 44.75%;
 		animation-name: top-mid-left;
 		animation-duration: .5s;
-		animation-timing-function: ease-out;
 	}
 	.panel-topright {
 		position: absolute;
@@ -121,7 +121,6 @@ header {
 		width: 45.65%;
 		animation-name: top-right;
 		animation-duration: .75s;
-		animation-timing-function: ease-out;
 	}
 	.panel-midleft {
 		position: absolute;
@@ -130,7 +129,6 @@ header {
 		width: 44.75%;
 		animation-name: top-mid-left;
 		animation-duration: .75s;
-		animation-timing-function: ease-out;
 	}
 	.panel-botleft {
 		position: absolute;
@@ -139,7 +137,6 @@ header {
 		width: 54.25%;
 		animation-name: bot-left;
 		animation-duration: .75s;
-		animation-timing-function: ease-out;
 	}
 	.panel-botright {
 		position: absolute;
@@ -148,7 +145,6 @@ header {
 		width: 36.25%;
 		animation-name: bot-right;
 		animation-duration: .5s;
-		animation-timing-function: ease-out;	
 	}
 	.page {
 		box-shadow: 5px 5px 15px -8px #0d0305;
@@ -175,41 +171,41 @@ header {
 	}
 
 	@keyframes top-mid-left {
-		from {
+		0% {
 			opacity: 0;
 			left: -100px;
 		}
-		to {
+		100% {
 			opacity: 1;
 			left: -20px;
 		}
 	}
 	@keyframes top-right {
-		from {
+		0% {
 			opacity: 0;
 			top: -50px;
 		}
-		to {
+		100% {
 			opacity: 1;
 			top: 0;
 		}
 	}
 	@keyframes bot-left {
-		from {
+		0% {
 			opacity: 0;
 			bottom: -50px;
 		}
-		to {
+		100% {
 			opacity: 1;
 			bottom: 20px;
 		}
 	}
 	@keyframes bot-right {
-		from {
+		0% {
 			opacity: 0;
 			right: -100px;
 		}
-		to {
+		100% {
 			opacity: 1;
 			right: -10px;
 		}

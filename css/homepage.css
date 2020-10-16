@@ -31,7 +31,7 @@ header a:hover {
 }
 
 html {
-  background-color: #1d1e1f;
+  background-color: #201e21;
 }
 
 a, a:visited {
@@ -77,7 +77,7 @@ button {
 }
 
 .bg-dark {
-  background-color: #1d1e1f;
+  background-color: #201e21;
 }
 
 .bg-light {
@@ -192,6 +192,7 @@ header {
     position: relative;
     min-width: 90vw;
     min-height: 108vw;
+    background-color: #242328;
   }
 
   .panel img {
@@ -205,7 +206,6 @@ header {
     width: 44.75%;
     animation-name: top-mid-left;
     animation-duration: 0.5s;
-    animation-timing-function: ease-out;
   }
 
   .panel-topright {
@@ -215,7 +215,6 @@ header {
     width: 45.65%;
     animation-name: top-right;
     animation-duration: 0.75s;
-    animation-timing-function: ease-out;
   }
 
   .panel-midleft {
@@ -225,7 +224,6 @@ header {
     width: 44.75%;
     animation-name: top-mid-left;
     animation-duration: 0.75s;
-    animation-timing-function: ease-out;
   }
 
   .panel-botleft {
@@ -235,7 +233,6 @@ header {
     width: 54.25%;
     animation-name: bot-left;
     animation-duration: 0.75s;
-    animation-timing-function: ease-out;
   }
 
   .panel-botright {
@@ -245,7 +242,6 @@ header {
     width: 36.25%;
     animation-name: bot-right;
     animation-duration: 0.5s;
-    animation-timing-function: ease-out;
   }
 
   .page {
@@ -274,41 +270,41 @@ header {
   }
 
   @keyframes top-mid-left {
-    from {
+    0% {
       opacity: 0;
       left: -100px;
     }
-    to {
+    100% {
       opacity: 1;
       left: -20px;
     }
   }
   @keyframes top-right {
-    from {
+    0% {
       opacity: 0;
       top: -50px;
     }
-    to {
+    100% {
       opacity: 1;
       top: 0;
     }
   }
   @keyframes bot-left {
-    from {
+    0% {
       opacity: 0;
       bottom: -50px;
     }
-    to {
+    100% {
       opacity: 1;
       bottom: 20px;
     }
   }
   @keyframes bot-right {
-    from {
+    0% {
       opacity: 0;
       right: -100px;
     }
-    to {
+    100% {
       opacity: 1;
       right: -10px;
     }

@@ -1,6 +1,4 @@
-$(document).ready(function() {
-	$('#nav-placeholder').load('html/navbar.html');
-	
+window.addEventListener('DOMContentLoaded', () => {
 	let details = document.querySelector('details');
 	details.addEventListener('toggle', event => {
 		//element was toggled open

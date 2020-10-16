@@ -1,9 +1,8 @@
 const galleryScripts = (function(){
-	// initialize event listeners and default page content
-	$(document).ready(function() {
-		$('#nav-placeholder').load('html/navbar.html');
-
-		// open the sketches category by default
+	/* Initialize event listeners and default page content;
+	 * open the sketches category by default
+	 */
+	window.addEventListener('DOMContentLoaded', () => {
 		if(window.sessionStorage.getItem('galleryLanding') == null) {
 			openCategory(event, '.sketches');
 		}
@@ -30,6 +29,7 @@ const galleryScripts = (function(){
 			handleInput(e, allowedKeys[e.keyCode]);
 		});
 	});
+
 
 	// opens category based on the category name passed into it
 	function openCategory(e, categoryName) {

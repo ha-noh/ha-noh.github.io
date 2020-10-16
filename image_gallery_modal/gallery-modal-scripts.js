@@ -79,7 +79,7 @@ const imageGalleryModal = (function() {
 			document.querySelector('.gallery-modal-ready').addEventListener('click', openGalleryModal);
 		} 
 		catch(error) {
-			console.error(error);
+			//console.error(error);
 			return false;
 		}
 

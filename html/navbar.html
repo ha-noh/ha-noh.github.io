@@ -20,15 +20,15 @@
 		}
 
 		function modeToggleHelper() {
-			document.querySelector('html').classList.toggle('white-bg');
+			document.querySelector('html').classList.toggle('bg-light');
 			document.querySelector('.sun').classList.toggle('hidden-button');
 			document.querySelector('.moon').classList.toggle('hidden-button');
 
 			//if on the gallery page, change the category header bg color to match
 			let galleryHeader = document.querySelector('.gallery-header'); 
 			if(galleryHeader) {
-				galleryHeader.classList.toggle('white-bg');
-				galleryHeader.classList.toggle('dark-bg');
+				galleryHeader.classList.toggle('bg-light');
+				galleryHeader.classList.toggle('bg-dark');
 			} 
 		}
 	}());

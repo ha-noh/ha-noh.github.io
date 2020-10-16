@@ -1,6 +1,7 @@
 $body-font: 'Karla', sans-serif;
 $header-font: 'Montserrat', sans-serif;
-$background-color: #1d1e1f;
+$page-bg-color: #1d1e1f;
+$content-bg-color: #232428;
 //shades of aqua
 $primary-color: #97fae4;
 $primary-color-shadow: #34b89a;
@@ -42,7 +43,7 @@ header {
 	}
 }
 html {
-	background-color: $background-color;
+	background-color: $page-bg-color;
 }
 a, a:visited {
 	text-decoration: none;
@@ -82,9 +83,16 @@ button {
 .sun:hover, .moon:hover {
 	color: $primary-color;
 }
-.dark-bg {
-	background-color: $background-color;
+.bg-dark {
+	background-color: $page-bg-color;
 }
-.white-bg {
+.bg-light {
 	background-color: white;
+}
+//make content background a lighter, distinct color in both light and dark mode
+.content-dark {
+
+}
+.content-light {
+
 }

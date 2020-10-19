@@ -44,7 +44,7 @@ button {
   cursor: pointer;
 }
 
-.moon, .sun, .inline-icon {
+.inline-icon {
   color: #34b89a;
   font-family: icomoon;
   font-size: 22px;
@@ -57,31 +57,6 @@ button {
   color: #e72d80;
   padding: 0 5px;
   font-size: inherit;
-}
-
-.sun {
-  border: none;
-}
-
-.moon {
-  border: none;
-}
-
-.hidden-button {
-  display: none;
-}
-
-/* navbar icons change color on hover */
-.sun:hover, .moon:hover {
-  color: #97fae4;
-}
-
-.bg-dark {
-  background-color: #201e21;
-}
-
-.bg-light {
-  background-color: white;
 }
 
 header {

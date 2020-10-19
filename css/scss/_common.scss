@@ -68,31 +68,3 @@ button {
 	padding: 0 5px;
 	font-size: inherit;
 }
-.sun {
-	@extend %icomoon;
-	border: none;
-}
-.moon {
-	@extend %icomoon;
-	border: none;
-}
-.hidden-button {
-	display: none;
-}
-/* navbar icons change color on hover */
-.sun:hover, .moon:hover {
-	color: $primary-color;
-}
-.bg-dark {
-	background-color: $page-bg-color;
-}
-.bg-light {
-	background-color: white;
-}
-//make content background a lighter, distinct color in both light and dark mode
-.content-dark {
-
-}
-.content-light {
-
-}

@@ -20,68 +20,71 @@
 		<div class="profile">
 			<br>
 			<p>
-				Hello, I'm Andrew. You can find my various work in web design, illustration, music, and programming on this site. 
-				There's not much else to say at the moment, so I'll list some of the more interesting improvements I've made to this site:
+				Hello, I'm Andrew - I do web developer and digital illustrator things. 
+				You can find the various professional and hobby projects I work on here (I even make music sometimes)!
+				There's not much else to say at the moment, so I'll hit you with the enrapturing history of how this site has improved for users over time:
 			</p>
 			<details>
 				<summary> 
 					Click for change list
 				</summary>
-				<p class="list-entry">
+				<br>
+				<section class="list-entry">
 					<b>9/10/19</b><br>
 					The website now remembers if you toggled nightmode (in your current session), and renders the page accordingly!
-				</p>
-				<div class="list-entry">
+				</section>
+				<br>
+				<section class="list-entry">
 					<b>12/17/19</b><br>
 					You can now read the home page headings even if you are navigating with a keyboard - the panels now properly display their headings when focused.
-				</div>
+				</section>
 				<br>
-				<div class="list-entry">
+				<section class="list-entry">
 					<b>6/2/20</b><br>
 					Keyboard navigation in the gallery is now fully implemented; you can now use arrow keys to navigate through gallery images and use the enter key to click on them. Neat.
-				</div>
+				</section>
 				<br>
-				<div class="list-entry">
+				<section class="list-entry">
 					<b>6/18/20</b><br>
 					Gallery images can now be previewed in full by focusing or hovering them. 
 					The modal has been updated to look more cohesive.
-				</div>
+				</section>
 				<br>
-				<div class="list-entry">
+				<section class="list-entry">
 					<b>7/3/20</b><br>
 					The gallery modal buttons can now be hidden for an unobstructed view of the image.
 					The buttons are also more visible now.
-				</div>
+				</section>
 				<br>
-				<div class="list-entry">
+				<section class="list-entry">
 					<b>8/11/20</b><br>
 					The gallery sidebar is more tactful now and automatically gets out of the user's way.
 					The gallery has also received a much needed visual overhaul (uniform, square thumbnails!).
-				</div>
+				</section>
 				<br>
-				<div class="list-entry">
+				<section class="list-entry">
 					<b>10/5/20</b><br>
 					There is now a descriptive landing page for the code projects section instead of a direct link to my github.
 					The gallery categories are now mutually exclusive and aren't visible to each other through the modal.
-				</div>
+				</section>
 				<br>
-				<div class="list-entry">
+				<section class="list-entry">
 					<b>10/16/20</b>
 					<p>
 						It feels strange to scrap something I've invested so much into, but it's come time to say goodbye to the lightmode toggle :(.
-						For my sake, the feature deserves a eulogy and an explanation.
 					</p>
 					<p>
-						I originally implemented it to give the site an alternate, less eye straining, display method.
-						The website was paper white by default because the home page was supposed to be a comic page, but over time this became less practical.
+						Night mode's purpose - as in most implementations - was to provide an alternate, less eye straining, display method.
+						The website backgrounds were white by default to support the comic book aesthetic, and the night mode was there because who actually likes light mode. 
+						So really, from the start having a toggle was a compromise between aesthetics and comfort.
+					<p>
+						Having two modes for every page brought twice the issues:
+						Every font color had to display nicely on both background colors; the blinding flash of white as the page rendered led to night mode being toggled by default; adding colors to the palette was more labor-intensive than it should have been; every page had to have the nav element containing the toggle button. This element even lost most its purpose over time, and eventually only existed to hold that one button.
 					</p>
 					<p>
-						Every font color had to display nicely on both background colors; the blinding flash of white as the page rendered meant that dark mode had to be changed to be on by default; every page had to have the toggle button, with its custom font. The nav element containing the toggle button lost most of its children and ended up existing only to hold that one button. The scripting turned the small task of adjusting color styles a much more labor intensive task.
+						The feature is more prohibitive than useful, and it's time for it to be scrapped. While it was fun to think about, unfortunately it's no longer needed.
 					</p>
-					<p>
-						It was prohibitive in a lot of ways, and it's time for it to be scrapped. While a fun feature to think about, unfortunately it's no longer needed.
-					</p>
-				</div>
+				</section>
 			</details>
 			<br><span class="inline-icon">&#xe902;</span><a href="https://www.linkedin.com/in/ha-noh/" target="_blank">Connect on LinkedIn</a>
 			<br><span class="inline-icon">&#xe904;</span><a href="mailto:andrew@hanoh.studio">Email me</a>

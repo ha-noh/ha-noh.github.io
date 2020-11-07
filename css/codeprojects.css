@@ -36,7 +36,7 @@ html {
 
 a, a:visited {
   text-decoration: none;
-  color: #e9e6f2;
+  color: #e72d80;
 }
 
 button {
@@ -54,13 +54,13 @@ button {
 }
 
 .inline-icon {
-  color: #e9e6f2;
+  color: #e72d80;
   padding: 0 5px;
   font-size: inherit;
 }
 
-a {
-  color: #ac206e;
+a:hover {
+  color: #e72d80;
 }
 
 header {

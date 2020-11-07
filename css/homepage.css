@@ -36,7 +36,7 @@ html {
 
 a, a:visited {
   text-decoration: none;
-  color: #e9e6f2;
+  color: #e72d80;
 }
 
 button {
@@ -54,7 +54,7 @@ button {
 }
 
 .inline-icon {
-  color: #e9e6f2;
+  color: #e72d80;
   padding: 0 5px;
   font-size: inherit;
 }
@@ -71,7 +71,7 @@ h2 {
   width: 100%;
   font-family: "Montserrat", sans-serif;
   font-size: 40px;
-  text-shadow: -3px 0 #201e21;
+  text-shadow: -3px 0 #242328;
 }
 
 header {
@@ -106,7 +106,7 @@ header {
 }
 
 .panel a:focus {
-  outline-color: #e9e6f2;
+  outline-color: #e72d80;
 }
 
 .panel-topleft, .panel-topright, .panel-botright {

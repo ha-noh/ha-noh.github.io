@@ -36,7 +36,7 @@ html {
 
 a, a:visited {
   text-decoration: none;
-  color: #e9e6f2;
+  color: #e72d80;
 }
 
 button {
@@ -54,9 +54,17 @@ button {
 }
 
 .inline-icon {
-  color: #e9e6f2;
+  color: #e72d80;
   padding: 0 5px;
   font-size: inherit;
+}
+
+a {
+  color: #e9e6f2;
+}
+
+a:hover {
+  color: #e72d80;
 }
 
 h1 {
@@ -80,6 +88,10 @@ details > summary {
   display: block;
   text-align: center;
   font-style: italic;
+}
+
+summary:hover {
+  color: #e72d80;
 }
 
 .list-entry {

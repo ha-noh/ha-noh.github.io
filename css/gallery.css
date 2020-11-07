@@ -36,7 +36,7 @@ html {
 
 a, a:visited {
   text-decoration: none;
-  color: #e9e6f2;
+  color: #e72d80;
 }
 
 button {
@@ -54,7 +54,7 @@ button {
 }
 
 .inline-icon {
-  color: #e9e6f2;
+  color: #e72d80;
   padding: 0 5px;
   font-size: inherit;
 }
@@ -68,7 +68,7 @@ h2 {
 }
 
 h3, p {
-  color: #e9e6f2;
+  color: #e72d80;
 }
 
 article img {
@@ -126,7 +126,7 @@ header {
 
 /*sidebar navigation*/
 .open-button {
-  color: #e9e6f2;
+  color: #e72d80;
   border: none;
   background-color: inherit;
   transition: 0.2s;
@@ -166,7 +166,7 @@ header {
 
 .sidebar button:hover, .sidebar button:focus {
   background-color: #3b1f2b;
-  outline: #e9e6f2 solid 1px;
+  outline: #e72d80 solid 1px;
 }
 
 .sidebar .sidebar-close-button {
@@ -201,7 +201,7 @@ header {
   }
 
   .gallery img:focus {
-    outline: #e9e6f2 solid 1px;
+    outline: #e72d80 solid 1px;
   }
 }
 @media screen and (min-width: 900px) {

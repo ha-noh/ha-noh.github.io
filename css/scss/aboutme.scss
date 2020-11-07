@@ -1,5 +1,10 @@
 @use 'common';
-
+a {
+	color: common.$body-text-color;
+}
+a:hover {
+	color: common.$secondary-color;
+}
 h1 {
 	margin-bottom: 4px;
 }
@@ -7,7 +12,7 @@ h2 {
 	text-align: center;
 }
 h3, .profile { //about me body text
-	color: common.$secondary-color;
+	color: common.$body-text-color;
 }
 header { 
 	margin-bottom: 30px;
@@ -17,6 +22,9 @@ details > summary {
 	display: block;
 	text-align: center;
 	font-style: italic;
+}
+summary:hover {
+	color: common.$secondary-color;
 }
 .list-entry {
 	padding: 10px;

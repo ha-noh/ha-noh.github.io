@@ -1,5 +1,7 @@
 @use 'common';
-
+a {
+	color: common.$secondary-color-shadow;
+}
 header { 
 	margin-bottom: 30px;
 }
@@ -8,14 +10,13 @@ header {
 	width: 80vw;
 	padding: 20px;
 	margin: 0 auto 15px;
-	color: common.$secondary-color-shadow;
+	color: common.$secondary-color;
 	background-color: common.$content-bg-color;
 	-webkit-box-shadow: 3px 5px 10px -3px common.$gallery-shadow-color;
 	-moz-box-shadow: 3px 5px 10px -3px common.$gallery-shadow-color;
 	box-shadow: 3px 5px 10px -3px common.$gallery-shadow-color;
 	-webkit-border-radius: 4px;
 	border-radius: 4px;
-
 }
 a.blurb {
 	width: 50vw;

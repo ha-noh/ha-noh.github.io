@@ -13,7 +13,7 @@ h1 {
 }
 
 h2 {
-  color: #e72d80;
+  color: #e9e6f2;
 }
 
 /* determines icon size */
@@ -36,7 +36,7 @@ html {
 
 a, a:visited {
   text-decoration: none;
-  color: #e72d80;
+  color: #e9e6f2;
 }
 
 button {
@@ -54,7 +54,7 @@ button {
 }
 
 .inline-icon {
-  color: #e72d80;
+  color: #e9e6f2;
   padding: 0 5px;
   font-size: inherit;
 }
@@ -68,7 +68,7 @@ h2 {
 }
 
 h3, .profile {
-  color: #e72d80;
+  color: #e9e6f2;
 }
 
 header {

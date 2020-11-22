@@ -94,11 +94,16 @@ summary:hover {
   color: #e72d80;
 }
 
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
 .list-entry {
   padding: 10px;
   background-color: #201e21;
-  -webkit-box-shadow: 3px 5px 10px -3px #0d0305;
-  -moz-box-shadow: 3px 5px 10px -3px #0d0305;
+  -webkit-box-shadow: 1px 1px 2px #0d0305;
+  -moz-box-shadow: 1px 1px 2px #0d0305;
   box-shadow: 1px 1px 2px #0d0305;
   border-left: 5px solid #ac206e;
   -webkit-border-radius: 2px;
@@ -146,6 +151,32 @@ summary:hover {
 @media screen and (min-width: 1200px) {
   .aboutme-body {
     width: 600px;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .aboutme-body {
+    font-size: 20px;
+    min-width: 800px;
+    padding: 25px;
+  }
+
+  .list-entry {
+    padding: 15px;
+  }
+}
+@media screen and (min-width: 2600px) {
+  .aboutme-body {
+    font-size: 30px;
+    min-width: 1200px;
+  }
+
+  .list-entry {
+    -webkit-box-shadow: 3px 3px 6px #0d0305;
+    -moz-box-shadow: 3px 3px 6px #0d0305;
+    box-shadow: 3px 3px 6px #0d0305;
+    border-left: 10px solid #ac206e;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
   }
 }
 

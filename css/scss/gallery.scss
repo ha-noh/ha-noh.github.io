@@ -33,6 +33,7 @@ header { //determines icon size
 	position: sticky;
 	top: 0;
 	padding: 10px 0;
+	background-color: common.$page-bg-color;
 	-webkit-box-shadow: 0 5px 5px -4px common.$gallery-shadow-color;
 	-moz-box-shadow: 0 5px 5px -4px common.$gallery-shadow-color;
 	box-shadow: 0 5px 5px -4px common.$gallery-shadow-color;
@@ -152,6 +153,7 @@ header { //determines icon size
 		width: 24vw;
 	}
 }
+// most 1080p viewports will end up here
 @media screen and (min-width:1500px) {
 	article img {
 		height: 370px;
@@ -160,5 +162,17 @@ header { //determines icon size
 	.gallery {
 		width: 1500px;
 		margin: auto;
+	}
+}
+@media screen and (min-width:2000px) {
+	article img {
+		height: 24vw;
+		width: 24vw;
+	}
+}
+@media screen and (min-width:2600px) {
+	article img {
+		height: 500px;
+		width: 500px;
 	}
 }

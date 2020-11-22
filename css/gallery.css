@@ -96,6 +96,7 @@ header {
   position: sticky;
   top: 0;
   padding: 10px 0;
+  background-color: #201e21;
   -webkit-box-shadow: 0 5px 5px -4px #0d0305;
   -moz-box-shadow: 0 5px 5px -4px #0d0305;
   box-shadow: 0 5px 5px -4px #0d0305;
@@ -225,6 +226,18 @@ header {
   .gallery {
     width: 1500px;
     margin: auto;
+  }
+}
+@media screen and (min-width: 2000px) {
+  article img {
+    height: 24vw;
+    width: 24vw;
+  }
+}
+@media screen and (min-width: 2600px) {
+  article img {
+    height: 500px;
+    width: 500px;
   }
 }
 

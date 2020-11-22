@@ -26,16 +26,19 @@ details > summary {
 summary:hover {
 	color: common.$secondary-color;
 }
+ul {
+	list-style-type: none;
+	padding: 0;
+}
 .list-entry {
 	padding: 10px;
 	background-color: common.$page-bg-color;
-	-webkit-box-shadow: 3px 5px 10px -3px common.$gallery-shadow-color;
-	-moz-box-shadow: 3px 5px 10px -3px common.$gallery-shadow-color;
+	-webkit-box-shadow: 1px 1px 2px common.$gallery-shadow-color;
+	-moz-box-shadow: 1px 1px 2px common.$gallery-shadow-color;
 	box-shadow: 1px 1px 2px common.$gallery-shadow-color;
 	border-left: 5px solid common.$secondary-color-shadow;
 	-webkit-border-radius: 2px;
 	border-radius: 2px;
-
 }
 .aboutme-body {
 	width: 80%;
@@ -77,4 +80,27 @@ summary:hover {
 		width: 600px;
 	}
 }
-
+@media screen and (min-width:2000px) {
+	.aboutme-body {
+		font-size: 20px;
+		min-width: 800px;
+		padding: 25px;
+	}
+	.list-entry {
+		padding: 15px;
+	}
+}
+@media screen and (min-width:2600px) {
+	.aboutme-body {
+		font-size: 30px;
+		min-width: 1200px;
+	}
+	.list-entry {
+		-webkit-box-shadow: 3px 3px 6px common.$gallery-shadow-color;
+		-moz-box-shadow: 3px 3px 6px common.$gallery-shadow-color;
+		box-shadow: 3px 3px 6px common.$gallery-shadow-color;
+		border-left: 10px solid common.$secondary-color-shadow;
+		-webkit-border-radius: 8px;
+		border-radius: 8px;
+	}
+}

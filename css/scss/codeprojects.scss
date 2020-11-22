@@ -63,3 +63,28 @@ a.blurb {
 		width: 500px;
 	}
 }
+@media screen and (min-width:2000px) {
+	.card, .blurb{
+		width: 900px;
+		font-size: 20px;
+	}
+	a.blurb {
+		width: 800px;
+	}
+}
+@media screen and (min-width:2600px) {
+	h1 {
+		font-size: 50px;
+	}
+	.card, .blurb{
+		width: 1200px;
+		font-size: 30px;
+		padding: 40px;
+	}
+	.card {
+		border-left: 10px solid common.$secondary-color-shadow;
+	}
+	a.blurb {
+		width: 1000px;
+	}
+}

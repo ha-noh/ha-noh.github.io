@@ -94,8 +94,11 @@ a.blurb {
   animation-timing-function: ease-out;
 }
 
-.card h2, .card a {
+.card h2 {
   text-align: center;
+}
+
+.card h2 a {
   font-family: "Montserrat", sans-serif;
 }
 

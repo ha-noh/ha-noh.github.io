@@ -169,6 +169,15 @@ header {
 	.panel:hover img, a:focus img {
 		filter: blur(3px);
 	}
+	.fx-overlay {
+		width: 100%;
+		left: 0;
+	}
+	.fx-panel {
+		filter: blur(3px);
+		transform: scale(.97);
+		transition: transform 0.1s;
+	}
 
 	@keyframes top-mid-left {
 		0% {

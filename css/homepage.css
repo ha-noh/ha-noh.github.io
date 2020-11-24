@@ -244,6 +244,17 @@ header {
     filter: blur(3px);
   }
 
+  .fx-overlay {
+    width: 100%;
+    left: 0;
+  }
+
+  .fx-panel {
+    filter: blur(3px);
+    transform: scale(0.97);
+    transition: transform 0.1s;
+  }
+
   @keyframes top-mid-left {
     0% {
       opacity: 0;

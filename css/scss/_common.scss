@@ -31,18 +31,44 @@ h2 {
 }
 /* determines icon size */
 header {
+	position: sticky;
+	background-color: $page-bg-color;
+	top: -1px;
+	border-top: 1px;
+	z-index: 1;
 	text-align: center;
-	font-size: 15px;
-	// transition: all .2s;
-
-	a, a:visited {
+	h1 {
+		transition: transform .2s, font-size .2s;
+	}
+	h1 a, h1 a:visited {
 		text-decoration: none;
 		color: $primary-color;
 		font-family: $header-font;
 	}
-	a:hover {
+	h1 a:hover {
 		color: $primary-color-shadow;
 	}
+	.header-links {
+		transition: translate .2s;
+	}
+	.header-links, .header-links a {
+		color: $secondary-color;
+		font-family: $header-font;
+		padding: 0 10px;
+	}
+	.header-links a:hover {
+		color: $secondary-color-shadow;
+	}
+}
+h1.isSticky {
+	transform: translate(-400px, 0);
+	font-size: 30px;
+	margin: 0;
+	transition: transform .2s, font-size .2s;
+}
+.header-links.isSticky {
+	transform: translate(0 , -25px);
+	transition: translate .2s;
 }
 html {
 	background-color: $page-bg-color;

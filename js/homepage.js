@@ -29,6 +29,20 @@ const homepageScripts = (function() {
 	document.querySelector('.header-link__aboutme').addEventListener('focusin', () => togglePanelFX('.panel-botright'));
 	document.querySelector('.header-link__aboutme').addEventListener('focusout', () => togglePanelFX('.panel-botright'));
 
+	const stickyEle = document.querySelector('header');
+	
+	const observer = new IntersectionObserver(
+		([e]) => {
+			const nodes = e.target.children;
+			for(const node of nodes) {
+				node.classList.toggle('isSticky', e.intersectionRatio < 1)
+			}
+		},	
+		{threshold: [1]}
+	);
+
+	observer.observe(stickyEle);
+
 	// opens the corresponding category if it's clicked through on the home page
 	function openDesignCategory() { 
 		window.sessionStorage.setItem('galleryLanding','design');

@@ -18,16 +18,46 @@ h2 {
 
 /* determines icon size */
 header {
+  position: sticky;
+  background-color: #201e21;
+  top: -1px;
+  border-top: 1px;
+  z-index: 1;
   text-align: center;
-  font-size: 15px;
 }
-header a, header a:visited {
+header h1 {
+  transition: transform 0.2s, font-size 0.2s;
+}
+header h1 a, header h1 a:visited {
   text-decoration: none;
   color: #97fae4;
   font-family: "Montserrat", sans-serif;
 }
-header a:hover {
+header h1 a:hover {
   color: #34b89a;
+}
+header .header-links {
+  transition: translate 0.2s;
+}
+header .header-links, header .header-links a {
+  color: #e72d80;
+  font-family: "Montserrat", sans-serif;
+  padding: 0 10px;
+}
+header .header-links a:hover {
+  color: #ac206e;
+}
+
+h1.isSticky {
+  transform: translate(-400px, 0);
+  font-size: 30px;
+  margin: 0;
+  transition: transform 0.2s, font-size 0.2s;
+}
+
+.header-links.isSticky {
+  transform: translate(0, -25px);
+  transition: translate 0.2s;
 }
 
 html {

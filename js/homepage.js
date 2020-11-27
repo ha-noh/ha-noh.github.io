@@ -36,7 +36,7 @@ const homepageScripts = (function() {
 			e.target.classList.toggle('isSticky', e.intersectionRatio < 1);
 			const nodes = e.target.children;
 			for(const node of nodes) {
-				node.classList.toggle('isSticky', e.intersectionRatio < 1)
+				node.classList.toggle('isSticky', e.intersectionRatio < 1);
 			}
 		},	
 		{threshold: [1]}

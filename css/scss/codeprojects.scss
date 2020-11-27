@@ -3,9 +3,6 @@
 a:hover {
 	color: common.$secondary-color;
 }
-header { 
-	margin-bottom: 30px;
-}
 .card, .blurb {
 	position: relative;
 	width: 80vw;
@@ -75,9 +72,6 @@ a.blurb {
 	}
 }
 @media screen and (min-width:2600px) {
-	h1 {
-		font-size: 50px;
-	}
 	.card, .blurb{
 		width: 1200px;
 		font-size: 30px;

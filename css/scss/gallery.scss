@@ -2,9 +2,6 @@
 $sidebar-color: #1f1f24;
 $sidebar-border-color: #030305;
 
-h1 {
-	margin-bottom: 4px;
-}
 h2 {
 	text-align: center;
 }
@@ -15,10 +12,6 @@ article img {
 	width: 100%;
 	margin: 0 0 3px;
 }
-header { //determines icon size
-	margin-bottom: 30px;
-}
-
 .gallery {
 	display: flex;
 	flex-flow: column;
@@ -109,9 +102,6 @@ header { //determines icon size
 
 /*====== Full layout ======*/
 @media screen and (min-width:700px) {
-	h1 {
-		font-size: 55px;
-	}
 	article img {
 		height: 45vw;
 		width: 45vw;

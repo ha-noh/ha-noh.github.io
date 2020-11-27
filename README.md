@@ -19,7 +19,7 @@ A website to catalog my various personal projects, including: artwork, software,
 15) Add sidebar to all pages or a "return to top" link instead
 16) ~~Add high resolution (1440p, 4K) media queries for all pages since they are currently styled for 1080p screens~~
 17) ~~Animation for aboutme page and details~~
-18) Shrink header footprint; left-justified? sticky?
+18) ~~Shrink header footprint; left-justified? sticky?~~
 19) Add header navigation / mobile burger icon to all pages for ease of use
 20) Change gallery modal buttons to be a single row of buttons so its position is more predictable across all viewports.
 21) Add a demo link to a live demo page for code projects.

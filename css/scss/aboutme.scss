@@ -5,17 +5,11 @@ a {
 a:hover {
 	color: common.$secondary-color;
 }
-h1 {
-	margin-bottom: 4px;
-}
 h2 {
 	text-align: center;
 }
 h3, .profile { //about me body text
 	color: common.$body-text-color;
-}
-header { 
-	margin-bottom: 30px;
 }
 details > summary {
 	cursor: pointer;
@@ -67,9 +61,6 @@ ul {
 }
 /*====== Full layout ======*/
 @media screen and (min-width:700px) {
-	h1 {
-		font-size: 55px;
-	}
 	.aboutme-body {
 		min-width: 547px;
 		max-width: 600px;

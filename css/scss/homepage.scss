@@ -1,10 +1,6 @@
 @use 'common';
 $border-color: #121212;
 
-h1 {
-	font-size: 55px;
-	margin-bottom:0;
-}
 h2 {
 	position: absolute;
 	top: 0;
@@ -13,9 +9,6 @@ h2 {
 	font-family: common.$header-font;
 	font-size: 40px;
 	text-shadow: -3px 0 common.$content-bg-color;
-}
-header {
-	margin-bottom: 30px;
 }
 
 /* ============== Default, mobile layout ============== */
@@ -94,9 +87,6 @@ header {
  * as a workaround there is a couple pixel difference between the <picture> bp and the media query bp.
  */
 @media screen and (min-width:655px) {
-	header {
-		font-size: 18px;
-	}
 	.page {
 		position: relative;
 		min-width: 90vw;
@@ -305,9 +295,6 @@ header {
 }
 //some love for 4K monitors
 @media screen and (min-width:2600px) {
-	h1 {
-		font-size: 100px;
-	}
 	h2 {
 		font-size: 100px;
 	}

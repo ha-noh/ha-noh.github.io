@@ -14,5 +14,11 @@ const codeprojectsjs = (function(){
 		);
 	
 		observer.observe(stickyEle);
+
+		// opens the corresponding category if it's clicked through on the home page
+		document.querySelector('.header-link__design').addEventListener('click', () => {
+			window.sessionStorage.setItem('galleryLanding','design');
+			console.log('landing page set');
+		});
 	});
 }());

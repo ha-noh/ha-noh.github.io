@@ -112,6 +112,9 @@ button {
 	}
 }
 @media screen and (min-width: 900px) {
+	.header-links a {
+		padding: 0 10px;
+	}
 	h1.isSticky {
 		transform: translate(-300px, 5px);
 		font-size: 30px;

@@ -1,7 +1,9 @@
 @use 'common';
 $sidebar-color: #1f1f24;
 $sidebar-border-color: #030305;
-
+header {
+	position: static;
+}
 h2 {
 	text-align: center;
 }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="../../image_gallery_modal/gallery-modal-style.css">
+	<title>image gallery modal demo</title>
+</head>
+<body>
+	<section aria-label="modal overlay" class="gallery-modal__container" tabindex="-1">
+		<button aria-label="close modal overlay" class="gallery-modal__button gallery-modal__button_close">×</button>
+		<button aria-label="previous image" class="gallery-modal__button gallery-modal__button_prev">‹</button>
+		<img class="gallery-modal__image" src="">
+		<button aria-label="next image" class="gallery-modal__button gallery-modal__button_next">›</button>
+		<button aria-label="toggle visibility for modal buttons" class="gallery-modal__button_invisible"></button>
+		<span class="gallery-modal__index"></span>
+	</section>
+	
+	<ul class="gallery-modal-ready">
+		<li>
+			<img src="images/01.png">
+		</li>
+		<li>
+			<img src="images/02.png">
+		</li>
+		<li>
+			<img src="images/03.png">
+		</li>
+		<li>	
+			<img src="images/04.png">
+		</li>
+	</ul>
+</body>
+<script src="../../image_gallery_modal/gallery-modal-scripts.js"></script>
+</html>

@@ -49,13 +49,11 @@ const galleryScripts = (function(){
 		newCategory.classList.add('category-displayed');
 		newCategory.classList.remove('category-hidden');
 
-		// set the appropriate category name in header
-		let catName = convertClassToHeading(categoryName);
-		document.querySelector('.gallery-header a').innerText = catName;
+		document.querySelector('.gallery-header a').innerText = convertClassToHeading(categoryName);
 
 		// make all images in the current open category focusable
 		const images = document.querySelectorAll(`${categoryName} img`);
-		for (const image of images) {
+		for(const image of images) {
 			image.tabIndex = 0;
 		}
 
@@ -117,7 +115,7 @@ const galleryScripts = (function(){
 			button.tabIndex = 0;
 		}
 
-		// document.querySelector('.sidebar').focus();
+		document.querySelector('.sidebar-close-button').focus();
 
 		// stopping event propagation prevents soft locking the sidebar
 		if (!e) var e = window.event;

@@ -240,8 +240,8 @@ article img {
   font-size: 22px;
 }
 
-.open-button:hover {
-  color: #b31d51;
+.open-button:hover, .open-button:focus {
+  color: #ac206e;
 }
 
 .sidebar {
@@ -272,8 +272,7 @@ article img {
 }
 
 .sidebar button:hover, .sidebar button:focus {
-  background-color: #3b1f2b;
-  outline: #e72d80 solid 1px;
+  color: #97fae4;
 }
 
 .sidebar .sidebar-close-button {
@@ -332,14 +331,22 @@ article img {
 }
 @media screen and (min-width: 2000px) {
   article img {
-    height: 24vw;
-    width: 24vw;
+    height: 20vw;
+    width: 20vw;
+  }
+
+  .gallery {
+    width: 2000px;
   }
 }
 @media screen and (min-width: 2600px) {
   article img {
-    height: 500px;
-    width: 500px;
+    height: 600px;
+    width: 600px;
+  }
+
+  .gallery {
+    width: 2600px;
   }
 }
 

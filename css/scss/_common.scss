@@ -63,7 +63,6 @@ header.isSticky {
 }
 h1.isSticky {
 	transform: translateY(2.5px);
-	transition: all .2s;
 }
 a, a:visited {
 	text-decoration: none;
@@ -75,7 +74,10 @@ button {
 }
 .header-links {
 	display: none;
-	transition: transform .2s;
+	position: relative;
+	top: -300px;
+	flex-direction: column;
+	transition: all .2s;
 }
 %icomoon {
 	color: $primary-color-shadow;
@@ -91,11 +93,29 @@ button {
 	padding: 0 5px;
 	font-size: inherit;
 }
-
+.header-links.isOpen {
+	display: flex;
+	top: 0;
+}
+@keyframes navbarSlide{
+	0% {
+		top: -300px;
+		display: none;
+	}
+	50% {
+		display: flex;
+	}
+	100% {
+		top: 0;
+	}
+}
 @media screen and (min-width: 500px) {
+	.mobile-links-button {
+		display: none;
+	}
 	.header-links {
 		display: block;
-		transition: transform .2s;
+		position: static;
 	}
 	.header-links a {
 		color: $secondary-color;

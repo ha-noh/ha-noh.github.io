@@ -62,7 +62,7 @@ header.isSticky {
 	box-shadow: 0 5px 10px -3px $gallery-shadow-color;
 }
 h1.isSticky {
-	transform: translateY(2.5px);
+	transform: translateY(10px);
 }
 a, a:visited {
 	text-decoration: none;
@@ -75,9 +75,18 @@ button {
 .header-links {
 	display: none;
 	position: relative;
-	top: -300px;
 	flex-direction: column;
 	transition: all .2s;
+
+	a {
+		padding: 0 0 25px;
+		font-size: 18px;
+		color: $body-text-color;
+	}
+}
+.mobile-links-button.inline-icon {
+	font-size: 24px;
+	padding: 10px 0 20px;
 }
 %icomoon {
 	color: $primary-color-shadow;
@@ -95,17 +104,15 @@ button {
 }
 .header-links.isOpen {
 	display: flex;
-	top: 0;
+	animation: navbarSlide .2s;
 }
 @keyframes navbarSlide{
-	0% {
-		top: -300px;
-		display: none;
+	from {
+		opacity: 0;
+		top: -100px;
 	}
-	50% {
-		display: flex;
-	}
-	100% {
+	to {
+		opacity: 1;
 		top: 0;
 	}
 }
@@ -116,6 +123,11 @@ button {
 	.header-links {
 		display: block;
 		position: static;
+	}
+	.header-links.isOpen {
+		// fail-safe necessary in case the viewport changes while the .isOpen class is active
+		display: block;
+		animation: none;
 	}
 	.header-links a {
 		color: $secondary-color;

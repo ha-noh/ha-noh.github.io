@@ -28,6 +28,10 @@ const galleryScripts = (function(){
 			};
 			handleInput(e, allowedKeys[e.keyCode]);
 		});
+
+		document.querySelector('.mobile-links-button').addEventListener('click', () => {
+			document.querySelector('.header-links').classList.toggle('isOpen');
+		});
 	});
 
 

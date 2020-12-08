@@ -93,7 +93,6 @@ button {
 .inline-icon {
   color: #e72d80;
   padding: 0 5px;
-  font-size: inherit;
 }
 
 .header-links.isOpen {
@@ -272,7 +271,7 @@ article img {
   border: none;
   background-color: inherit;
   transition: 0.2s;
-  font-size: 22px;
+  padding: 0 15px;
 }
 
 .open-button:hover, .open-button:focus {
@@ -294,6 +293,10 @@ article img {
   -webkit-box-shadow: 5px 0 10px -3px #0d0305;
   -moz-box-shadow: 5px 0 10px -3px #0d0305;
   box-shadow: 5px 0 10px -3px #0d0305;
+}
+
+.sidebar.sidebar_isOpen {
+  left: 0;
 }
 
 .sidebar button {
@@ -378,6 +381,20 @@ article img {
     width: 450px;
     left: -450px;
   }
+  .sidebar button {
+    font-size: 30px;
+  }
+  .sidebar .sidebar-close-button {
+    font-size: 55px;
+  }
+
+  .gallery-header {
+    font-size: 30px;
+  }
+
+  .open-button {
+    font-size: 25px;
+  }
 }
 @media screen and (min-width: 2600px) {
   article img {
@@ -390,8 +407,23 @@ article img {
   }
 
   .sidebar {
-    width: 800px;
-    left: -800px;
+    width: 700px;
+    left: -700px;
+  }
+  .sidebar button {
+    font-size: 50px;
+    padding: 20px;
+  }
+  .sidebar .sidebar-close-button {
+    font-size: 80px;
+  }
+
+  .gallery-header {
+    font-size: 45px;
+  }
+
+  .open-button {
+    font-size: 40px;
   }
 }
 

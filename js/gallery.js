@@ -106,7 +106,7 @@ const galleryScripts = (function(){
 	}
 
 	function openSidebar(e) {
-		document.querySelector('.sidebar').style.left = '0';
+		document.querySelector('.sidebar').classList.add('sidebar_isOpen');
 
 		const buttons = document.querySelectorAll('.sidebar button');
 		for(const button of buttons) {
@@ -125,7 +125,7 @@ const galleryScripts = (function(){
 	}
 
 	function closeSidebar() {
-		document.querySelector('.sidebar').style.left = '-250px';
+		document.querySelector('.sidebar').classList.remove('sidebar_isOpen');
 
 		const buttons = document.querySelectorAll('.sidebar button');
 		for(const button of buttons) {

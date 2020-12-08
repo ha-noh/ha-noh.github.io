@@ -61,7 +61,7 @@ article img {
 	border: none;
 	background-color: inherit;
 	transition: .2s;
-	font-size: 22px;
+	padding: 0 15px;
 }
 .open-button:hover, .open-button:focus {
 	color: common.$secondary-color-shadow;
@@ -82,6 +82,9 @@ article img {
 	-moz-box-shadow: 5px 0 10px -3px common.$gallery-shadow-color;
 	box-shadow: 5px 0 10px -3px common.$gallery-shadow-color;
 }
+.sidebar.sidebar_isOpen {
+	left: 0;
+}
 .sidebar button {
 	padding: 20px 10px 20px;
 	border: none;
@@ -94,6 +97,7 @@ article img {
 .sidebar button:hover, .sidebar button:focus {
 	color: common.$primary-color;
 }
+// .sidebar specificity is required to overrule '.sidebar button' selector
 .sidebar .sidebar-close-button {
 	font-size: 45px;
 	text-align: right;
@@ -165,7 +169,21 @@ article img {
 	.sidebar {
 		width: 450px;
 		left: -450px;
+
+		button {
+			font-size: 30px;
+		}
+		.sidebar-close-button {
+			font-size: 55px;
+		}
 	}
+	.gallery-header {
+		font-size: 30px;
+	}
+	.open-button {
+		font-size: 25px;
+	}
+
 }
 @media screen and (min-width:2600px) {
 	article img {
@@ -176,7 +194,21 @@ article img {
 		width: 2600px;
 	}
 	.sidebar {
-		width: 800px;
-		left: -800px;
+		width: 700px;
+		left: -700px;
+
+		button {
+			font-size: 50px;
+			padding: 20px;
+		}
+		.sidebar-close-button {
+			font-size: 80px;
+		}
+	}
+	.gallery-header {
+		font-size: 45px;
+	}
+	.open-button {
+		font-size: 40px;
 	}
 }

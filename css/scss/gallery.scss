@@ -162,6 +162,10 @@ article img {
 	.gallery {
 		width: 2000px;
 	}
+	.sidebar {
+		width: 450px;
+		left: -450px;
+	}
 }
 @media screen and (min-width:2600px) {
 	article img {
@@ -170,5 +174,9 @@ article img {
 	}
 	.gallery {
 		width: 2600px;
+	}
+	.sidebar {
+		width: 800px;
+		left: -800px;
 	}
 }

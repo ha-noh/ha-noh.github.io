@@ -3,13 +3,13 @@ $sidebar-color: #1f1f24;
 $sidebar-border-color: #030305;
 $button-hover-color: #3b1f2b;
 
-header {
+header { // prevent default sticky behavior on this page
 	position: static;
 }
 h2 {
 	text-align: center;
 }
-h3, p { //about me body text
+h3, p { // about me body text
 	color: common.$secondary-color;
 }
 article img {

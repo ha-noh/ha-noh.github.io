@@ -15,7 +15,7 @@ const navbarScripts = (function() {
 
 		observer.observe(stickyEle);
 
-		// opens the corresponding category if it's clicked through on the home page
+		// opens the design category if the header link is clicked
 		document.querySelector('.header-link__design').addEventListener('click', () => {
 			window.sessionStorage.setItem('galleryLanding','design');
 			console.log('landing page set');

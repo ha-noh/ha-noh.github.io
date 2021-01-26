@@ -1,7 +1,6 @@
 const homepageScripts = (function() {
 	// set session storage to open proper gallery category
 	document.querySelector('.panel-botleft a').addEventListener('click', openDesignCategory);
-	document.querySelector('.header-link__design').addEventListener('click', openDesignCategory);
 
 	// mousing over or focusing a header link affects the corresponding panel
 	document.querySelector('.header-link__music').addEventListener('mouseenter', () => togglePanelFX('.panel-topleft'));
@@ -28,6 +27,12 @@ const homepageScripts = (function() {
 	document.querySelector('.header-link__aboutme').addEventListener('mouseleave', () => togglePanelFX('.panel-botright'));
 	document.querySelector('.header-link__aboutme').addEventListener('focusin', () => togglePanelFX('.panel-botright'));
 	document.querySelector('.header-link__aboutme').addEventListener('focusout', () => togglePanelFX('.panel-botright'));
+
+	// opens the corresponding category if it's clicked through on the home page
+	function openDesignCategory() { 
+		window.sessionStorage.setItem('galleryLanding','design');
+		console.log('landing page set');
+	}
 
 	function togglePanelFX(panelName) {
 		document.querySelector(`${panelName} .overlay`).classList.toggle('fx-overlay');

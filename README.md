@@ -23,6 +23,10 @@ A website to catalog my various personal projects, including: artwork, software,
 19) ~~Add header navigation / mobile burger icon to all pages for ease of use~~
 20) Change gallery modal buttons to be a single row of buttons so its position is more predictable across all viewports.
 21) ~~Add a demo link to a live demo page for code projects.~~
+22) Minify js
+
+## Bugs
+1) Home page link in header doesn't align properly with text when stickied
 
 ## Browser Compatibility
 - Keyboard navigation in Firefox is weird; it allows you to focus the body DOM element if you tab to the bottom of any given page. Issue is not present in Chrome.

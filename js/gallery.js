@@ -32,8 +32,12 @@ const galleryScripts = (function(){
 		document.querySelector('.mobile-links-button').addEventListener('click', () => {
 			document.querySelector('.header-links').classList.toggle('isOpen');
 		});
-	});
 
+		document.querySelector('.header-link__design').addEventListener('click', () => {
+			window.sessionStorage.setItem('galleryLanding','design');
+			console.log('landing page set');
+		});
+	});
 
 	// opens category based on the category name passed into it
 	function openCategory(e, categoryName) {

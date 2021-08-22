@@ -24,6 +24,7 @@ A website to catalog my various personal projects, including: artwork, software,
 20) Change gallery modal buttons to be a single row of buttons so its position is more predictable across all viewports.
 21) ~~Add a demo link to a live demo page for code projects.~~
 22) Minify js
+23) Refactor js to (1) get rid of deprecated syntax and (2) rewrite event listeners to have no nesting
 
 ## Bugs
 1) Home page link in header doesn't align properly with text when stickied

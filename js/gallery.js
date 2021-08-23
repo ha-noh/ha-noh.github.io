@@ -2,23 +2,23 @@ const galleryScripts = (function(){
 	/* Initialize event listeners and default page content;
 	 * open the sketches category by default
 	 */
-	window.addEventListener('DOMContentLoaded', () => {
+	window.addEventListener('DOMContentLoaded', e => {
 		if(window.sessionStorage.getItem('galleryLanding') == null) {
-			openCategory(event, '.sketches');
+			openCategory(e, '.sketches');
 		}
 
 		// if the design panel was clicked to reach the gallery, open the design category by default
 		else if(window.sessionStorage.getItem('galleryLanding') == 'design') {
-			openCategory(event,'.design');
+			openCategory(e,'.design');
 			//clear storage to return to default category on next page load
 			window.sessionStorage.removeItem('galleryLanding');
 		}
 
 		document.querySelector('.sidebar-close-button').addEventListener('click', closeSidebar);
-		document.querySelector('.link-sketches').addEventListener('click', () => openCategory(event, '.sketches'));
-		document.querySelector('.link-illustrations').addEventListener('click', () => openCategory(event, '.illustrations'));
-		document.querySelector('.link-design').addEventListener('click', () => openCategory(event, '.design'));
-		document.querySelector('.link-photos').addEventListener('click', () => openCategory(event, '.photos'));
+		document.querySelector('.link-sketches').addEventListener('click', e => openCategory(e, '.sketches'));
+		document.querySelector('.link-illustrations').addEventListener('click', e => openCategory(e, '.illustrations'));
+		document.querySelector('.link-design').addEventListener('click', e => openCategory(e, '.design'));
+		document.querySelector('.link-photos').addEventListener('click', e => openCategory(e, '.photos'));
 		document.querySelector('.open-button').addEventListener('click', openSidebar);
 
 		// Allow a focused image to be 'clicked' on with the Enter key

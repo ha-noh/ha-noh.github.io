@@ -1,32 +1,36 @@
 const galleryScripts = (function(){
-	/* Initialize event listeners and default page content;
-	 * open the sketches category by default
-	 */
-	window.addEventListener('DOMContentLoaded', e => {
+	// Initialize event listeners and default page content;
+	// open the sketches category by default
+
+	window.addEventListener('DOMContentLoaded', event => {
 		if(window.sessionStorage.getItem('galleryLanding') == null) {
-			openCategory(e, '.sketches');
+			openCategory(event, '.sketches');
 		}
 
 		// if the design panel was clicked to reach the gallery, open the design category by default
 		else if(window.sessionStorage.getItem('galleryLanding') == 'design') {
-			openCategory(e,'.design');
+			openCategory(event,'.design');
 			//clear storage to return to default category on next page load
 			window.sessionStorage.removeItem('galleryLanding');
 		}
 
 		document.querySelector('.sidebar-close-button').addEventListener('click', closeSidebar);
-		document.querySelector('.link-sketches').addEventListener('click', e => openCategory(e, '.sketches'));
-		document.querySelector('.link-illustrations').addEventListener('click', e => openCategory(e, '.illustrations'));
-		document.querySelector('.link-design').addEventListener('click', e => openCategory(e, '.design'));
-		document.querySelector('.link-photos').addEventListener('click', e => openCategory(e, '.photos'));
+		document.querySelector('.link-sketches').addEventListener('click', event => openCategory(event, '.sketches'));
+		document.querySelector('.link-illustrations').addEventListener('click', event => openCategory(event, '.illustrations'));
+		document.querySelector('.link-design').addEventListener('click', event => openCategory(event, '.design'));
+		document.querySelector('.link-photos').addEventListener('click', event => openCategory(event, '.photos'));
 		document.querySelector('.open-button').addEventListener('click', openSidebar);
 
 		// Allow a focused image to be 'clicked' on with the Enter key
+		// Maybe prevent default for buttons/links/etc to prevent double click?
 		document.addEventListener('keyup', function(e) {
 			let allowedKeys = {
-				13: 'enter'
+				13: 'enter',
+				Enter: 'enter'
 			};
-			handleInput(e, allowedKeys[e.keyCode]);
+
+			let key = e.key || e.keyCode;
+			handleInput(e, allowedKeys[key]);
 		});
 
 		document.querySelector('.mobile-links-button').addEventListener('click', () => {
@@ -44,7 +48,7 @@ const galleryScripts = (function(){
 		let currentCat = document.querySelector('.category-displayed');
 
 		// If there is a category open, hide it first
-		if(currentCat != null) hideCurrentCat(e, currentCat, categoryName);
+		if(currentCat !== null) hideCurrentCat(e, currentCat, categoryName);
 
 		// open a new category and adjust its classList
 		let newCategory = document.querySelector(categoryName);
@@ -119,7 +123,7 @@ const galleryScripts = (function(){
 
 		document.querySelector('.sidebar-close-button').focus();
 
-		// stopping event propagation prevents soft locking the sidebar
+		// stop event propagation to prevent soft locking the sidebar
 		if (!e) var e = window.event;
 		e.cancelBubble = true;
 		if (e.stopPropagation) e.stopPropagation();
@@ -139,7 +143,6 @@ const galleryScripts = (function(){
 		document.querySelector('html').removeEventListener('click', closeIfOutOfBounds);
 	}
 
-	// handles keyup events
 	function handleInput(event, keystroke) {
 		switch(keystroke) {
 			case 'enter':

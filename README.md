@@ -1,4 +1,4 @@
-#ha-noh.github.io
+# ha-noh.github.io
 A website to catalog my various personal projects, including: artwork, software, and music.
 
 ## TODO
